@@ -1,4 +1,5 @@
-const Essence = require('../models/Essence')
+const Essence = require('../models/Essence');
+const { checkLengthAndSend } = require('../helpers/helpers');
 
 // @desc      Get all essences
 // @route     GET /api/v1/essences
@@ -14,11 +15,28 @@ exports.getEssences = async (req, res, next) => {
   }
 };
 
-// @desc      Get a single essence
+// @desc      Get a single essence by id
 // @route     GET /api/v1/essences/:id
 // @access    Public
-exports.getSingleEssence = (req, res, next) => {
+exports.getSingleEssenceById = (req, res, next) => {
   res.status(200).json({ success: true, data: { msg: `Show essence ${req.params.id}` }});
+}
+
+// @desc      Get a single essence by name
+// @route     GET /api/v1/essences/:name
+// @access    Public
+exports.getSingleEssenceByName = async (req, res, next) => {
+  try {
+    // const name = req.params.name.replace(".", "/");
+
+    console.log(req.params.name);
+    const essence = await Essence.find({ nameSlug: req.params.name })
+
+    checkLengthAndSend(res, essence);
+    
+  } catch (err) {
+    
+  }
 }
 
 // @desc      Get essences by company
@@ -26,9 +44,7 @@ exports.getSingleEssence = (req, res, next) => {
 // @access    Public
 exports.getEssencesByCompany = async (req, res, next) => {
   try {
-    const company = req.params.company.replace(/([A-Z]+)/g, ' $1').trim();
-    
-    const essences = await Essence.find({ company });
+    const essences = await Essence.find({ companySlug: req.params.company });
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {
@@ -41,9 +57,7 @@ exports.getEssencesByCompany = async (req, res, next) => {
 // @access    Public
 exports.getEssencesByGroup = async (req, res, next) => {
   try {
-    const group = req.params.group.replace(/([A-Z]+)/g, ' $1').trim();
-    
-    const essences = await Essence.find({ group });
+    const essences = await Essence.find({ groupSlug: req.params.group });
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {

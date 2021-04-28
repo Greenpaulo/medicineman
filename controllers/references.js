@@ -1,5 +1,6 @@
 const Reference = require('../models/Reference');
 const { checkLengthAndSend } = require('../helpers/helpers');
+const slugify = require('slugify');
 
 // @desc      Get all references
 // @route     GET /api/v1/references
@@ -20,10 +21,7 @@ exports.getAllReferences = async (req, res, next) => {
 // @access    Public
 exports.getSingleReference = async (req, res, next) => {
   try {
-    const param = req.params.keyword.replace(/_/g, " ");
-    const keyword = param.replace(".", "/");
-
-    const reference = await Reference.find({ title: keyword });
+    const reference = await Reference.find({ titleSlug: req.params.keyword });
 
     checkLengthAndSend(res, reference);
   } catch (err) {

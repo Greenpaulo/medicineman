@@ -6,10 +6,7 @@ const { checkLengthAndSend } = require('../helpers/helpers');
 // @access    Public
 exports.getGroupInfo = async (req, res, next) => {
   try {
-    const company = req.params.company.replace(/_/g, " ");
-    const group = req.params.group.replace(/_/g, " ");
-    console.log(company, group);
-    const info = await GroupInfo.find({ company, group });
+    const info = await GroupInfo.find({ companySlug: req.params.company, groupSlug: req.params.group });
 
     checkLengthAndSend(res, info);
     

@@ -5,10 +5,7 @@ const Essence = require('../models/Essence');
 // @access    Public
 exports.getEssenceDataByElement = async (req, res, next) => {
   try {
-    const element = req.params.element.replace(/_/g, " ");
-    console.log(element);
-    
-    const essences = await Essence.find({ elements: element });
+    const essences = await Essence.find({ elements: req.params.element });
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {
@@ -21,9 +18,7 @@ exports.getEssenceDataByElement = async (req, res, next) => {
 // @access    Public
 exports.getEssenceNamesByElement = async (req, res, next) => {
   try {
-    const element = req.params.element.replace(/_/g, " ");
-    
-    const essences = await Essence.find({ elements: element });
+    const essences = await Essence.find({ elements: req.params.element });
 
     const convertEssences = (essences) => {
       let names = [];

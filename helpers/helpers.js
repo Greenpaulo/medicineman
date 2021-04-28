@@ -1,5 +1,4 @@
 exports.checkLengthAndSend = (res, resource) => {
-  console.log(resource);
   if (resource.length === 0) {
       res.status(404).json({ success: false, msg: "File not found"});
     } else {
