@@ -15,6 +15,7 @@ const chakras = require('./routes/chakras');
 const meridians = require('./routes/meridians');
 const elements = require('./routes/elements');
 const references = require('./routes/references');
+const groupInfo = require('./routes/groupInfo');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use('/api/v1/chakras', chakras);
 app.use('/api/v1/meridians', meridians);
 app.use('/api/v1/elements', elements);
 app.use('/api/v1/references', references);
+app.use('/api/v1/groupinfo', groupInfo);
 
 const PORT = process.env.PORT || 5000;
 

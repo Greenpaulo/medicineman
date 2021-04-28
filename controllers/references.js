@@ -1,4 +1,5 @@
 const Reference = require('../models/Reference');
+const { checkLengthAndSend } = require('../helpers/helpers');
 
 // @desc      Get all references
 // @route     GET /api/v1/references
@@ -24,7 +25,7 @@ exports.getSingleReference = async (req, res, next) => {
 
     const reference = await Reference.find({ title: keyword });
 
-    res.status(200).json({ success: true, data: reference }); 
+    checkLengthAndSend(res, reference);
   } catch (err) {
     console.log(err);
     res.status(400).json({ success: false })

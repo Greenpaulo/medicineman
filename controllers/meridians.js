@@ -6,7 +6,6 @@ const Essence = require('../models/Essence');
 exports.getEssenceDataByMeridian = async (req, res, next) => {
   try {
     const meridian = req.params.meridian.replace(/_/g, " ");
-    console.log(meridian);
     
     const essences = await Essence.find({$or: [{meridians: meridian}, {meridiansSecondary: meridian} ]});
 

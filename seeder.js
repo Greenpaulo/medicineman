@@ -9,6 +9,7 @@ dotenv.config({ path: './config/config.env'})
 // Load models
 const Essence = require('./models/Essence');
 const Reference = require('./models/Reference');
+const GroupInfo = require('./models/GroupInfo');
 
 // Connect to DB
 mongoose.connect(process.env.MONGO_URI, {
@@ -38,6 +39,7 @@ const seaEssences = JSON.parse(fs.readFileSync(`${__dirname}/_data/Pacific/seaEs
 const springFlowers = JSON.parse(fs.readFileSync(`${__dirname}/_data/Pacific/springFlowers.json`, 'utf-8'));
 const weae = JSON.parse(fs.readFileSync(`${__dirname}/_data/WEAE/weae.json`, 'utf-8'));
 const crossreference = JSON.parse(fs.readFileSync(`${__dirname}/_data/CrossReference/crossreference.json`, 'utf-8'));
+const groupDescriptions = JSON.parse(fs.readFileSync(`${__dirname}/_data/groupDescriptions.json`, 'utf-8'));
 
 
 // Import into DB
@@ -61,6 +63,7 @@ const importData = async () => {
     await Essence.create(springFlowers);
     await Essence.create(weae);
     await Reference.create(crossreference, { checkKeys: false});
+    await GroupInfo.create(groupDescriptions);
     
 
     console.log('Data imported...'.green.inverse);
@@ -75,6 +78,7 @@ const deleteData = async () => {
   try {
     await Essence.deleteMany();
     await Reference.deleteMany();
+    await GroupInfo.deleteMany();
 
     console.log('Data deleted...'.red.inverse);
     process.exit();
