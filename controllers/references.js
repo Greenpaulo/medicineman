@@ -11,7 +11,7 @@ exports.getAllReferences = async (req, res, next) => {
 
     res.status(200).json({ success: true, count: references.length, data: references }); 
   } catch (err) {
-    next(new ErrorResponse('References not found', 404));
+    next(err);
   }
 };
 
@@ -24,6 +24,6 @@ exports.getSingleReference = async (req, res, next) => {
 
     checkLengthAndSend(res, reference, next);
   } catch (err) {
-    next(new ErrorResponse('Reference not found', 404));
+    next(err);
   }
 };

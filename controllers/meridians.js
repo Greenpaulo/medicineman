@@ -14,7 +14,7 @@ exports.getEssenceDataByMeridian = async (req, res, next) => {
     checkLengthAndSend(res, essences, next);
 
   } catch (err) {
-    next(new ErrorResponse('Essences not found', 404));
+    next(err);
   }
 };
 
@@ -39,6 +39,6 @@ exports.getEssenceNamesByMeridian = async (req, res, next) => {
     checkLengthAndSend(res, names, next);
 
   } catch (err) {
-      next(new ErrorResponse('Essences not found', 404));
+      next(err);
   }
 };

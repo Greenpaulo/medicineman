@@ -14,7 +14,7 @@ exports.getEssenceDataByChakra = async (req, res, next) => {
     checkLengthAndSend(res, essences, next)
 
   } catch (err) {
-    next(new ErrorResponse('Essences not found', 404));
+    next(err)
   }
 };
 
@@ -40,6 +40,6 @@ exports.getEssenceNamesByChakra = async (req, res, next) => {
     checkLengthAndSend(res, names, next);
 
   } catch (err) {
-    next(new ErrorResponse('Essences not found', 404));
+    next(err)
   }
 };

@@ -12,6 +12,6 @@ exports.getGroupInfo = async (req, res, next) => {
     checkLengthAndSend(res, info, next);
     
   } catch (err) {
-    next(new ErrorResponse('Group info not found', 404));
+    next(err);
   }
 }

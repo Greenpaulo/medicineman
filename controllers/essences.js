@@ -11,7 +11,7 @@ exports.getEssences = async (req, res, next) => {
 
     res.status(200).json({ success: true, data: essences }); 
   } catch (err) {
-    next(new ErrorResponse('Files not found', 404));
+    next(err)
   }
 };
 
@@ -29,10 +29,10 @@ exports.getSingleEssenceByName = async (req, res, next) => {
   try {
     const essence = await Essence.find({ nameSlug: req.params.name })
 
-    checkLengthAndSend(res, next, essence);
+    checkLengthAndSend(res, essence, next);
     
   } catch (err) {
-    next(new ErrorResponse('Essence not found', 404));
+    next(err)
   }
 }
 
@@ -45,7 +45,7 @@ exports.getEssencesByCompany = async (req, res, next) => {
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {
-    next(new ErrorResponse('Essences not found', 404));
+    next(err)
   }
 };
 
@@ -58,6 +58,6 @@ exports.getEssencesByGroup = async (req, res, next) => {
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {
-    next(new ErrorResponse('Essences not found', 404));
+    next(err);
   }
 };
