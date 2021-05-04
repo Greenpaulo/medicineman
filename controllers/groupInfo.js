@@ -1,3 +1,4 @@
+const ErrorResponse = require('../helpers/errorResponse');
 const GroupInfo = require('../models/GroupInfo');
 const { checkLengthAndSend } = require('../helpers/helpers');
 
@@ -8,9 +9,9 @@ exports.getGroupInfo = async (req, res, next) => {
   try {
     const info = await GroupInfo.find({ companySlug: req.params.company, groupSlug: req.params.group });
 
-    checkLengthAndSend(res, info);
+    checkLengthAndSend(res, info, next);
     
   } catch (err) {
-    res.status(400).json({ success: false, msg: err });
+    next(new ErrorResponse('Group info not found', 404));
   }
 }

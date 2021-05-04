@@ -1,4 +1,6 @@
+const ErrorResponse = require('../helpers/errorResponse');
 const Essence = require('../models/Essence');
+const { checkLengthAndSend } = require('../helpers/helpers');
 
 // @desc      Get essence data by meridian
 // @route     GET /api/v1/meridians/essence-data/:meridian
@@ -9,9 +11,10 @@ exports.getEssenceDataByMeridian = async (req, res, next) => {
     
     const essences = await Essence.find({$or: [{meridians: meridian}, {meridiansSecondary: meridian} ]});
 
-    res.status(200).json({ success: true, count: essences.length, data: essences });
+    checkLengthAndSend(res, essences, next);
+
   } catch (err) {
-    res.status(400).json({ success: false, msg: err})
+    next(new ErrorResponse('Essences not found', 404));
   }
 };
 
@@ -33,8 +36,9 @@ exports.getEssenceNamesByMeridian = async (req, res, next) => {
     }
     const names = convertEssences(essences);
 
-    res.status(200).json({ success: true, count: essences.length, data: names });
+    checkLengthAndSend(res, names, next);
+
   } catch (err) {
-    res.status(400).json({ success: false, msg: err})
+      next(new ErrorResponse('Essences not found', 404));
   }
 };

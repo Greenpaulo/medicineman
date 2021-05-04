@@ -1,3 +1,4 @@
+const ErrorResponse = require('../helpers/errorResponse');
 const Essence = require('../models/Essence');
 const { checkLengthAndSend } = require('../helpers/helpers');
 
@@ -10,8 +11,7 @@ exports.getEssences = async (req, res, next) => {
 
     res.status(200).json({ success: true, data: essences }); 
   } catch (err) {
-    console.log(err);
-    res.status(400).json({ success: false })
+    next(new ErrorResponse('Files not found', 404));
   }
 };
 
@@ -27,15 +27,12 @@ exports.getSingleEssenceById = (req, res, next) => {
 // @access    Public
 exports.getSingleEssenceByName = async (req, res, next) => {
   try {
-    // const name = req.params.name.replace(".", "/");
-
-    console.log(req.params.name);
     const essence = await Essence.find({ nameSlug: req.params.name })
 
-    checkLengthAndSend(res, essence);
+    checkLengthAndSend(res, next, essence);
     
   } catch (err) {
-    
+    next(new ErrorResponse('Essence not found', 404));
   }
 }
 
@@ -48,7 +45,7 @@ exports.getEssencesByCompany = async (req, res, next) => {
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {
-    res.status(400).json({ success: false, msg: err})
+    next(new ErrorResponse('Essences not found', 404));
   }
 };
 
@@ -61,6 +58,6 @@ exports.getEssencesByGroup = async (req, res, next) => {
 
     res.status(200).json({ success: true, count: essences.length, data: essences });
   } catch (err) {
-    res.status(400).json({ success: false, msg: err})
+    next(new ErrorResponse('Essences not found', 404));
   }
 };
