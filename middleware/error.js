@@ -6,12 +6,12 @@ const errorHandler = (err, req, res, next) => {
 
   // Log to console for dev
   console.log(err.stack.red);
+  // console.log(err.statusCode);
 
   let message;
 
-  const field = Object.keys(Object.values(Object.values(err))[0])[0];
-  console.log(field);
-  console.log(Object.values(Object.values(err))[0]);
+  // const field = Object.keys(Object.values(Object.values(err))[0])[0];
+  // console.log(field);
 
   // if (field !== undefined) {
   //   message = err.errors.field.properties.message;
@@ -46,6 +46,11 @@ const errorHandler = (err, req, res, next) => {
   if (err.code === 11000){
     const message = 'Email address already taken';
     error = new ErrorResponse(message, 400);
+  }
+
+  if (err.statusCode === 401) {
+    const message = err.message;
+    error = new ErrorResponse(message, 401)
   }
 
   res.status(error.statusCode || 500).json({

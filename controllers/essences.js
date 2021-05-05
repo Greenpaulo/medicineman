@@ -1,19 +1,15 @@
-const ErrorResponse = require('../helpers/errorResponse');
+const asyncHandler = require('../middleware/async');
 const Essence = require('../models/Essence');
 const { checkLengthAndSend } = require('../helpers/helpers');
 
 // @desc      Get all essences
 // @route     GET /api/v1/essences
 // @access    Public
-exports.getEssences = async (req, res, next) => {
-  try {
+exports.getEssences = asyncHandler(async (req, res, next) => {
     const essences = await Essence.find();
 
     res.status(200).json({ success: true, data: essences }); 
-  } catch (err) {
-    next(err)
-  }
-};
+});
 
 // @desc      Get a single essence by id
 // @route     GET /api/v1/essences/:id
@@ -25,39 +21,26 @@ exports.getSingleEssenceById = (req, res, next) => {
 // @desc      Get a single essence by name
 // @route     GET /api/v1/essences/:name
 // @access    Public
-exports.getSingleEssenceByName = async (req, res, next) => {
-  try {
+exports.getSingleEssenceByName = asyncHandler(async (req, res, next) => {
     const essence = await Essence.find({ nameSlug: req.params.name })
 
     checkLengthAndSend(res, essence, next);
-    
-  } catch (err) {
-    next(err)
-  }
-}
+});
 
 // @desc      Get essences by company
 // @route     GET /api/v1/essences/company/:company
 // @access    Public
-exports.getEssencesByCompany = async (req, res, next) => {
-  try {
+exports.getEssencesByCompany = asyncHandler(async (req, res, next) => {
     const essences = await Essence.find({ companySlug: req.params.company });
 
-    res.status(200).json({ success: true, count: essences.length, data: essences });
-  } catch (err) {
-    next(err)
-  }
-};
+    checkLengthAndSend(res, essences, next);
+});
 
 // @desc      Get essences by group
 // @route     GET /api/v1/essences/group/:group
 // @access    Public
-exports.getEssencesByGroup = async (req, res, next) => {
-  try {
+exports.getEssencesByGroup = asyncHandler(async (req, res, next) => {
     const essences = await Essence.find({ groupSlug: req.params.group });
 
-    res.status(200).json({ success: true, count: essences.length, data: essences });
-  } catch (err) {
-    next(err);
-  }
-};
+    checkLengthAndSend(res, essences, next);
+});
