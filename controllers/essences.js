@@ -8,7 +8,7 @@ const { checkLengthAndSend } = require('../helpers/helpers');
 exports.getEssences = asyncHandler(async (req, res, next) => {
     const essences = await Essence.find();
 
-    res.status(200).json({ success: true, data: essences }); 
+    checkLengthAndSend(res, essences, next);
 });
 
 // @desc      Get a single essence by id
