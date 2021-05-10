@@ -19,6 +19,7 @@ const elements = require('./routes/elements');
 const references = require('./routes/references');
 const groupInfo = require('./routes/groupInfo');
 const auth = require('./routes/auth');
+const medicines = require('./routes/medicines');
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use('/api/v1/elements', elements);
 app.use('/api/v1/references', references);
 app.use('/api/v1/groupinfo', groupInfo);
 app.use('/api/v1/auth', auth);
+app.use('/api/v1/medicines', medicines);
 
 // Error handler middleware - define error-handling middleware last, after other app.use() and routes calls
 app.use(errorHandler);
