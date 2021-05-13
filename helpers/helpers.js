@@ -9,6 +9,15 @@ exports.checkLengthAndSend = (res, resource, next) => {
     }
 };
 
+// Convert full data array into an array of just the names 
+exports.getNamesFromData = (data) => {
+  let names = [];
+  data.forEach(element => {
+    names.push(element)
+  })
+  return names;
+}
+
 // Get token from model, create cookie and send response
 exports.sendTokenResponse = (user, statusCode, res) => {
   // Create token

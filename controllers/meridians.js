@@ -1,6 +1,6 @@
 const asyncHandler = require('../middleware/async');
 const Essence = require('../models/Essence');
-const { checkLengthAndSend } = require('../helpers/helpers');
+const { checkLengthAndSend, getNamesFromData } = require('../helpers/helpers');
 
 // @desc      Get essence data by meridian
 // @route     GET /api/v1/meridians/essence-data/:meridian
@@ -21,14 +21,7 @@ exports.getEssenceNamesByMeridian = asyncHandler(async (req, res, next) => {
     
     const essences = await Essence.find({$or: [{meridians: meridian}, {meridiansSecondary: meridian} ]});
 
-    const convertEssences = (essences) => {
-      let names = [];
-      essences.forEach(essence => {
-        names.push(essence.name)
-      })
-      return names;
-    }
-    const names = convertEssences(essences);
+    const names = getNamesFromData(essences);
 
     checkLengthAndSend(res, names, next);
 });

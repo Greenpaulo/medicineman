@@ -1,6 +1,6 @@
 const asyncHandler = require('../middleware/async');
 const Reference = require('../models/Reference');
-const { checkLengthAndSend } = require('../helpers/helpers');
+const { checkLengthAndSend, getNamesFromData } = require('../helpers/helpers');
 
 // @desc      Get all references
 // @route     GET /api/v1/references
@@ -8,7 +8,26 @@ const { checkLengthAndSend } = require('../helpers/helpers');
 exports.getAllReferences = asyncHandler(async (req, res, next) => {
     const references = await Reference.find();
 
-    res.status(200).json({ success: true, count: references.length, data: references }); 
+    checkLengthAndSend(res, references, next)
+});
+
+// @desc      Get all reference names
+// @route     GET /api/v1/references/names
+// @access    Public
+exports.getAllReferenceTitles = asyncHandler(async (req, res, next) => {
+    const references = await Reference.find();
+
+    const getTitlesFromData = (references) => {
+      let titles = [];
+      references.forEach(ref => {
+        titles.push(ref.title)
+      })
+      return titles;
+    };
+
+    const titles = getTitlesFromData(references)
+    
+    checkLengthAndSend(res, titles, next)
 });
 
 // @desc      Get a single reference by keyword

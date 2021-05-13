@@ -1,9 +1,10 @@
 const express = require('express')
-const { getAllReferences, getSingleReference } = require('../controllers/references');
+const { getAllReferences, getSingleReference, getAllReferenceTitles } = require('../controllers/references');
 
 const router = express.Router();
 
-router.route('/').get(getAllReferences);
-router.route('/:keyword').get(getSingleReference);
+router.get('/', getAllReferences);
+router.get('/titles', getAllReferenceTitles);
+router.get('/:keyword', getSingleReference);
 
 module.exports = router;

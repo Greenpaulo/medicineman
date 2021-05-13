@@ -1,6 +1,6 @@
 const asyncHandler = require('../middleware/async');
 const Essence = require('../models/Essence');
-const { checkLengthAndSend } = require('../helpers/helpers');
+const { checkLengthAndSend, getNamesFromData } = require('../helpers/helpers');
 const ErrorResponse = require('../helpers/errorResponse');
 
 // @desc      Get essence data by chakra
@@ -23,14 +23,7 @@ exports.getEssenceNamesByChakra = asyncHandler(async (req, res, next) => {
     
     const essences = await Essence.find({$or: [{chakras: chakra}, {chakrasSecondary: chakra} ]});
 
-    const convertEssences = (essences) => {
-      let names = [];
-      essences.forEach(essence => {
-        names.push(essence.name)
-      })
-      return names;
-    }
-    const names = convertEssences(essences);
+    const names = getNamesFromData(essences);
 
     checkLengthAndSend(res, names, next);
 });
@@ -46,14 +39,7 @@ exports.getCompanyEssenceNamesByChakra = asyncHandler(async (req, res, next) => 
       companySlug: req.params.company
     });
 
-    const convertEssences = (essences) => {
-      let names = [];
-      essences.forEach(essence => {
-        names.push(essence.name)
-      })
-      return names;
-    }
-    const names = convertEssences(essences);
+    const names = getNamesFromData(essences);
 
     checkLengthAndSend(res, names, next);
 });
@@ -84,14 +70,7 @@ exports.getCompanyEssenceNamesByChakraPriority = asyncHandler(async (req, res, n
        next(new ErrorResponse('Invalid URL parameter', 400))
     )
     
-    const convertEssences = (essences) => {
-      let names = [];
-      essences.forEach(essence => {
-        names.push(essence.name)
-      })
-      return names;
-    }
-    const names = convertEssences(essences);
+    const names = getNamesFromData(essences);
 
-    res.status(200).json({ success: true, count: essences.length, names })
+    res.status(200).json({ success: true, count: essences.length, data: names })
 });

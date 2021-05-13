@@ -37,6 +37,11 @@ const springFlowers = JSON.parse(fs.readFileSync(`${__dirname}/_data/Pacific/spr
 const weae = JSON.parse(fs.readFileSync(`${__dirname}/_data/WEAE/weae.json`, 'utf-8'));
 const crossreference = JSON.parse(fs.readFileSync(`${__dirname}/_data/CrossReference/crossreference.json`, 'utf-8'));
 const groupDescriptions = JSON.parse(fs.readFileSync(`${__dirname}/_data/groupDescriptions.json`, 'utf-8'));
+const newChildSeries = JSON.parse(fs.readFileSync(`${__dirname}/_data/Indigo/newChildSeries.json`, 'utf-8'));
+const twelveHealers = JSON.parse(fs.readFileSync(`${__dirname}/_data/Bach/twelveHealers.json`, 'utf-8'));
+const sevenHelpers = JSON.parse(fs.readFileSync(`${__dirname}/_data/Bach/sevenHelpers.json`, 'utf-8'));
+const secondNineteen = JSON.parse(fs.readFileSync(`${__dirname}/_data/Bach/secondNineteen.json`, 'utf-8'));
+const acupunctureSet = JSON.parse(fs.readFileSync(`${__dirname}/_data/Bailey/acupunctureSet.json`, 'utf-8'));
 
 
 // Import into DB
@@ -59,6 +64,11 @@ const importData = async () => {
     await Essence.create(seaEssences);
     await Essence.create(springFlowers);
     await Essence.create(weae);
+    await Essence.create(newChildSeries);
+    await Essence.create(twelveHealers);
+    await Essence.create(sevenHelpers);
+    await Essence.create(secondNineteen);
+    await Essence.create(acupunctureSet);
     await Reference.create(crossreference, { checkKeys: false});
     await GroupInfo.create(groupDescriptions);
     
