@@ -28,6 +28,9 @@ const UserSchema = new mongoose.Schema({
     // Don't return the password when fetch user data
     select: false
   },
+  shoppingBasket: {
+    type: Array
+  },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
   createdAt: {
