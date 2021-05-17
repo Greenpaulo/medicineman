@@ -1,9 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const colors = require('colors');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/error');
+require('colors');
 
 // Load env vars
 dotenv.config({ path: './config/config.env'});
@@ -20,6 +20,7 @@ const references = require('./routes/references');
 const groupInfo = require('./routes/groupInfo');
 const auth = require('./routes/auth');
 const medicines = require('./routes/medicines');
+const orders = require('./routes/orders');
 
 const app = express();
 
@@ -38,6 +39,7 @@ app.use('/api/v1/references', references);
 app.use('/api/v1/groupinfo', groupInfo);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/medicines', medicines);
+app.use('/api/v1/orders', orders);
 
 // Error handler middleware - define error-handling middleware last, after other app.use() and routes calls
 app.use(errorHandler);

@@ -13,6 +13,25 @@ exports.getMedicine = asyncHandler(async (req, res, next) => {
   checkLengthAndSend(res, medicine, next);
 });
 
+// @desc      Get a user's medicines
+// @route     GET /api/v1/medicines
+// @access    Private    
+exports.getUserMedicines = asyncHandler(async (req, res, next) => {
+  
+  const medicines = await Medicine.find({ user: req.user.id });
+
+  // if(!medicines) {
+  //   return next(new ErrorResponse('User has no ', 404));
+  // }
+
+  // // Check it medicine belongs to logged in user
+  // if (req.user.id !== (medicine.user).toString()) {
+  //   return next(new ErrorResponse('Not authorized to interact with this medicine', 401));
+  // }
+  
+  res.status(200).json({ success: true, count: medicines.length, data: medicines});
+});
+
 // @desc      Create a medicine
 // @route     POST /api/v1/medicines
 // @access    Private    

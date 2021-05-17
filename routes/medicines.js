@@ -1,11 +1,12 @@
 const express = require('express');
-const { getMedicine, createMedicine, updateMedicine ,deleteMedicine ,addMedicineToBasket, removeMedicineFromBasket } = require('../controllers/medicines');
+const { getMedicine, getUserMedicines ,createMedicine, updateMedicine ,deleteMedicine ,addMedicineToBasket, removeMedicineFromBasket } = require('../controllers/medicines');
 const { protect } = require('../middleware/auth');
 
 const router = express.Router();
 
 // CRUD for Medicines
 router.get('/:id', protect, getMedicine);
+router.get('/', protect, getUserMedicines);
 router.post('/', protect, createMedicine);
 router.put('/:id', protect, updateMedicine);
 router.delete('/:id', protect, deleteMedicine);
