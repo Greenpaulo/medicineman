@@ -1,8 +1,7 @@
-import './Landing.css'
 
 const Landing = () => {
   return (
-    <div className='main'>
+    <div id="landing" className="container">
       <h1 id="landing-h1">Landing</h1>
     </div>
   )
