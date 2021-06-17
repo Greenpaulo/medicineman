@@ -1,6 +1,49 @@
 section#sidenav {
-  height: 100vh;
-  width: 20vw;
-  background-color: #312450;
+  height: 80vh;
+  width: 10vw;
+  // background-color: #312450;
   position: fixed;
+  border-right: 5px solid pink;
+  margin: 85px 0;
+
+  nav#main-nav {
+    height: 74%;
+  }
+
+  ul {
+    list-style: none;
+    height: 77%;
+    margin-top: 8rem;
+    // text-align: center;
+  }
+
+  li {
+    margin: 45px 0;
+  }
+
+  li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  #links {
+    display: grid;
+    grid-template-columns: repeat(2, 20px);
+    grid-column-gap: 45px;
+    grid-row-gap: 25px;
+    margin: 10px 0 0 5px;
+    border-top: 5px solid #b3ec68;
+    width: 62%;
+    padding-top: 36px;
+
+    i.fa-facebook,
+    i.fa-twitter,
+    i.fa-youtube,
+    i.fa-instagram {
+      // color: #8dc73f;
+      color: #b3ec68;
+    }
+  }
 }

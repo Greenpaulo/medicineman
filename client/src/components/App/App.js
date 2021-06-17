@@ -3,7 +3,7 @@ import SideNav from '../SideNav/SideNav'
 
 const App = () => {
   return (
-    <div>
+    <div className="main-container">
       <SideNav />
       <Landing />
     </div>
