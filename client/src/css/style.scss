@@ -1,6 +1,9 @@
 @import '../components/App/App';
 @import '../components/Landing/Landing';
 @import '../components/SideNav/SideNav';
+@import '../components/Medicine/Medicine';
+@import '../components/Essence/Essence';
+@import '../components/Education/Education';
 
 // Reset
 * {
@@ -19,9 +22,18 @@ html {
   line-height: 1.8em;
   // color: #333;
   // background-color: #eee;
-}
-
-.main-container {
   width: 80vw;
   margin: auto;
+}
+
+// Section container
+.container {
+  margin-left: 14vw;
+}
+
+//Section heading
+#section-heading {
+  font-family: 'Dawning of a New Day', cursive;
+  font-size: 5rem;
+  padding-top: 5rem;
 }

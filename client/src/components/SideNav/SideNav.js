@@ -1,19 +1,21 @@
+import { Link } from 'react-router-dom'
+
 const SideNav = () => {
   return (
 			<section id="sidenav">
         <nav id="main-nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Medicine</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/medicine">Medicine</Link></li>
+            <li><Link to="/education">Education</Link></li>
+            <li><Link to="#">About</Link></li>
+            <li><Link to="#">Contact</Link></li>
           </ul>
           <div id="links">
-            <a href="#"><i className="fab fa-facebook fa-2x"></i></a>
-            <a href="#"><i className="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i className="fab fa-youtube fa-2x"></i></a>
-            <a href="#"><i className="fab fa-instagram fa-2x"></i></a>
+            <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
+            <a href="www.twitter.com"><i className="fab fa-twitter fa-2x"></i></a>
+            <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a>
+            <a href="www.instagram.com"><i className="fab fa-instagram fa-2x"></i></a>
           </div>
         </nav>
 			</section>
