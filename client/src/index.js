@@ -4,13 +4,16 @@ import './css/style.min.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 
-import { GlobalProvider } from './context/GlobalProvider';
+import { EssencesProvider } from './context/EssencesState';
+import { GroupInfoProvider } from './context/GroupInfoState';
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalProvider>
-      <App />
-    </GlobalProvider>
+    <EssencesProvider>
+      <GroupInfoProvider>
+        <App /> 
+      </GroupInfoProvider>
+    </EssencesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

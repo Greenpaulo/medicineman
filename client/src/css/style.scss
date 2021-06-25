@@ -3,6 +3,8 @@
 @import '../components/SideNav/SideNav';
 @import '../components/Medicine/Medicine';
 @import '../components/Essence/Essence';
+@import '../components/Company/Company';
+@import '../components/Group/Group';
 @import '../components/Education/Education';
 
 // Reset
@@ -26,12 +28,16 @@ html {
   margin: auto;
 }
 
+li {
+  list-style: none;
+}
+
 // Section container
 .container {
   margin-left: 14vw;
 }
 
-//Section heading
+// Section heading
 #section-heading {
   font-family: 'Dawning of a New Day', cursive;
   font-size: 5rem;

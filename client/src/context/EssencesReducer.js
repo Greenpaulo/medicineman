@@ -3,14 +3,22 @@ const essencesReducer = (state, action) => {
     case 'GET_ESSENCE_BY_NAME':
       return {
         ...state,
-        loading: false,
         essence: action.payload
       }
     case 'GET_ESSENCES_BY_COMPANY':
       return {
         ...state,
-        loading: false,
         essences: action.payload
+      }
+    case 'GET_ESSENCES_BY_GROUP':
+      return {
+        ...state,
+        essences: action.payload
+      }
+    case 'SET_LOADING_ESSENCES':
+      return {
+        ...state,
+        loadingEssences: action.payload
       }
     case 'ESSENCE_ERROR':
       return {

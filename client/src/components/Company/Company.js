@@ -1,36 +1,50 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
-import { GlobalContext } from "../../context/GlobalState"
+import { GroupInfoContext } from "../../context/GroupInfoState"
 
 const Company = (props) => {
-  const { loading, essences, getEssencesByCompany, groupInfo, getGroupInfo } = useContext(GlobalContext);
+  const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);
 
   useEffect(() => {
     async function getData(){
-      await getGroupInfo(props.match.params.name, 'general')
-      await getEssencesByCompany(props.match.params.name);
+      await getGroupInfo(props.match.params.company, 'general')
+      await getGroupsByCompany(props.match.params.company)
+      setLoadingGroup(false);
     }
     getData();
+    return () => {
+      setLoadingGroup(true);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log(essences)
+  // Check data has loaded before render
+  let isLoading;
+  if (groupInfo === null || groups === null || loadingGroup === true) {
+    isLoading = true
+  } else {
+    isLoading = false
+  }
 
   return (
     <>
-      {loading && 
+      {isLoading && 
         <div className="container">
           <h1>Loading</h1>
         </div>
       }
 
-      {!loading &&
+      {!isLoading &&
         <div className="container">
-          <h1 id="company-heading">{essences[0].company}</h1>
-          <section id="Company-info">
+          <h1 id="company-heading">{groupInfo[0].company}</h1>
+          <section id="company-info">
+            {groupInfo[0].description.map(paragraph => (
+              <p>{paragraph}</p>
+            ))}
+
             <ul>
-              {essences.map(essence => (
-                <li><Link to='#'>{essence.name}</Link></li>
+              {groups.map(group => (
+                <li key={group.name}><Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`}>{group.name}</Link></li>
               ))}
             </ul>
               

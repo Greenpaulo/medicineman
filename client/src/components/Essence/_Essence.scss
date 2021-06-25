@@ -13,3 +13,15 @@ a {
   text-decoration: none;
   color: black;
 }
+
+section#essence-effects {
+  margin: 1.5rem 0;
+}
+
+.essence-effect {
+  margin: 0.5rem 0;
+}
+
+.essence-effect::first-letter {
+  text-transform: capitalize;
+}
