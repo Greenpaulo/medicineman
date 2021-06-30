@@ -8,7 +8,7 @@ const ReferenceSchema = new mongoose.Schema({
     unique: true
   },
   titleSlug: String,
-  references: Array,
+  references: Object,
   related: Array
 });
 

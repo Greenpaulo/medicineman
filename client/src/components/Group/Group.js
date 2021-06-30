@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { GroupInfoContext } from "../../context/GroupInfoState"
+import { checkLoading } from "../../helpers/helpers"
 
 const Group = (props) => {
   const { essences, getEssencesByGroup, loadingEssences, setLoadingEssences } = useContext(EssencesContext);
@@ -23,17 +24,6 @@ const Group = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
-  // Check data has loaded before render
-  let company, group;
-  let isLoading;
-  if (essences === null || groupInfo === null || loadingEssences === true || loadingGroup === true) {
-    isLoading = true
-  } else {
-    isLoading = false
-    // Assign variables
-    company = essences[0].company;
-    group = essences[0].group;
-  }
 
   const renderTable = (columnLength) => {
     return (
@@ -102,11 +92,15 @@ const Group = (props) => {
 
     return renderTable(columnLength);
   }
-  // const renderTable2 = () => {
-  //   if (essences.length > 120)
-  //   return renderTable(120);
-  // }
 
+  // Check data has loaded before render
+    let isLoading = checkLoading([essences, groupInfo], [loadingEssences, loadingGroup]); 
+    // Assign variables
+    let company, group;
+    if (isLoading === false) {
+      company = essences[0].company;
+      group = essences[0].group;
+    }
 
   return (
     <>

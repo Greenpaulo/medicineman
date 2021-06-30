@@ -17,15 +17,18 @@ exports.getAllReferences = asyncHandler(async (req, res, next) => {
 exports.getAllReferenceTitles = asyncHandler(async (req, res, next) => {
     const references = await Reference.find();
 
-    const getTitlesFromData = (references) => {
+    const getTitlesAndSlugsFromData = (references) => {
       let titles = [];
       references.forEach(ref => {
-        titles.push(ref.title)
+        titles.push({
+          title: ref.title,
+          slug: ref.titleSlug
+        })
       })
       return titles;
     };
 
-    const titles = getTitlesFromData(references)
+    const titles = getTitlesAndSlugsFromData(references)
     
     checkLengthAndSend(res, titles, next)
 });

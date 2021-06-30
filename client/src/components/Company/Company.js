@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { GroupInfoContext } from "../../context/GroupInfoState"
+import { checkLoading } from "../../helpers/helpers";
 
 const Company = (props) => {
   const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);
@@ -19,12 +20,7 @@ const Company = (props) => {
   }, [])
 
   // Check data has loaded before render
-  let isLoading;
-  if (groupInfo === null || groups === null || loadingGroup === true) {
-    isLoading = true
-  } else {
-    isLoading = false
-  }
+  let isLoading = checkLoading([groupInfo, groups], [loadingGroup]);
 
   return (
     <>

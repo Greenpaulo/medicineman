@@ -7,6 +7,7 @@ const SideNav = () => {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/medicine">Medicine</Link></li>
+            <li><Link to="/crossreference">Cross Reference</Link></li>
             <li><Link to="/education">Education</Link></li>
             <li><Link to="#">About</Link></li>
             <li><Link to="#">Contact</Link></li>

@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
+import { checkLoading } from "../../helpers/helpers"
 
 const Essence = (props) => {
   const { essence, getEssenceByName, setLoadingEssences, loadingEssences } = useContext(EssencesContext);
@@ -17,7 +18,6 @@ const Essence = (props) => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  // console.log(essence)
 
   
   const renderDescription = () => {
@@ -46,12 +46,7 @@ const Essence = (props) => {
   }
 
   // Check data has loaded before render
-  let isLoading;
-  if (essence === null || loadingEssences === true ) {
-    isLoading = true
-  } else {
-    isLoading = false
-  }
+  let isLoading = checkLoading([essence], [loadingEssences]);
   
   return (
     <>

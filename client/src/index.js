@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 
 import { EssencesProvider } from './context/EssencesState';
 import { GroupInfoProvider } from './context/GroupInfoState';
+import { ReferencesProvider } from './context/ReferencesState';
 
 ReactDOM.render(
   <React.StrictMode>
     <EssencesProvider>
       <GroupInfoProvider>
-        <App /> 
+        <ReferencesProvider>
+          <App /> 
+        </ReferencesProvider>
       </GroupInfoProvider>
     </EssencesProvider>
   </React.StrictMode>,
