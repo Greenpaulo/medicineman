@@ -33,6 +33,7 @@ const EssenceSchema = new mongoose.Schema({
   meridiansSecondary: Array,
   elements: Array,
   keywords: Array,
+  images: Array,
   stock: Boolean
 });
 

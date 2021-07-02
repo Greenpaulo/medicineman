@@ -1,0 +1,16 @@
+section#top-nav {
+  display: flex;
+}
+
+nav#essence-nav {
+  margin-top: 0;
+  padding-top: 5rem;
+  margin-left: auto;
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -5,7 +5,12 @@
   padding-top: 5rem;
 }
 
+#company-subheading {
+  margin-top: 2rem;
+}
+
 section#essence-info {
+  display: flex;
   padding-top: 2rem;
 }
 
@@ -16,6 +21,11 @@ a {
 
 section#essence-effects {
   margin: 1.5rem 0;
+}
+
+#essence-img {
+  max-height: 400px;
+  // height: auto;
 }
 
 .essence-effect {

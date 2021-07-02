@@ -1,0 +1,17 @@
+#references {
+  p.essence {
+    margin: 0.5rem 0;
+  }
+}
+
+.reference {
+  margin: 2rem 0;
+}
+
+.indication {
+  margin: 1rem 0;
+}
+
+.indication::first-letter {
+  text-transform: capitalize;
+}

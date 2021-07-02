@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading } from "../../helpers/helpers"
+import slugify from 'slugify'
 
 const Reference = (props) => {
   const { references, getSingleReference, setLoadingReferences, loadingReferences } = useContext(ReferencesContext);
@@ -34,7 +35,7 @@ const Reference = (props) => {
   const renderEssences = (desc) => {
     console.log(indications[desc])
     return indications[desc].map(essence => (
-      <Link to='#'>{essence}</Link>
+      <p className="essence"><Link to={`/essence/${slugify(essence, { lower: true, replacement: '_' })}`}>- {essence}</Link></p>
     ))
   }
   
@@ -50,9 +51,9 @@ const Reference = (props) => {
         <div className="container">
           <h1 id="essence-heading">{references[0].title}</h1>
           <section id="essence-info">
-            <ul>
+            <ul id="references">
               {descriptions.map(desc => (
-                <li>{desc} - {renderEssences(desc)}</li>
+                <li className="reference"><h4 className="indication">{desc}</h4>{renderEssences(desc)}</li>
               ))}
             </ul>
           </section>

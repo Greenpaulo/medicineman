@@ -4,6 +4,7 @@ import Landing from '../Landing/Landing'
 import SideNav from '../SideNav/SideNav'
 import Medicine from '../Medicine/Medicine'
 import Essence from '../Essence/Essence'
+import EssenceKeywords from '../EssenceKeywords/EssenceKeywords'
 import Company from '../Company/Company'
 import Group from '../Group/Group'
 import CrossReference from '../CrossReference/CrossReference'
@@ -18,6 +19,7 @@ const App = () => {
       <Route exact path='/' component={Landing} />
       <Route path='/medicine' component={Medicine} />
       <Route path='/essence/:name' component={Essence} />
+      <Route exact path='/essence/:name/:keywords' component={EssenceKeywords} />
       <Route exact path='/company/:company' component={Company} />
       <Route path='/company/:company/:group' component={Group} />
       <Route exact path='/crossreference' component={CrossReference} />
