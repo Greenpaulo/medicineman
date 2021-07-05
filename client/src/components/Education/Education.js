@@ -2,7 +2,7 @@
 const Education = () => {
   return (
     <div className="container">
-      <h1 id="section-heading">Education</h1>
+      <h1 className="section-heading">Education</h1>
       <section id="education-intro">
         <div id="text-section-1">
           {/* <p>Welcome to the education section of the website!</p> */}

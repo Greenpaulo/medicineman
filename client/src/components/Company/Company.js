@@ -38,9 +38,9 @@ const Company = (props) => {
               <p>{paragraph}</p>
             ))}
 
-            <ul>
+            <ul id="group-list">
               {groups.map(group => (
-                <li key={group.name}><Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`}>{group.name}</Link></li>
+                <li key={group.name}><Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`} className="group-link" >{group.name}</Link></li>
               ))}
             </ul>
               

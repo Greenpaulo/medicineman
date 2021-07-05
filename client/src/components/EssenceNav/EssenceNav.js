@@ -1,15 +1,31 @@
-import { Link } from 'react-router-dom'
 
 const EssenceNav = ({ essence }) => {
+
+  const showDescription = () => {
+    document.getElementById("description").style.display = "flex"
+    document.getElementById("chakrasMeridians").style.display = "none"
+    document.getElementById("gallery").style.display = "none"
+  }
+  const showChakrasMeridians = () => {
+    document.getElementById("description").style.display = "none"
+    document.getElementById("chakrasMeridians").style.display = "block"
+    document.getElementById("gallery").style.display = "none"
+  }
+  const showGallery = () => {
+    document.getElementById("description").style.display = "none"
+    document.getElementById("chakrasMeridians").style.display = "none"
+    document.getElementById("gallery").style.display = "block"
+  }
+  
   
   return (
     <section  id="top-nav">
       <h1 id="essence-heading">{essence.name}</h1>
       <nav id="essence-nav">
         <ul>
-          <li><Link to={`/essence/${essence.nameSlug}`}>Description</Link></li>
-          <li><Link to={`/essence/${essence.nameSlug}/keywords`}>Keywords</Link></li>
-          <li><Link to={`/essence/${essence.nameSlug}/gallery`}>Gallery</Link></li>
+          <li id="description-link"onClick={() => showDescription()}>Description</li>
+          <li id="chakrasMeridians-link"onClick={() => showChakrasMeridians()}>Chakras & Meridians</li>
+          <li id="gallery-link"onClick={() => showGallery()}>Gallery</li>
         </ul>
       </nav>
     </section>

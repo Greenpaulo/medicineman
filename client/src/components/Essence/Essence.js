@@ -33,6 +33,19 @@ const Essence = (props) => {
       }
     }
 
+  const renderIndications = () => {
+    if (essence.indications.length > 0) {
+      return (
+        <section id="essence-indications">
+          <h3>Indications</h3>
+          {essence.indications.map(indication => (
+            <p className="essence-indication">{indication}</p>
+          ))}
+        </section>
+      )   
+    }
+  }
+
   const renderEffects = () => {
     if (essence.effects.length > 0) {
       return (
@@ -40,6 +53,32 @@ const Essence = (props) => {
           <h3>Effects</h3>
           {essence.effects.map(effect => (
             <p className="essence-effect">{effect}</p>
+          ))}
+        </section>
+      )   
+    }
+  }
+
+  const renderChakras = () => {
+    if (essence.chakras.length > 0) {
+      return (
+        <section id="chakras">
+          <h3>Chakra resonance</h3>
+          {essence.chakras.map(chakra => (
+            <p className="chakra">{chakra}</p>
+          ))}
+        </section>
+      )   
+    }
+  }
+
+  const renderMeridians = () => {
+    if (essence.meridians.length > 0) {
+      return (
+        <section id="meridians">
+          <h3>Meridian resonance</h3>
+          {essence.meridians.map(meridian => (
+            <p className="meridian">{meridian}</p>
           ))}
         </section>
       )   
@@ -67,13 +106,22 @@ const Essence = (props) => {
         <div className="container">
           <EssenceNav essence={essence}/>
           <h3 id="company-subheading"><Link to={`/company/${essence.company}`}>{essence.company}</Link></h3>
-          <section id="essence-info">
+          <section id="description">
             <div id="essence-text">
               {renderDescription()}
+              {renderIndications()}
               {renderEffects()}
             </div>
-            <img id="essence-img" src={renderImagePath()} alt="" />
-            {/* <img id="essence-img" src={`/images/${essence.images[0]}`} alt="" /> */}
+            <div id="essence-main-img">
+              <img id="essence-img" src={renderImagePath()} alt="" />
+            </div>
+          </section>
+          <section id="chakrasMeridians">
+            {renderChakras()}
+            {renderMeridians()}
+          </section>
+          <section id="gallery">
+            <p>gallery...........</p>
           </section>
         </div>
       }

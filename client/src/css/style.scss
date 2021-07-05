@@ -41,8 +41,9 @@ li {
 }
 
 // Section heading
-#section-heading {
-  font-family: 'Dawning of a New Day', cursive;
-  font-size: 5rem;
+.section-heading {
+  // font-family: 'Dawning of a New Day', cursive;
+  font-size: 3rem;
+  font-weight: 400;
   padding-top: 5rem;
 }

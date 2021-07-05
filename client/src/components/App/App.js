@@ -18,7 +18,7 @@ const App = () => {
       <Route path='/' component={SideNav} />
       <Route exact path='/' component={Landing} />
       <Route path='/medicine' component={Medicine} />
-      <Route path='/essence/:name' component={Essence} />
+      <Route exact path='/essence/:name' component={Essence} />
       <Route exact path='/essence/:name/:keywords' component={EssenceKeywords} />
       <Route exact path='/company/:company' component={Company} />
       <Route path='/company/:company/:group' component={Group} />

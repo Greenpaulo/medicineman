@@ -9,7 +9,7 @@
   margin-top: 2rem;
 }
 
-section#essence-info {
+section#description {
   display: flex;
   padding-top: 2rem;
 }
@@ -19,19 +19,39 @@ a {
   color: black;
 }
 
+#essence-text {
+  width: 1000px;
+  margin-right: 2rem;
+}
+
+section#essence-indications,
 section#essence-effects {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2rem 0;
 }
 
-#essence-img {
-  max-height: 400px;
-  // height: auto;
-}
-
+.essence-indication,
 .essence-effect {
   margin: 0.5rem 0;
 }
 
+.essence-indication::first-letter,
 .essence-effect::first-letter {
   text-transform: capitalize;
+}
+
+#essence-main-img {
+  height: 400px;
+  width: 400px;
+  // margin: 0;
+}
+
+img#essence-img {
+  max-width: 400px;
+  margin: auto;
+}
+
+section#chakrasMeridians,
+section#gallery {
+  display: none;
+  padding-top: 2rem;
 }
