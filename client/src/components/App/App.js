@@ -2,6 +2,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import Landing from '../Landing/Landing'
 import SideNav from '../SideNav/SideNav'
+import Intro from '../Intro/Intro'
 import Medicine from '../Medicine/Medicine'
 import Essence from '../Essence/Essence'
 import EssenceKeywords from '../EssenceKeywords/EssenceKeywords'
@@ -17,6 +18,7 @@ const App = () => {
     <BrowserRouter>
       <Route path='/' component={SideNav} />
       <Route exact path='/' component={Landing} />
+      <Route path='/intro' component={Intro} />
       <Route path='/medicine' component={Medicine} />
       <Route exact path='/essence/:name' component={Essence} />
       <Route exact path='/essence/:name/:keywords' component={EssenceKeywords} />

@@ -1,6 +1,6 @@
 section#sidenav {
   height: 80vh;
-  width: 10vw;
+  width: 12vw;
   // background-color: #312450;
   position: fixed;
   border-right: 5px solid pink;
@@ -12,8 +12,8 @@ section#sidenav {
 
   ul {
     list-style: none;
-    height: 77%;
-    margin-top: 8rem;
+    height: 76%;
+    margin-top: -2rem;
     // text-align: center;
   }
 
@@ -22,21 +22,36 @@ section#sidenav {
   }
 
   li a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
   }
 
+  li#logo-link {
+    font-family: 'Dawning of a New Day', cursive;
+    font-weight: 600;
+    width: 80%;
+    padding-right: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+
+    a {
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
   #links {
     display: grid;
     grid-template-columns: repeat(2, 20px);
-    grid-column-gap: 45px;
-    grid-row-gap: 25px;
-    margin: 10px 0 0 5px;
+    grid-column-gap: 37px;
+    grid-row-gap: 17px;
+    margin: 160px 0 0 5px;
     border-top: 5px solid #b3ec68;
     width: 62%;
-    padding-top: 36px;
+    padding-top: 27px;
 
     i.fa-facebook,
     i.fa-twitter,

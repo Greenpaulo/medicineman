@@ -1,6 +1,7 @@
 @import '../components/App/App';
 @import '../components/Landing/Landing';
 @import '../components/SideNav/SideNav';
+@import '../components/Intro/Intro';
 @import '../components/Medicine/Medicine';
 @import '../components/Essence/Essence';
 @import '../components/EssenceNav/EssenceNav';
@@ -27,7 +28,7 @@ html {
   line-height: 1.8em;
   // color: #333;
   // background-color: #eee;
-  width: 80vw;
+  width: 82vw;
   margin: auto;
 }
 
@@ -37,7 +38,7 @@ li {
 
 // Section container
 .container {
-  margin-left: 14vw;
+  margin-left: 16vw;
 }
 
 // Section heading

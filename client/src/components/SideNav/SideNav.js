@@ -5,12 +5,14 @@ const SideNav = () => {
 			<section id="sidenav">
         <nav id="main-nav">
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <li id="logo-link"><Link to="/">Medicine Man</Link></li>
+            {/* <li><Link to="/">Home</Link></li> */}
+            <li><Link to="/intro">Introduction</Link></li>
             <li><Link to="/medicine">Medicine</Link></li>
             <li><Link to="/crossreference">Cross Reference</Link></li>
             <li><Link to="/education">Education</Link></li>
             <li><Link to="#">About</Link></li>
-            <li><Link to="#">Contact</Link></li>
+            {/* <li><Link to="#">Contact</Link></li> */}
           </ul>
           <div id="links">
             <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
