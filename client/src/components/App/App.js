@@ -11,6 +11,8 @@ import Group from '../Group/Group'
 import CrossReference from '../CrossReference/CrossReference'
 import Reference from '../Reference/Reference'
 import Education from '../Education/Education'
+import Beginner from '../Beginner/Beginner'
+import Advanced from '../Advanced/Advanced'
 
 
 const App = () => {
@@ -26,7 +28,9 @@ const App = () => {
       <Route path='/company/:company/:group' component={Group} />
       <Route exact path='/crossreference' component={CrossReference} />
       <Route path='/crossreference/:reference' component={Reference} />
-      <Route path='/education' component={Education} />
+      <Route exact path='/education' component={Education} />
+      <Route path='/education/beginner' component={Beginner} />
+      <Route path='/education/advanced' component={Advanced} />
     </BrowserRouter>
   );
 }

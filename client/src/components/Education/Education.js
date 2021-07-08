@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 const Education = () => {
   return (
@@ -15,9 +16,9 @@ const Education = () => {
         <div id="text-section-2">
           <p>This information has been split up into 2 sections:</p>
 
-          <p>BEGINNER – If you are totally new to traditional medicine and you’ve only ever taken prescription drugs from your doctor, then start here.</p>
+          <p><Link to="/education/beginner">BEGINNER</Link> – If you are totally new to traditional medicine and you’ve only ever taken prescription drugs from your doctor, then start here.</p>
 
-          <p>ADVANCED – This section is for those who have been previously using traditional medicine and understand the body/mind/spirit paradigm and have moved beyond “body = machine”. Here you will find in-depth information on my understanding on health and disease, and ultimately life itself.</p>
+          <p><Link to="/education/advanced">ADVANCED</Link>  – This section is for those who have been previously using traditional medicine and understand the body/mind/spirit paradigm and have moved beyond “body = machine”. Here you will find in-depth information on my understanding on health and disease, and ultimately life itself.</p>
         </div>
       </section>
     </div>
