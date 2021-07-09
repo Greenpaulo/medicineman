@@ -47,4 +47,28 @@ li {
   font-size: 3rem;
   font-weight: 400;
   padding-top: 5rem;
+  text-align: center;
+}
+
+.heading-underline {
+  height: 5px;
+  width: 130px;
+  background-color: pink;
+  margin: 27px auto;
+}
+
+section.section-intro {
+  padding-top: 2rem;
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  div.section-text {
+    width: 75%;
+    padding-bottom: 2rem;
+    margin: auto;
+  }
 }

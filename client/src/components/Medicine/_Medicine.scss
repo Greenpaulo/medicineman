@@ -1,0 +1,45 @@
+#company-links {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-row-gap: 1.5rem;
+  // justify-content: space-between;
+  // width: 95%;
+  margin-top: 2rem;
+  text-align: center;
+
+  .page-link:nth-child(1),
+  .page-link:nth-child(3) {
+    background-color: rgb(248, 245, 245);
+  }
+  .page-link:nth-child(2),
+  .page-link:nth-child(4) {
+    // background-color: rgb(248, 219, 224);
+    background-color: pink;
+  }
+}
+
+.company-link {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+  // padding: 2rem 3rem 3rem 3rem;
+  text-align: center;
+  margin: auto;
+
+  img {
+    height: 135px;
+    margin-bottom: 1rem;
+  }
+
+  img#indigo-logo {
+    width: 514px;
+    height: 100px;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    padding-right: 16rem;
+  }
+}
+
+#indigo-link {
+  padding-bottom: 1rem;
+}

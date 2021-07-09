@@ -7,6 +7,7 @@ const Landing = () => {
         {/* <img id="underline" src="images/swirl-line.png" alt="" /> */}
       </div>
       <img id="tree" src="images/tree_of_life.jpg" alt="" />
+      {/* <img id="tree" src="images/tree.svg" alt="" /> */}
     </div>
   )
 }
