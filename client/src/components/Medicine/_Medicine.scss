@@ -1,3 +1,7 @@
+#medicine-intro-text {
+  padding-bottom: 0;
+}
+
 #company-links {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -7,21 +11,16 @@
   margin-top: 2rem;
   text-align: center;
 
-  .page-link:nth-child(1),
-  .page-link:nth-child(3) {
-    background-color: rgb(248, 245, 245);
-  }
-  .page-link:nth-child(2),
-  .page-link:nth-child(4) {
-    // background-color: rgb(248, 219, 224);
-    background-color: pink;
-  }
+  // .company-link:nth-child(even) {
+  //   border: 8px solid var(--secondary);
+  // }
 }
 
 .company-link {
-  height: 250px;
-  width: 250px;
-  border-radius: 15px;
+  height: 275px;
+  width: 275px;
+  border-radius: 50px;
+  border: 8px solid var(--secondary);
   // padding: 2rem 3rem 3rem 3rem;
   text-align: center;
   margin: auto;
@@ -29,6 +28,7 @@
   img {
     height: 135px;
     margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 
   img#indigo-logo {

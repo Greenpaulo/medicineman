@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { GroupInfoContext } from "../../context/GroupInfoState"
-import { checkLoading, renderCompanyName } from "../../helpers/helpers";
+import { checkLoading, renderCompanyName } from "../../helpers/helpers"
 import CompanyDescription from '../CompanyDescription/CompanyDescription'
+import VineBorder from '../VineBorder/VineBorder'
 
 const Company = (props) => {
   const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);
@@ -25,9 +26,13 @@ const Company = (props) => {
 
   const renderLogo = () => {
     if (groupInfo[0].company === 'Living Tree Orchid Essences') {
-      return <img src="/images/company-logos/ltoe.gif" id="description-logo" />
+      return (
+        // <div id="company-logo-with-border">
+          <img src="/images/company-logos/ltoe.gif" id="description-logo" alt="orchid essence logo"/>
+        // </div>
+      )
     }
-    return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} id="description-logo" />
+    return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} id="description-logo" alt="essences producer's logo"/>
   }
 
 
@@ -41,7 +46,7 @@ const Company = (props) => {
 
       {!isLoading &&
         <div className="container">
-          {renderCompanyName(groupInfo)}
+          {renderCompanyName(groupInfo[0].company)}
           {renderLogo()}
           <section id="company-info">
             <CompanyDescription groupInfo={groupInfo[0]}/>

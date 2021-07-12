@@ -16,6 +16,8 @@
 @import '../components/Reference/Reference';
 @import '../components/Education/Education';
 @import '../components/Spiral/Spiral';
+@import '../components/VineUnderline/VineUnderline';
+@import '../components/VineBorder/VineBorder';
 
 // vars
 :root {
@@ -67,7 +69,7 @@ li {
 .heading-underline {
   height: 5px;
   width: 130px;
-  background-color: pink;
+  background-color: var(--secondary);
   margin: 27px auto;
 }
 

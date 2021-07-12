@@ -11,9 +11,8 @@ export function checkLoading ( resources, loaders) {
   return false;
 }
 
-export const renderCompanyName = (groupInfo) => {
-    if (groupInfo) {
-      switch(groupInfo[0].company) {
+export const renderCompanyName = (company) => {
+      switch(company) {
         case 'ABFE':
           return <h1 id="company-heading">Australian Bush Flower Essences</h1> 
         case 'Alaskan':
@@ -29,9 +28,6 @@ export const renderCompanyName = (groupInfo) => {
         case 'WEAE':
           return <h1 id="company-heading">Wild Earth Animal Essences</h1> 
         default:
-          return <h1 id="company-heading">{groupInfo[0].company}</h1> 
+          return <h1 id="company-heading">{company}</h1> 
       }
-    } else {
-      return;
-    }
   }

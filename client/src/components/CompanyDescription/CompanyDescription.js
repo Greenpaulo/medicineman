@@ -1,3 +1,4 @@
+import uuid from 'react-uuid'
 import Alaskan from '../Descriptions/Alaskan/Alaskan'
 import Bach from '../Descriptions/Bach/Bach'
 import Indigo from '../Descriptions/Indigo/Indigo'
@@ -5,8 +6,6 @@ import Pacific from '../Descriptions/Pacific/Pacific'
 import WEAE from '../Descriptions/WEAE/WEAE'
 
 const GroupDescription = ({groupInfo}) => {
-
-  console.log(groupInfo)
 
   const renderDescription = () => {
     switch (groupInfo.company) {
@@ -24,7 +23,7 @@ const GroupDescription = ({groupInfo}) => {
         return (
           <div>
             {groupInfo.description.map(paragraph => (
-                <p>{paragraph}</p>
+                <p key={uuid()}>{paragraph}</p>
               ))}
           </div>
         )

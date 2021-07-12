@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, renderCompanyName } from "../../helpers/helpers"
+import uuid from 'react-uuid'
 
 const Group = (props) => {
   const { essences, getEssencesByGroup, loadingEssences, setLoadingEssences } = useContext(EssencesContext);
@@ -36,7 +37,7 @@ const Group = (props) => {
                   if (index > 0 && index <= columnLength) {
                     return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
                   }
-                    return <li></li>
+                    return <li key={essence.name}></li>
                   }
                 )}
               </ul>
@@ -45,9 +46,9 @@ const Group = (props) => {
               <ul>
                 {essences.map((essence, index) => {
                   if (index > columnLength && index <= columnLength*2 ) {
-                    return <li><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
+                    return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
                   }
-                    return <li></li>
+                    return <li key={essence.name}></li>
                   }
                 )}
               </ul>
@@ -56,9 +57,9 @@ const Group = (props) => {
               <ul>
                 {essences.map((essence, index) => {
                   if (index > columnLength*2 && index <= columnLength*3) {
-                    return <li><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
+                    return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
                   }
-                    return <li></li>
+                    return <li key={essence.name}></li>
                   }
                 )}
               </ul>
@@ -67,9 +68,9 @@ const Group = (props) => {
               <ul>
                 {essences.map((essence, index) => {
                   if (index > columnLength*3 && index <= columnLength*4) {
-                    return <li><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
+                    return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
                   }
-                    return <li></li>
+                    return <li key={essence.name}></li>
                   }
                 )}
               </ul>
@@ -96,9 +97,9 @@ const Group = (props) => {
   // Check data has loaded before render
     let isLoading = checkLoading([essences, groupInfo], [loadingEssences, loadingGroup]); 
     // Assign variables
-    let company, group;
+    let group;
     if (isLoading === false) {
-      company = essences[0].company;
+      // company = essences[0].company;
       group = essences[0].group;
     }
 
@@ -112,11 +113,11 @@ const Group = (props) => {
 
       {!isLoading &&
         <div className="container">
-          {renderCompanyName(groupInfo)}
+          {renderCompanyName(groupInfo[0].company)}
           <h2 id="group-heading">{group}</h2>
           <section id="group-info">
             {groupInfo[0].description.map(paragraph => (
-              <p>{paragraph}</p>
+              <p key={uuid()}>{paragraph}</p>
             ))}
             {renderTable1()}
           </section>

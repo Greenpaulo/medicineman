@@ -24,10 +24,20 @@ const EssenceKeywords = (props) => {
   let isLoading = checkLoading([essence], [loadingEssences]);
 
   return (
-    <div className="container">
-      <EssenceNav essence={essence}/>
-      <h3 className="section-heading">Keywords</h3>
-    </div>
+    <>
+      {isLoading && 
+        <div className="container">
+          <h1>Loading</h1>
+        </div>
+      }
+
+      {!isLoading &&
+        <div className="container">
+          <EssenceNav essence={essence}/>
+          <h3 className="section-heading">Keywords</h3>
+        </div>
+      }
+    </>
   )
 }
 

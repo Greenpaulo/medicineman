@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { checkLoading } from "../../helpers/helpers"
 import EssenceNav from "../EssenceNav/EssenceNav"
+import uuid from 'react-uuid'
 
 const Essence = (props) => {
   const { essence, getEssenceByName, setLoadingEssences, loadingEssences } = useContext(EssencesContext);
@@ -26,7 +27,7 @@ const Essence = (props) => {
       return (
         <section id="essence-description">
           {essence.description.map(paragraph => (
-            <p>{paragraph}</p>
+            <p key={uuid()} >{paragraph}</p>
           ))}
         </section>
         )   
@@ -39,7 +40,7 @@ const Essence = (props) => {
         <section id="essence-indications">
           <h3>Indications</h3>
           {essence.indications.map(indication => (
-            <p className="essence-indication">{indication}</p>
+            <p key={uuid()} className="essence-indication">{indication}</p>
           ))}
         </section>
       )   
@@ -52,7 +53,7 @@ const Essence = (props) => {
         <section id="essence-effects">
           <h3>Effects</h3>
           {essence.effects.map(effect => (
-            <p className="essence-effect">{effect}</p>
+            <p key={uuid()} className="essence-effect">{effect}</p>
           ))}
         </section>
       )   
@@ -65,7 +66,7 @@ const Essence = (props) => {
         <section id="chakras">
           <h3>Chakra resonance</h3>
           {essence.chakras.map(chakra => (
-            <p className="chakra">{chakra}</p>
+            <p key={uuid()} className="chakra">{chakra}</p>
           ))}
         </section>
       )   
@@ -78,7 +79,7 @@ const Essence = (props) => {
         <section id="meridians">
           <h3>Meridian resonance</h3>
           {essence.meridians.map(meridian => (
-            <p className="meridian">{meridian}</p>
+            <p key={uuid()} className="meridian">{meridian}</p>
           ))}
         </section>
       )   

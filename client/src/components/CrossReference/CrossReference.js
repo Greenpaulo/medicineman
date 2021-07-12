@@ -22,8 +22,6 @@ const CrossReference = () => {
   // Check data has loaded before render
   let isLoading = checkLoading([referenceTitles], [loadingReferences]);
 
-  console.log(referenceTitles)
-  
   return (
     <>
       {isLoading && 
