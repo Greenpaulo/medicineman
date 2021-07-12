@@ -13,11 +13,11 @@ const Medicine = () => {
       </section>
       <section id="company-links">
         <Link to="/company/alaskan" className="company-link">
-          <img src="images/company-logos/alaskan.gif" alt="" />
+          <img src="images/company-logos/alaskan.gif" alt="Alaskan Essences logo" />
           <h4>Alaskan Essences</h4>
         </Link>
         <Link to="/company/abfe" className="company-link">
-          <img src="images/company-logos/abfe.gif" alt="" />
+          <img src="images/company-logos/abfe.gif" alt="Bush Flower Essences logo" />
           <h4>Australian Bush Flower Essences</h4>
         </Link>
         <Link to="/company/bach" className="company-link">
@@ -29,15 +29,15 @@ const Medicine = () => {
           <h4>Bailey Essences</h4>
         </Link>
         <Link to="/company/indigo" className="company-link" id="indigo-link">
-          <img src="images/company-logos/indigo.png" id="indigo-logo" alt="" />
+          <img src="images/company-logos/indigo.gif" id="indigo-logo" alt="" />
           <h4>Indigo Essences</h4>
         </Link>
         <Link to="/company/living_tree_orchid_essences" className="company-link">
-          <img src="images/company-logos/ltoe2.jpg" alt="" />
+          <img src="images/company-logos/ltoe.gif" alt="" />
           <h4>Living Tree Orchid Essences</h4>
         </Link>
         <Link to="/company/pacific" className="company-link">
-          <img src="images/company-logos/pacific.png" alt="" />
+          <img src="images/company-logos/pacific.gif" alt="" />
           <h4>Pacific Essences</h4>
         </Link>
         <Link to="/company/weae" className="company-link">

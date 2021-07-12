@@ -13,6 +13,10 @@ table {
   margin: 2rem 0;
   border-top: pink 3px solid;
   padding: 2rem 0 0.7rem 0;
+
+  li {
+    list-style: none;
+  }
 }
 
 td {

@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { GroupInfoContext } from "../../context/GroupInfoState"
-import { checkLoading } from "../../helpers/helpers"
+import { checkLoading, renderCompanyName } from "../../helpers/helpers"
 
 const Group = (props) => {
   const { essences, getEssencesByGroup, loadingEssences, setLoadingEssences } = useContext(EssencesContext);
@@ -112,14 +112,13 @@ const Group = (props) => {
 
       {!isLoading &&
         <div className="container">
-          <h1 id="company-heading">{company}</h1>
+          {renderCompanyName(groupInfo)}
           <h2 id="group-heading">{group}</h2>
           <section id="group-info">
             {groupInfo[0].description.map(paragraph => (
               <p>{paragraph}</p>
             ))}
             {renderTable1()}
-              
           </section>
         </div>
       }

@@ -6,6 +6,11 @@
 @import '../components/Essence/Essence';
 @import '../components/EssenceNav/EssenceNav';
 @import '../components/Company/Company';
+@import '../components/Descriptions/Alaskan/Alaskan';
+@import '../components/Descriptions/Bach/Bach';
+@import '../components/Descriptions/Indigo/Indigo';
+@import '../components/Descriptions/Pacific/Pacific';
+@import '../components/Descriptions/WEAE/WEAE';
 @import '../components/Group/Group';
 @import '../components/CrossReference/CrossReference';
 @import '../components/Reference/Reference';
@@ -33,7 +38,7 @@ html {
 }
 
 li {
-  list-style: none;
+  margin-left: 2rem;
 }
 
 // Section container

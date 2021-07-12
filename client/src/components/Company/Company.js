@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { GroupInfoContext } from "../../context/GroupInfoState"
-import { checkLoading } from "../../helpers/helpers";
+import { checkLoading, renderCompanyName } from "../../helpers/helpers";
+import CompanyDescription from '../CompanyDescription/CompanyDescription'
 
 const Company = (props) => {
   const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);
@@ -22,6 +23,14 @@ const Company = (props) => {
   // Check data has loaded before render
   let isLoading = checkLoading([groupInfo, groups], [loadingGroup]);
 
+  const renderLogo = () => {
+    if (groupInfo[0].company === 'Living Tree Orchid Essences') {
+      return <img src="/images/company-logos/ltoe.gif" id="description-logo" />
+    }
+    return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} id="description-logo" />
+  }
+
+
   return (
     <>
       {isLoading && 
@@ -32,18 +41,21 @@ const Company = (props) => {
 
       {!isLoading &&
         <div className="container">
-          <h1 id="company-heading">{groupInfo[0].company}</h1>
+          {renderCompanyName(groupInfo)}
+          {renderLogo()}
           <section id="company-info">
-            {groupInfo[0].description.map(paragraph => (
-              <p>{paragraph}</p>
-            ))}
+            <CompanyDescription groupInfo={groupInfo[0]}/>
+          </section>
 
+          <div className="section-underline"></div>
+
+          <section id="group-links">
+            <h2>Essence Sets</h2>
             <ul id="group-list">
               {groups.map(group => (
                 <li key={group.name}><Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`} className="group-link" >{group.name}</Link></li>
               ))}
             </ul>
-              
           </section>
         </div>
       }
