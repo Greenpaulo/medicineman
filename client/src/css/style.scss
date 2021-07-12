@@ -15,6 +15,15 @@
 @import '../components/CrossReference/CrossReference';
 @import '../components/Reference/Reference';
 @import '../components/Education/Education';
+@import '../components/Spiral/Spiral';
+
+// vars
+:root {
+  --primary: pink;
+  // --secondary: #b3ec68;
+  --secondary: #ffd4bf;
+  // --secondary: #ffbfea;
+}
 
 // Reset
 * {

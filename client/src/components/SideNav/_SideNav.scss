@@ -8,12 +8,14 @@ section#sidenav {
 
   nav#main-nav {
     height: 74%;
+    margin-right: 2rem;
   }
 
   ul {
     list-style: none;
     height: 76%;
     margin-top: -2rem;
+
     // text-align: center;
   }
 
@@ -22,10 +24,17 @@ section#sidenav {
   }
 
   li a {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 30px;
+      margin-right: 1rem;
+    }
   }
 
   li#logo-link {
@@ -34,7 +43,7 @@ section#sidenav {
     width: 80%;
     padding-right: 4rem;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 
     a {
       text-transform: capitalize;
@@ -48,17 +57,18 @@ section#sidenav {
     grid-template-columns: repeat(2, 20px);
     grid-column-gap: 37px;
     grid-row-gap: 17px;
-    margin: 160px 0 0 5px;
-    border-top: 5px solid #b3ec68;
-    width: 62%;
+    margin: 160px 0 0 15px;
+    border-top: 5px solid var(--secondary);
+    width: 70%;
     padding-top: 27px;
+    padding-left: 27px;
+    justify-items: center;
 
     i.fa-facebook,
     i.fa-twitter,
     i.fa-youtube,
     i.fa-instagram {
-      // color: #8dc73f;
-      color: #b3ec68;
+      color: var(--secondary);
     }
   }
 }

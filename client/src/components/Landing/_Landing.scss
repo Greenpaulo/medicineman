@@ -1,8 +1,8 @@
 #logo-h1 {
+  max-width: 448px;
   color: black;
   font-size: 6.1rem;
   margin-top: 17rem;
-  // margin-right: 0rem;
   line-height: 6.8rem;
   font-weight: 600;
   text-align: center;
@@ -15,11 +15,11 @@
   display: flex;
   // margin-top: 3rem;
 
-  img#underline {
-    height: 50px;
-    margin-top: 35px;
-    margin-left: 35px;
-  }
+  // img#underline {
+  //   height: 50px;
+  //   margin-top: 35px;
+  //   margin-left: 35px;
+  // }
 
   img#tree {
     height: 93vh;

@@ -2,7 +2,7 @@
 const Bach = () => {
   return (
     <div>
-      <h3>Dr Edward Bach</h3>
+      <h2>Dr Edward Bach</h2>
       <p>Edward Bach used his training and experience in bacteriology, vaccine therapy and homeopathy to lead him to a totally new philosophy of wellness. The culmination of his work was the creation of the 38 Bach flower remedies also known globally as Bachblüten, Flores de Bach, Bach flower essences and Bach flowers.</p>
       
       <h4>Formative Years</h4>
