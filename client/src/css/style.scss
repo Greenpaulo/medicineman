@@ -1,3 +1,4 @@
+@import './utils';
 @import '../components/App/App';
 @import '../components/Landing/Landing';
 @import '../components/SideNav/SideNav';
@@ -41,7 +42,8 @@ html {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  line-height: 1.8em;
+  // line-height: 1.8em;
+  line-height: 2em;
   // color: #333;
   // background-color: #eee;
   width: 82vw;

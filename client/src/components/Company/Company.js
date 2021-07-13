@@ -35,7 +35,6 @@ const Company = (props) => {
     return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} id="description-logo" alt="essences producer's logo"/>
   }
 
-
   return (
     <>
       {isLoading && 
@@ -54,13 +53,18 @@ const Company = (props) => {
 
           <div className="section-underline"></div>
 
-          <section id="group-links">
+          <section id="groups">
             <h2>Essence Sets</h2>
-            <ul id="group-list">
+            <div id="group-links">
               {groups.map(group => (
-                <li key={group.name}><Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`} className="group-link" >{group.name}</Link></li>
+                <div className="group-link">
+                  <Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`} className="group-link">    
+                    <img src={`/images/group-images/${group.slug}.png`} alt="" />
+                    {group.name}
+                  </Link>
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
         </div>
       }

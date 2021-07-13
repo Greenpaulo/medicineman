@@ -15,7 +15,7 @@ exports.getGroupInfo = asyncHandler(async (req, res, next) => {
 // @route     /groupinfo/:company
 // @access    Public
 exports.getGroupsByCompany = asyncHandler(async (req, res, next) => {
-    const info = await GroupInfo.find({ companySlug: req.params.company});
+    const info = await GroupInfo.find({ companySlug: req.params.company}).sort([['_id', 1]]);
 
     // Return just the group names and slugs
     let groupNames = [];

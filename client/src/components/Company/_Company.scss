@@ -35,8 +35,27 @@ section#company-info {
   background-color: pink;
 }
 
-section#group-links {
+section#groups {
   padding: 1rem 0 5rem 0;
+}
+
+#group-links {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-row-gap: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.group-link {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  font-size: 1.1rem;
+
+  img {
+    height: 215px;
+  }
 }
 
 #group-list {

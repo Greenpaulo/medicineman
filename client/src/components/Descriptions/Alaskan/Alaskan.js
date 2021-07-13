@@ -6,7 +6,7 @@ const Alaskan = () => {
         
       <p>Flower essences carry the life force, energy or energetic imprint of flowers. They are NOT essential oils and do NOT contain any physical material. The energy of the flowers communicates / resonates with our energy, as we are energy ourselves as well.</p>
       
-      <div id="uses-list">
+      <div id="uses-list" className="bg-secondary">
         <h4>Flower essences can be used for:</h4>
         <ul>
           <li>spiritual insight and development</li>
@@ -27,14 +27,20 @@ const Alaskan = () => {
         
         <p>We have designed a system of vibrational healing that is based on the co-creative relationship that exists between the plant, mineral, and elemental kingdoms. This threefold system derives its effectiveness from the special qualities of healing energy that each kingdom has to offer, and from the synergy that is created when these essences are used together.</p>
         
-        <h3>Flower Essences</h3>
-        <p>The plant kingdom occupies the central role in this co-creative relationship, bringing the gift of spiritual consciousness to the earth. Flower Essences catalyze growth in consciousness. They help us increase our awareness and understanding of our self and our life lessons. Flower Essences both educate and empower the person taking them. They help us get insights in old ways of thinking, doing, and being that are no longer contributing to our highest good. In other words, they help us see clearly what we are doing and how we are trapped in our own patterns. Essences help us find new ways of looking at our lives and ourselves.</p>
-        
-        <h3>Gem Elixirs</h3>
-        <p>The mineral kingdom helps us fully anchor and embody changes in consciousness that are catalyzed by the use of flower essences. Just as the rocks and soil of this planet provide structure and stability for the growth of the plant kingdom, gem elixirs stabilize and restructure our energy systems so that our physical bodies can maintain their balance as the consciousness within us grows and expands. Gem elixirs carry the energetic imprint/vibration of the mineral kingdom.</p>
-        
-        <h3>Environmental Essences</h3>
-        <p>The gift of the elemental kingdom is energy for change. The environment, through the elements of air, earth, fire, and water, supplies vital nourishment for all living things. Essences made from the environment provide the potent qualities of energy we need to create and sustain change at the core level of our beings. Environmental Essences bring life force to the healing processes catalyzed by the flowers. They are often used to bring vitality to someone who is not responding to other therapies or modalities due to a lack of energy</p>
+        <div className="bg-secondary py-1 px-2 mt-2 mb-1">
+          <h3>Flower Essences</h3>
+          <p>The plant kingdom occupies the central role in this co-creative relationship, bringing the gift of spiritual consciousness to the earth. Flower Essences catalyze growth in consciousness. They help us increase our awareness and understanding of our self and our life lessons. Flower Essences both educate and empower the person taking them. They help us get insights in old ways of thinking, doing, and being that are no longer contributing to our highest good. In other words, they help us see clearly what we are doing and how we are trapped in our own patterns. Essences help us find new ways of looking at our lives and ourselves.</p>
+        </div>
+
+        <div className="bg-primary py-1 px-2 my-1">
+          <h3>Gem Elixirs</h3>
+          <p>The mineral kingdom helps us fully anchor and embody changes in consciousness that are catalyzed by the use of flower essences. Just as the rocks and soil of this planet provide structure and stability for the growth of the plant kingdom, gem elixirs stabilize and restructure our energy systems so that our physical bodies can maintain their balance as the consciousness within us grows and expands. Gem elixirs carry the energetic imprint/vibration of the mineral kingdom.</p>
+        </div>
+
+        <div className="bg-tertiary py-1 px-2 my-1">
+          <h3>Environmental Essences</h3>
+          <p>The gift of the elemental kingdom is energy for change. The environment, through the elements of air, earth, fire, and water, supplies vital nourishment for all living things. Essences made from the environment provide the potent qualities of energy we need to create and sustain change at the core level of our beings. Environmental Essences bring life force to the healing processes catalyzed by the flowers. They are often used to bring vitality to someone who is not responding to other therapies or modalities due to a lack of energy</p>
+        </div>
       </div>
       
       <p>Besides the individual flower, gem and environmental essences, we also have Combination Fomulas. The Alaskan Combination Formulas are unique blends of our flower, gem and environmental essences. They possess a special co-creative synergy that is only possible when healing energies from the flower, mineral and elemental kingdoms are combined through focused intention. These formulas were born out of many years of research, observation and feedback received from clients and therapists around the world. Most of our Combination Formulas are also available as Sprays.", "Note: All our essences are made with organic Demeter Certified Biodynamic® brandy.</p>
