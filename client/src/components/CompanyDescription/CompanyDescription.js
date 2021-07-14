@@ -1,4 +1,5 @@
 import uuid from 'react-uuid'
+import ABFE from '../Descriptions/ABFE/ABFE'
 import Alaskan from '../Descriptions/Alaskan/Alaskan'
 import Bach from '../Descriptions/Bach/Bach'
 import Indigo from '../Descriptions/Indigo/Indigo'
@@ -9,6 +10,8 @@ const GroupDescription = ({groupInfo}) => {
 
   const renderDescription = () => {
     switch (groupInfo.company) {
+      case 'ABFE':
+        return <ABFE />
       case 'Alaskan':
         return <Alaskan />
       case 'Bach':

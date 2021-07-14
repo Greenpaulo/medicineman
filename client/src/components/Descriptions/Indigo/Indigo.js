@@ -11,21 +11,25 @@ const Indigo = () => {
 
       <p>Ann says 'Indigo Essences are a kind of first aid kit for feelings, they are like good vibes in a bottle. They help balance your energy and when you are 'well balanced' it's much easier to heal yourself.'</p>
 
-      <h3>Why Indigo?</h3>
+      <div className="bg-primary py-2 px-1 mt-1 mb-2 br-10">
+        <h3>Why Indigo?</h3>
 
-      <p>People are talking about the coming of new children who are here to help us make a huge evolutionary leap into another way of being. Many of these children are called Indigo Children because they have the colour indigo as the primary colour in their aura. However, we believe that all children, indeed all people, on the planet are now playing their part in this transition.The colour indigo is often described as the colour of the night sky the moment before the dawn of a new day. This is how we see Indigo - as a moment in time, not just as a label for specific individuals. So we've called the essences Indigo because we hope that they will help everyone through this moment of tremendous change.</p>
+        <p>People are talking about the coming of new children who are here to help us make a huge evolutionary leap into another way of being. Many of these children are called Indigo Children because they have the colour indigo as the primary colour in their aura. However, we believe that all children, indeed all people, on the planet are now playing their part in this transition.The colour indigo is often described as the colour of the night sky the moment before the dawn of a new day. This is how we see Indigo - as a moment in time, not just as a label for specific individuals. So we've called the essences Indigo because we hope that they will help everyone through this moment of tremendous change.</p>
+      </div>
 
-      <h4>Release fear - allow Love</h4>
+      <div className="bg-secondary py-2 px-1 my-1 br-10">
+        <h3>Release fear - allow Love</h3>
 
-      <p>The stones used in the Indigo Essences all relate to the common themes of childhood, especially to releasing the fears which prevent us from being the loving, carefree, sparks of light we really are.</p>
+        <p>The stones used in the Indigo Essences all relate to the common themes of childhood, especially to releasing the fears which prevent us from being the loving, carefree, sparks of light we really are.</p>
 
-      <h4>Lighten up</h4>
+        <h3>Lighten up</h3>
 
-      <p>Several of the essences will also help with the sometimes uncomfortable feelings we get in our bodies as our energy changes and becomes lighter.</p>
+        <p>Several of the essences will also help with the sometimes uncomfortable feelings we get in our bodies as our energy changes and becomes lighter.</p>
 
-      <h4>Feel safe</h4>
+        <h3>Feel safe</h3>
 
-      <p>The essences will help very sensitive children feel safe and comfortable in their physical bodies even though the energies around them may not be easy to deal with.</p>
+        <p>The essences will help very sensitive children feel safe and comfortable in their physical bodies even though the energies around them may not be easy to deal with.</p>
+      </div>
     </div>
   )
 }

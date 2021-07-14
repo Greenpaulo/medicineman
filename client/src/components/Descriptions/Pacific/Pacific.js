@@ -11,19 +11,25 @@ const Pacific = () => {
 
       <p>Since the visionary work of Dr. Edward Bach in the 1930’s, the development and knowledge of flower essences has been expansive and exciting. Pacific Essences® has been a contributor to the continued growth of Energy Medicine®, with high quality, consciously prepared, flower, sea and gem essences.</p>
 
-      <h3>How Essences Work</h3>
+      <div className="bg-tertiary mt-2 mb-1 py-2 px-1 br-5">
+        <h3>How Essences Work</h3>
 
-      <p>Current scientific research, including that of Japanese scientist Dr. Masaru Emoto has shown that water has a memory. Subtle, non-physical aspects, such as the Vital Force of flowers can be imprinted on water. In this way, the positive “memory signature” of a particular essence creates a vibrational shift back to a state of harmonious balance.</p>
+        <p>Current scientific research, including that of Japanese scientist Dr. Masaru Emoto has shown that water has a memory. Subtle, non-physical aspects, such as the Vital Force of flowers can be imprinted on water. In this way, the positive “memory signature” of a particular essence creates a vibrational shift back to a state of harmonious balance.</p>
 
-      <p>The body has an innate intelligence to self-correct imbalanced or negative states, known as homeostasis in Western medicine. The essences, on a frequency level, facilitate this self-healing body wisdom by recalibrating the body’s energy systems - the Meridians and Chakras.</p>
+        <p>The body has an innate intelligence to self-correct imbalanced or negative states, known as homeostasis in Western medicine. The essences, on a frequency level, facilitate this self-healing body wisdom by recalibrating the body’s energy systems - the Meridians and Chakras.</p>
+      </div>
 
-      <h3>What are the ingredients?</h3>
-      
-      <p>Pacific Essences® do NOT contain any physical elements of the plant, animal, gem or crystal sources, instead their individual “frequency” is captured and stored in water. Alcohol or Brandy is used as a preservative with a dilution of 50% spring water, 50% Brandy (20% alcohol by volume).</p>
+      <div className="bg-primary mt-1 mb-1 py-2 px-1 br-5">
+        <h3>What are the ingredients?</h3>
+        
+        <p>Pacific Essences® do NOT contain any physical elements of the plant, animal, gem or crystal sources, instead their individual “frequency” is captured and stored in water. Alcohol or Brandy is used as a preservative with a dilution of 50% spring water, 50% Brandy (20% alcohol by volume).</p>
+      </div>
 
-      <h3>How are they made?</h3>
+      <div className="bg-secondary mt-1 mb-2 py-2 px-1 br-5">
+        <h3>How are they made?</h3>
 
-      <p>The flower is placed into a crystal bowl filled with pure spring water. The bowl is kept in sunlight for a short while, up to a couple of hours, in order to transfer the vibrational energy of the plant to the water. In the case of a living creature like Whale or Dolphin, the water that the animal has passed through is collected. No animal is ever harmed in this process. When possible, we don’t harm the plant when making the essences. Rather than clipping a flower off, we prefer to dip the flower or submerge it for a short time in the spring water. The plant remains whole and living.</p>
+        <p>The flower is placed into a crystal bowl filled with pure spring water. The bowl is kept in sunlight for a short while, up to a couple of hours, in order to transfer the vibrational energy of the plant to the water. In the case of a living creature like Whale or Dolphin, the water that the animal has passed through is collected. No animal is ever harmed in this process. When possible, we don’t harm the plant when making the essences. Rather than clipping a flower off, we prefer to dip the flower or submerge it for a short time in the spring water. The plant remains whole and living.</p>
+      </div>
 
       <h3>How are Essences used?</h3>
 
@@ -35,13 +41,15 @@ const Pacific = () => {
 
       <p>For those with alcohol sensitivities, children and pregnant women, consider applying the drops topically anywhere on the skin or creating a spray to be used topically.</p>
 
-      <h3>Are there any side effects?</h3>
+      <div className="bg-tertiary mt-2 mb-1 py-2 px-1 br-5">
+        <h3>Are there any side effects?</h3>
 
-      <p>The gift of essences is their ability to work on the subtle energetic levels, while triggering real wholistic change.</p>
+        <p>The gift of essences is their ability to work on the subtle energetic levels, while triggering real wholistic change.</p>
 
-      <p>Many people find that the gentleness of essence rebalancing is almost undetected. It is only with reflection that they notice that the negative state has dissipated and has been replaced with a return to their emotional/mental centre.</p>
+        <p>Many people find that the gentleness of essence rebalancing is almost undetected. It is only with reflection that they notice that the negative state has dissipated and has been replaced with a return to their emotional/mental centre.</p>
 
-      <p>They are safe to use in all situations and highly effective and immediate for children and animals.</p>
+        <p>They are safe to use in all situations and highly effective and immediate for children and animals.</p>
+      </div>
 
       <h3>Current research</h3>
 

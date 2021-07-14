@@ -28,11 +28,11 @@ const Company = (props) => {
     if (groupInfo[0].company === 'Living Tree Orchid Essences') {
       return (
         // <div id="company-logo-with-border">
-          <img src="/images/company-logos/ltoe.gif" id="description-logo" alt="orchid essence logo"/>
+          <img src="/images/company-logos/ltoe.gif" className="description-logo" alt="orchid essence logo"/>
         // </div>
       )
     }
-    return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} id="description-logo" alt="essences producer's logo"/>
+    return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} className="description-logo" id={`${groupInfo[0].company}-logo`} alt="essences producer's logo"/>
   }
 
   return (

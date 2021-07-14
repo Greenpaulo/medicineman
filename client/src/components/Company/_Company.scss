@@ -8,11 +8,21 @@
 //   float: right
 // }
 
-#description-logo {
+.description-logo {
   float: right;
   height: 250px;
   width: 250px;
   margin: 3.8rem 0 1rem 6rem;
+}
+// Company specific logo styling
+#Bach-logo {
+  width: 360px;
+}
+
+#Indigo-logo {
+  height: 140px;
+  width: 360px;
+  margin-top: 7rem;
 }
 
 section#company-info {
@@ -37,12 +47,17 @@ section#company-info {
 
 section#groups {
   padding: 1rem 0 5rem 0;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 }
 
 #group-links {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-row-gap: 6rem;
+  grid-row-gap: 8rem;
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
@@ -55,6 +70,7 @@ section#groups {
 
   img {
     height: 215px;
+    border-radius: 50%;
   }
 }
 
