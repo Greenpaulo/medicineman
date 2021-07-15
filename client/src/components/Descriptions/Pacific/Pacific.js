@@ -11,7 +11,7 @@ const Pacific = () => {
 
       <p>Since the visionary work of Dr. Edward Bach in the 1930’s, the development and knowledge of flower essences has been expansive and exciting. Pacific Essences® has been a contributor to the continued growth of Energy Medicine®, with high quality, consciously prepared, flower, sea and gem essences.</p>
 
-      <div className="bg-tertiary mt-2 mb-1 py-2 px-1 br-5">
+      <div className="bg-tertiary mt-2 mb-1 py-2 px-1 br-10">
         <h3>How Essences Work</h3>
 
         <p>Current scientific research, including that of Japanese scientist Dr. Masaru Emoto has shown that water has a memory. Subtle, non-physical aspects, such as the Vital Force of flowers can be imprinted on water. In this way, the positive “memory signature” of a particular essence creates a vibrational shift back to a state of harmonious balance.</p>
@@ -19,7 +19,7 @@ const Pacific = () => {
         <p>The body has an innate intelligence to self-correct imbalanced or negative states, known as homeostasis in Western medicine. The essences, on a frequency level, facilitate this self-healing body wisdom by recalibrating the body’s energy systems - the Meridians and Chakras.</p>
       </div>
 
-      <div className="bg-primary mt-1 mb-1 py-2 px-1 br-5">
+      <div className="bg-primary mt-1 mb-1 py-2 px-1 br-10">
         <h3>What are the ingredients?</h3>
         
         <p>Pacific Essences® do NOT contain any physical elements of the plant, animal, gem or crystal sources, instead their individual “frequency” is captured and stored in water. Alcohol or Brandy is used as a preservative with a dilution of 50% spring water, 50% Brandy (20% alcohol by volume).</p>

@@ -31,3 +31,31 @@ export const renderCompanyName = (company) => {
           return <h1 id="company-heading">{company}</h1> 
       }
   }
+
+  // Function to generate random number 
+export const randomNumber = (min, max) => { 
+    return Math.floor((Math.random() * (max - min) + min));
+}
+
+  // Function to export n random unique numbers
+// export const randomUniqueNumbers = (n, min, max) => { 
+//   let numbers = [];
+//   let checkNumberAndAdd = (number) => {
+//     if (!numbers.includes(number)){
+//       numbers.push(number)
+//     }
+//     else {
+//       n++;
+//     }
+//   } 
+//   for (let i = 0; i < n; i++ ) {
+//     checkNumberAndAdd(randomNumber(min, max))
+//   }
+//   return numbers;  
+// } 
+
+export const renderImagePath = (path) => {
+    // Just return the first image FOR NOW..................................................
+    const pathWithUnderline = path.replaceAll(" ", "_")
+    return `/images/${pathWithUnderline}`
+  }

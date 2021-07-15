@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, renderCompanyName } from "../../helpers/helpers"
 import CompanyDescription from '../CompanyDescription/CompanyDescription'
-import VineBorder from '../VineBorder/VineBorder'
 
 const Company = (props) => {
   const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);

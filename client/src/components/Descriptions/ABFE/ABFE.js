@@ -7,7 +7,7 @@ const ABFE = () => {
       <p>Over 30 years the success of Australian Bush Flowers Essences is attributed to the inherent power of the land, with the natural environment and conditions, aligned our founder’s expert knowledge and team’s commitment and ethical practices.</p>
 
 
-      <div className="bg-secondary py-2 px-1">
+      <div className="bg-secondary py-2 px-1 br-10">
         <p>Our consumers are actively beginning to understand that emotional wellbeing is a major component of one’s good health. Flower Essences have been described as vibrational medicine and the Australian Bush Flower Essences professional range of pure botanical Flower Essences are used all over the world to help manage the emotional demands of everyday life.</p>
 
         <p>Mother Earth is here to help us ease our connectivity and fulfil our own path. Not only our flower remedies bring clarity to the conscious mind, and develop many intuitive abilities, but they also help us resolve negative beliefs and directly affect us at the level where we make decisions about our emotions, health, vitality and relationships. Flower essences unlock our inherent positive qualities such as love, courage and joy.</p>

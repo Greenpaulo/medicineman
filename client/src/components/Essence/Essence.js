@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
-import { checkLoading } from "../../helpers/helpers"
+import { checkLoading, renderImagePath } from "../../helpers/helpers"
 import EssenceNav from "../EssenceNav/EssenceNav"
 import uuid from 'react-uuid'
 
@@ -86,12 +86,6 @@ const Essence = (props) => {
     }
   }
 
-  const renderImagePath = () => {
-    // Just return the first image FOR NOW..................................................
-    const pathWithUnderline = essence.images[0].replaceAll(" ", "_")
-    return `/images/${pathWithUnderline}`
-  }
-
   // Check data has loaded before render
   let isLoading = checkLoading([essence], [loadingEssences]);
   
@@ -114,7 +108,7 @@ const Essence = (props) => {
               {renderEffects()}
             </div>
             <div id="essence-main-img">
-              <img id="essence-img" src={renderImagePath()} alt="" />
+              <img id="essence-img" src={renderImagePath(essence.images[0])} alt="" />
             </div>
           </section>
           <section id="chakrasMeridians">
