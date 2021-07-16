@@ -57,7 +57,7 @@ const Company = (props) => {
             <div id="group-links">
               {groups.map(group => (
                 <div className="group-link">
-                  <Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`} className="group-link">    
+                  <Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`}>    
                     <img src={`/images/group-images/${group.slug}.png`} alt="" />
                     {group.name}
                   </Link>

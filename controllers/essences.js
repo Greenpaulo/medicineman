@@ -40,7 +40,7 @@ exports.getEssencesByCompany = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/essences/group/:group
 // @access    Public
 exports.getEssencesByGroup = asyncHandler(async (req, res, next) => {
-    const essences = await Essence.find({ groupSlug: req.params.group });
+    const essences = await Essence.find({ groupSlug: req.params.group }).sort([['name', 1]]);
 
     checkLengthAndSend(res, essences, next);
 });

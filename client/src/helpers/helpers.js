@@ -54,8 +54,11 @@ export const randomNumber = (min, max) => {
 //   return numbers;  
 // } 
 
-export const renderImagePath = (path) => {
+export const renderImagePath = (path, format) => {
     // Just return the first image FOR NOW..................................................
     const pathWithUnderline = path.replaceAll(" ", "_")
+    if (format === "200w") {
+      return `/images/${format}/${pathWithUnderline}`
+    }
     return `/images/${pathWithUnderline}`
   }

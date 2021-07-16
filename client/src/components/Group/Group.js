@@ -1,9 +1,9 @@
 import { useContext, useEffect } from "react"
-import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, randomNumber, renderCompanyName, renderImagePath } from "../../helpers/helpers"
 import uuid from 'react-uuid'
+import EssenceLinks from '../EssenceLinks/EssenceLinks'
 
 const Group = (props) => {
   const { essences, getEssencesByGroup, loadingEssences, setLoadingEssences } = useContext(EssencesContext);
@@ -37,116 +37,19 @@ const Group = (props) => {
   //   )
   // }
 
-  const renderEssencePhotos = () => {
+  const renderEssencePhoto = () => {
     if (groupInfo[0].company === 'ABFE') {
       return (
-      <div id="group-photo-examples">
-        <img src={renderImagePath(essences[randomNumber(0, essences.length)].images[1])}className="group-photo-example" alt=""/>
-      </div>
-    )
+        <div id="group-photo">
+          <img src={renderImagePath(essences[randomNumber(0, essences.length)].images[1])}className="group-photo-example" alt=""/>
+        </div>
+        )
     }
     return (
-      <div id="group-photo-examples">
+      <div id="group-photo">
         <img src={renderImagePath(essences[randomNumber(0, essences.length)].images[0])}className="group-photo-example" alt=""/>
       </div>
     )
-  }
-
-  const renderImageGrid = () => {
-    return (
-      <div id="image-grid">
-        <div id="view-selector">
-          <h5 id="images-selector" onClick={toggleTableImages}>Toggle images</h5>
-        </div>
-        {essences.map((essence) => {
-            return (
-              <Link to={`/essence/${essence.nameSlug}`}>
-                <img className="essence-link" src={renderImagePath(essence.images[0])} alt="" />
-                {essence.name}
-              </Link>
-            )
-          }
-        )}
-      </div>
-    )
-  }
-
-  const renderTable = (columnLength) => {
-    return (
-      <div id="table-container">
-        <div id="view-selector">
-          <h5 id="images-selector" onClick={toggleTableImages}>Toggle images</h5>
-        </div>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <ul>
-                  {essences.map((essence, index) => {
-                    if (index > 0 && index <= columnLength) {
-                      return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
-                    }
-                      return <li key={essence.name}></li>
-                    }
-                  )}
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  {essences.map((essence, index) => {
-                    if (index > columnLength && index <= columnLength*2 ) {
-                      return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
-                    }
-                      return <li key={essence.name}></li>
-                    }
-                  )}
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  {essences.map((essence, index) => {
-                    if (index > columnLength*2 && index <= columnLength*3) {
-                      return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
-                    }
-                      return <li key={essence.name}></li>
-                    }
-                  )}
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  {essences.map((essence, index) => {
-                    if (index > columnLength*3 && index <= columnLength*4) {
-                      return <li key={essence.name}><Link to={`/essence/${essence.nameSlug}`}>{essence.name}</Link></li>
-                    }
-                      return <li key={essence.name}></li>
-                    }
-                  )}
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    )
-  }
-  
-
-  const renderTable1 = () => {
-    let columnLength = 10;
-    
-    if (group === "Single Orchid Essences") {
-      columnLength = 27;
-    } else if (group === "Bush Flowers") {
-      columnLength = 17;
-    }
-
-    return renderTable(columnLength);
-  }
-
-  const toggleTableImages = () => {
-    document.getElementById("table-container").style.display = "none";
-    document.getElementById("image-grid").style.display = "grid";
   }
 
   // Check data has loaded before render
@@ -169,15 +72,14 @@ const Group = (props) => {
       {!isLoading &&
         <div className="container">
           {renderCompanyName(groupInfo[0].company)}
-          {renderEssencePhotos()}
+          {renderEssencePhoto()}
           <h2 id="group-heading">{group}</h2>
           <section id="group-info">
             {groupInfo[0].description.map(paragraph => (
               <p key={uuid()}>{paragraph}</p>
             ))}
-            {renderTable1()}
-            {renderImageGrid()}
           </section>
+          <EssenceLinks essences={essences} group={group}/>
         </div>
       }
     </>

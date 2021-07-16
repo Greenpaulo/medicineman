@@ -9,25 +9,25 @@ const SideNav = () => {
             {/* <li><Link to="/">Home</Link></li> */}
             <li>
               <Link to="/intro">
-                <img src="images/hello.svg" alt="" />
+                <img src="/images/hello.svg" alt="" />
                 Introduction
                 </Link>
             </li>
             <li>
               <Link to="/medicine">
-                <img src="images/medicine.svg" alt="" />
+                <img src="/images/medicine.svg" alt="" />
                 Medicine  
               </Link>
             </li>
             <li>
               <Link to="/crossreference">
-                <img src="images/storytelling.svg" alt="" />
+                <img src="/images/storytelling.svg" alt="" />
                 Cross Reference  
               </Link>
             </li>
             <li>
               <Link to="/education">
-                <img src="images/love.svg" alt="" />
+                <img src="/images/love.svg" alt="" />
                 Education  
               </Link>
             </li>
