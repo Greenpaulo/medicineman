@@ -32,8 +32,8 @@ const SideNav = () => {
               </Link>
             </li>
             <li>
-              <Link to="#">
-                <img src="images/healing2.svg" alt="" />
+              <Link to="/about">
+                <img src="/images/healing2.svg" alt="" />
                 About
               </Link>
             </li>

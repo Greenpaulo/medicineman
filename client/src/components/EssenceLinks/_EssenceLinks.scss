@@ -3,11 +3,12 @@ section#essence-links {
   margin-top: 5rem;
 }
 
-// #table-container {
-// }
+#table-container {
+  display: none;
+}
 
 #image-grid-container {
-  display: none;
+  display: grid;
 }
 
 #image-grid {

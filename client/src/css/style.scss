@@ -17,6 +17,8 @@
 @import '../components/CrossReference/CrossReference';
 @import '../components/Reference/Reference';
 @import '../components/Education/Education';
+@import '../components/Beginner/Beginner';
+@import '../components/Advanced/Advanced';
 @import '../components/Spiral/Spiral';
 @import '../components/VineUnderline/VineUnderline';
 @import '../components/VineBorder/VineBorder';
@@ -27,6 +29,7 @@
   // --secondary: #b3ec68;
   --secondary: #ffd4bf;
   // --secondary: #ffbfea;
+  --tertiary: #b6fff9;
 }
 
 // Reset

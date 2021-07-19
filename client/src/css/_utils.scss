@@ -11,6 +11,20 @@
   background-color: lighten(#b6fff9, 1%);
 }
 
+// Border colors
+
+.border-primary {
+  border: 5px solid var(--primary);
+}
+
+.border-secondary {
+  border: 5px solid var(--secondary);
+}
+
+.border-tertiary {
+  border: 5px solid var(--tertiary);
+}
+
 // Paddding
 .pt-1 {
   padding-top: 1rem;
@@ -80,7 +94,7 @@
 .mt-2 {
   margin-top: 2rem;
 }
-.mt-2 {
+.mt-3 {
   margin-top: 3rem;
 }
 .mb-1 {

@@ -7,7 +7,7 @@ import uuid from 'react-uuid'
 const EssenceLinks = ({ essences, group }) => {
 
   const [isGrid, setIsGrid] = useState({
-    isGrid: false
+    isGrid: true
   })
 
   const renderTable = (columnLength) => {

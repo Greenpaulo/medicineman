@@ -1,13 +1,14 @@
 section#education-intro {
   padding-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 3rem;
-  grid-row-gap: 5rem;
+  width: 80%;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(3, 1fr);
+  // grid-column-gap: 3rem;
+  // grid-row-gap: 5rem;
 
   p {
-    margin: 1rem 0;
+    // margin: 1rem 0;
     font-size: 1rem;
     line-height: 1.8rem;
   }
@@ -17,20 +18,44 @@ section#education-intro {
   }
 
   div#text-section-1 {
-    grid-column: 1 / span 2;
+    // grid-column: 1 / span 2;
+    border-bottom: 5px solid var(--secondary);
+    padding-bottom: 2rem;
   }
 
-  img#ayahuasca {
-    grid-column-start: 3;
-    grid-column-end: 3;
-  }
+  // img#ayahuasca {
+  //   grid-column-start: 3;
+  //   grid-column-end: 3;
+  // }
 
-  img#ayahuasca2 {
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
+  // img#ayahuasca2 {
+  //   grid-column-start: 1;
+  //   grid-column-end: 1;
+  // }
 
   div#text-section-2 {
-    grid-column: 2 / span 2;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    // grid-column: 2 / span 2;
+  }
+
+  .section-link {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn {
+    border: 5px solid var(--primary);
+    padding: 5px 10px 10px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    height: 50px;
+  }
+
+  .btn:hover {
+    background-color: darken(#ffd4bf, 5%);
+  }
+  .btn-secondary {
+    background-color: var(--secondary);
   }
 }

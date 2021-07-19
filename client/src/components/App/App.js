@@ -13,6 +13,7 @@ import Reference from '../Reference/Reference'
 import Education from '../Education/Education'
 import Beginner from '../Beginner/Beginner'
 import Advanced from '../Advanced/Advanced'
+import About from '../About/About'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <Route exact path='/education' component={Education} />
       <Route path='/education/beginner' component={Beginner} />
       <Route path='/education/advanced' component={Advanced} />
+      <Route path='/about' component={About} />
     </BrowserRouter>
   );
 }
