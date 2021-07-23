@@ -4,15 +4,19 @@ const Beginner = () => {
   return (
     <div className="container">
       <h1 className="section-heading">Beginner</h1>
+      <div className="heading-underline"></div>
       <section id="beginner-education" className="mt-2">
+        <div className="contents">
+          <h3>Section 1 – What is Traditional Medicine?</h3>
+          <h3>Section 2 – Flower Essences</h3>
+          <h3>Section 3 – Widening our Perspective on Essences</h3>
+        </div>
         <div id="beginner-section-1" className="my-2 py-2">
           <h3 className="mb-1">WHAT IS TRADITIONAL MEDICINE?</h3>
 
           <p>Our current medical system in the West, has only been around for the past 100 years. Before this time of pharmaceutical drugs and germ theory, doctors would use medicinal herbs to treat their patients, and this usage of plant medicine has a history of at least 5000 years.</p>
 
           <p>There is a lot more to healing than is currently practiced in our healthcare system. At this present time our healthcare system in the West has excellent emergency and critical care but falls short with the treatment of chronic conditions. This inadequacy stems from a very narrow understanding of the human body and the nature of reality itself. Orthodox medicine views the body as a machine. Symptoms are “managed” and old worn our parts are replaced with no thought given to the actual cause or root of the disease.</p>
-
-          <h4>Read more about the history of orthodox medicine</h4>
 
           <p>Science dictates healthcare, and the scientific understanding of the world filters into our healthcare system. Anything that can’t be measured of physically seen is cast aside because of a “lack of scientific evidence”. Therefore we have a healthcare system that is not holistic and doesn’t understand the true impact of the mind and spirit on health and disease.</p> 
 

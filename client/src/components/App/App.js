@@ -12,6 +12,7 @@ import CrossReference from '../CrossReference/CrossReference'
 import Reference from '../Reference/Reference'
 import Education from '../Education/Education'
 import Beginner from '../Beginner/Beginner'
+import Intermediate from '../Intermediate/Intermediate'
 import Advanced from '../Advanced/Advanced'
 import About from '../About/About'
 
@@ -31,6 +32,7 @@ const App = () => {
       <Route path='/crossreference/:reference' component={Reference} />
       <Route exact path='/education' component={Education} />
       <Route path='/education/beginner' component={Beginner} />
+      <Route path='/education/intermediate' component={Intermediate} />
       <Route path='/education/advanced' component={Advanced} />
       <Route path='/about' component={About} />
     </BrowserRouter>

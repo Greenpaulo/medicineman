@@ -18,6 +18,7 @@
 @import '../components/Reference/Reference';
 @import '../components/Education/Education';
 @import '../components/Beginner/Beginner';
+@import '../components/Intermediate/Intermediate';
 @import '../components/Advanced/Advanced';
 @import '../components/Spiral/Spiral';
 @import '../components/VineUnderline/VineUnderline';
@@ -45,9 +46,10 @@ html {
   height: 100%;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  // font-family: 'Nunito', sans-serif;
   font-weight: 400;
   // line-height: 1.8em;
-  line-height: 2em;
+  line-height: 2.3em;
   // color: #333;
   // background-color: #eee;
   width: 82vw;
@@ -93,4 +95,10 @@ section.section-intro {
     padding-bottom: 2rem;
     margin: auto;
   }
+}
+
+// Education contents
+.contents {
+  margin: 4rem 0;
+  text-align: center;
 }
