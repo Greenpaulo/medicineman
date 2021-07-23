@@ -18,6 +18,8 @@ const Advanced = () => {
         <div id="advanced-section-1" className="my-2">
           <h3>INTRODUCTION</h3>
 
+          <img src="/images/shaman_aura.jpg" alt="Pablo Amaringo painting of a shaman" />
+
           <p>In this advanced section we are going to get deep into medicine. Before we start, please keep an open mind, because this information is going to be EXTREMELY different from what is taught in the West. To REALLY understand health and disease we need to cover a lot of topics, including the nature of reality, because ultimately we need to understand who we are, where we are, and how we create reality. THIS is the medicine of the plants, this is what they teach. This section will not be referenced. These teaching are from direct interaction with the plants and they do not conform to “scientific evidence” i.e. for some of the things I am about to share there exists no evidence within “science” simply because “science” itself, has been formed to suppress this type of knowledge, and focus entirely on the material world. The reasons for this we will get into very soon.</p>
 
           <p>We need to come to terms with the truth, no matter how “mind bending” it may seem, that what we think of as our everyday reality is NOT the truth of the universe. </p>
@@ -25,6 +27,8 @@ const Advanced = () => {
 
         <div id="advanced-section-2" className="bg-primary py-2 px-2 br-10 mt-3 mb-2">
           <h3>UNDERSTANDING MEDICINE, REALITY, AND HOW THE PLANTS TEACH</h3>
+
+          <img src="/images/alberto_icaros.jpg" alt="Shaman perfoming healing" />
 
           <p>I understand that just mentioning that “our everyday Western reality is VERY different to the reality of nature” – is not really very practical to let’s try to make this concept a bit more concrete. To give you a practical understanding of how the plants teach medicine, let’s talk about the process of shamanic apprenticeship in the Amazon. This is the training of the Medicine Man in a tradition that has a history of thousands of years.</p>
 
@@ -36,6 +40,8 @@ const Advanced = () => {
 
             <p><i>The diets are considered the pinicle of intensity for the apprentice. It is through pure intent that one completes the diet and bonds with the doctor spirit of the plant. Through that bond, the spiritual knowledge and healing abilities are passed.”</i></p>
           </div>
+
+          <img src="/images/plant_diet.jpg" alt="Plant diet preparation" />
 
           <p>During the shamanic diets our whole concept of reality is broken down and rebuilt. We begin to realize that in the West we are born into an idea of reality that is not based on truth. We have SO many incorrect perceptions of the nature of reality and these misconceptions are passed down from parent to child in a never ending loop. We all “agree” on these misconceptions, and this further cements these falsities in the collective consciousness of the population.</p>
 
@@ -49,7 +55,9 @@ const Advanced = () => {
         <div id="advanced-section-3" className="bg-secondary py-2 px-2 mt-3 br-10">
           <h3>GOING DEEPER</h3>
 
-          <p>Once we understand that the body is not just a machine, and that our mind, emotions and spirit have an effect on the physical body then to further our knowledge we have to take the next step in our understanding of life. As we continue to take the medicine and the plants continue to teach us, our consciousness increases to higher frequencies and our perspective on life is widened dramatically. We then get into deeper levels of medicine which encompasses far more than just physical medicines for our body. What I mean by this is that our understanding of medicine changes, and we realise that medicine is a synonym for truth. Our quest for knowledge moves away from healing the symptoms of disease and towards the nature of life itself.</p>
+          <img src="/images/deeper.jpg" alt="Pablo Amaringo Ayahuasca Painting" />
+
+          <p>Once we understand that the body is not just a machine, and that our mind, emotions and spirit have an effect on the physical body then to further our knowledge we have to take the next step in our understanding of life. As we continue to take the medicine and the plants continue to teach us, our consciousness increases to higher frequencies and our perspective on life is widened dramatically. We then get into deeper levels of medicine which encompasses far more than just physical medicines for our body. What I mean by this is that our understanding of medicine changes, and we realise that medicine is a synonym for TRUTH. Our quest for knowledge moves away from healing the symptoms of disease and towards the nature of life itself.</p>
 
           <p>As our consciousness expands we begin to see that the world is absolutely NOT as we thought it was, and here is where we get into what most people term “conspiracy theories”. This is a delicate subject, especially in the times we are now living, as this information is hotly debated on social media, and is currently being censored in an extreme way.</p>
 
@@ -96,6 +104,8 @@ const Advanced = () => {
         <div id="advanced-section-6" className="bg-primary py-3 px-2 br-10 mt-3">
           <h3>HOW DO WE CREATE OUR REALITY?</h3>
 
+          <img src="/images/galaxy.jpeg" alt="Galaxy" />
+
           <p>One of the major misconceptions is how we create our reality. WE are infinite consciousness experiencing ourselves. We CHOOSE to have an experience as “human” and we incarnate into a physical form to experience life as an individual point of attention of the “self”. Our body is not solid, is appears solid because of the way the eyes decode waveform information and create a three dimensional hologram of information in our brain. The image of physical reality that we think we see “outside” is actually a holographic projection that is created inside the brain. We actually live a universe made up of energy or waveforms, and our body is pure energy or waveforms, everything is. The eyes decode waveforms into a physical image, which is actually an amazing and a beautiful way of experiencing energy.</p>
 
           <p>So how is our reality created? The vast majority of spiritual literature points to the “Law of Attraction” which extends the principle of resonance in physics, and says our vibration attracts to it waveforms that are of a matching vibration. We experience whatever our frequency/waveform is in resonance with. However, where the teachings of the plants and the spiritual literature differ is in the understanding of manifestation and “who” controls our vibration.</p>
@@ -126,6 +136,8 @@ const Advanced = () => {
 
           <p>The “Higher Self” is an aspect of us that incarnated into the physical form. The job of the higher self is to be the bridge between the two aspects of us: the whole and the individual – who we really are as infinite consciousness and the individual point of consciousness experiencing itself as the self. Who we really are as Infinite consciousness at the level of the Higher Self manifests our life and everything that the self “wants” is known by the Higher Self – it IS us.</p>
 
+          <img src="/images/trust.jpg" alt="Heart chakra" />
+
           <p>So now we have to learn to LET GO OF CONTROL. Give control back to the Higher Self. TRUST ourselves again (but this time trusting the higher aspect of ourself which actually has control instead of trusting the ego which will fail because it didn’t have control, it was never designed to). This releases the burden from the self, and we can start to enjoy life fully without trying to control what happens. This release of control from the mind (ego) to the heart (higher self / infinite consciousness) is the path of our evolution in human form, right now.</p>
 
           <p>The belief that we (the self, “I”) control our lives, through our thoughts controlling manifestation, brings stress. It brings a burden, it brings worry that we might be in a vibration or thinking thoughts that attract something we don’t want (fear), it also brings desire and wants, and “trying” to attract and manifest what we desire. </p>
@@ -144,9 +156,11 @@ const Advanced = () => {
         <div id="advanced-section-8" className="bg-secondary py-2 px-2 mt-3 br-10">
           <h3>WHY DO WE HAVE NEGATIVE THOUGHTS?</h3>
 
+          <img src="/images/alberto.jpg" alt="Maestro Alberto Torres Davilla" />
+
           <p>All negative thoughts come from an incorrect perception of reality. The Amazonian shamans observe these thoughts and beliefs in the body as “crossed energy”. The process of “healing” then, is the “straightening” of this energy.</p>
 
-          <p>This is the physical representation of transformation of the emotional or mental bodies. In other words, the physical straightening of the energy corresponds to the changing of thought patterns and beliefs from “crossed” or incorrect perceptions of reality or truth, to correct perceptions.</p>
+          <p>This is the physical representation of transformation of the emotional or mental bodies. In other words, the physical straightening of the energy corresponds to the changing of thought patterns and beliefs from “crossed” or incorrect perceptions of the universe, to correct perceptions.</p>
 
           <p>The medicine spirits teach us about the true nature of reality and in doing so they dissolve any misconception which leads to dissolution of negative thought patterns and beliefs, "straightening" our energy.</p>
 
@@ -236,6 +250,8 @@ const Advanced = () => {
         <div id="advanced-section-11" className="py-2 mt-3">
 
           <h3>WHAT ABOUT MEDICINE THEN?</h3>
+
+          <img src="/images/ayahuasca.jpg" alt="Ayahuasca cooking over an open fire" />
 
           <p>Ok, so if there is no need to heal anything then why do we need medicine?</p>
 

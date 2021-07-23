@@ -14,6 +14,8 @@ const Beginner = () => {
         <div id="beginner-section-1" className="my-2 py-2">
           <h3 className="mb-1">WHAT IS TRADITIONAL MEDICINE?</h3>
 
+          <img src="/images/herbal_shop.jpg" alt="Old herbal shop" />
+
           <p>Our current medical system in the West, has only been around for the past 100 years. Before this time of pharmaceutical drugs and germ theory, doctors would use medicinal herbs to treat their patients, and this usage of plant medicine has a history of at least 5000 years.</p>
 
           <p>There is a lot more to healing than is currently practiced in our healthcare system. At this present time our healthcare system in the West has excellent emergency and critical care but falls short with the treatment of chronic conditions. This inadequacy stems from a very narrow understanding of the human body and the nature of reality itself. Orthodox medicine views the body as a machine. Symptoms are “managed” and old worn our parts are replaced with no thought given to the actual cause or root of the disease.</p>
