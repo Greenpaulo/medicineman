@@ -20,11 +20,11 @@ section#sidenav {
   }
 
   li {
-    margin: 45px 0;
+    margin: 40px 0;
   }
 
   li a {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -53,16 +53,20 @@ section#sidenav {
   }
 
   #links {
-    display: grid;
-    grid-template-columns: repeat(2, 20px);
-    grid-column-gap: 37px;
-    grid-row-gap: 17px;
-    margin: 160px 0 0 15px;
+    // display: grid;
+    // grid-template-columns: repeat(2, 20px);
+    // grid-column-gap: 37px;
+    // grid-row-gap: 17px;
+    margin: 230px 0 0 15px;
     border-top: 5px solid var(--secondary);
-    width: 70%;
+    width: 83%;
     padding-top: 27px;
-    padding-left: 27px;
-    justify-items: center;
+    padding-left: 16px;
+    // justify-items: center;
+
+    a {
+      margin-right: 1rem;
+    }
 
     i.fa-facebook,
     i.fa-twitter,

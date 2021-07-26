@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, renderCompanyName } from "../../helpers/helpers"
 import CompanyDescription from '../CompanyDescription/CompanyDescription'
+import uuid from "react-uuid"
 
 const Company = (props) => {
   const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);
@@ -44,7 +45,7 @@ const Company = (props) => {
 
       {!isLoading &&
         <div className="container">
-          {renderCompanyName(groupInfo[0].company)}
+          <h1 id="company-heading">{renderCompanyName(groupInfo[0].company)}</h1> 
           {renderLogo()}
           <section id="company-info">
             <CompanyDescription groupInfo={groupInfo[0]}/>
@@ -56,7 +57,7 @@ const Company = (props) => {
             <h2>Essence Sets</h2>
             <div id="group-links">
               {groups.map(group => (
-                <div className="group-link">
+                <div key={uuid()} className="group-link">
                   <Link to={`/company/${groupInfo[0].companySlug}/${group.slug}`}>    
                     <img src={`/images/group-images/${group.slug}.png`} alt="" />
                     {group.name}

@@ -1,6 +1,7 @@
 section#education-intro {
   padding-top: 3rem;
   width: 80%;
+  margin: auto;
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
   // grid-template-rows: repeat(3, 1fr);
@@ -44,12 +45,19 @@ section#education-intro {
     flex-direction: row;
   }
 
+  .btn-container {
+    width: 300px;
+  }
+
   .btn {
     border: 5px solid var(--primary);
     padding: 5px 10px 10px 10px;
     border-radius: 5px;
     font-weight: 600;
     height: 50px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
   }
 
   .btn:hover {

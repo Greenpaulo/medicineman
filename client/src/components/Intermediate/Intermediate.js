@@ -8,6 +8,8 @@ const Intermediate = () => {
       <section id="intermediate-education" className="my-2">
         <div className="contents">
           <h3>Section 1 – How did we get to our current healthcare model?</h3>
+          <h3>Section 2 - Why modern "medicine" is not medicine</h3>
+          <p>...............talk about drugs/surgery/radiation trinity of treatment. Also about vaccines and compulsory, Icke chapter and immunity of pharmaceutical companies</p>
           <h3>Section 2 – A change in thinking</h3>
           <h3>Section 3 – Human Multidimensional Anatomy</h3>
           <h3>Section 4 – The Chakras</h3>

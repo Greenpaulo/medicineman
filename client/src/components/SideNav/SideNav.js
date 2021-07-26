@@ -32,6 +32,12 @@ const SideNav = () => {
               </Link>
             </li>
             <li>
+              <Link to="/store">
+                <img src="/images/online-shopping-2.svg" alt="" />
+                Store 
+              </Link>
+            </li>
+            <li>
               <Link to="/about">
                 <img src="/images/healing2.svg" alt="" />
                 About
@@ -46,7 +52,7 @@ const SideNav = () => {
           <div id="links">
             <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
             <a href="www.twitter.com"><i className="fab fa-twitter fa-2x"></i></a>
-            <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a>
+            {/* <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a> */}
             <a href="www.instagram.com"><i className="fab fa-instagram fa-2x"></i></a>
           </div>
         </nav>

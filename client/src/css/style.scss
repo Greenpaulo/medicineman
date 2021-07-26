@@ -20,6 +20,7 @@
 @import '../components/Beginner/Beginner';
 @import '../components/Intermediate/Intermediate';
 @import '../components/Advanced/Advanced';
+@import '../components/Store/Store';
 @import '../components/Spiral/Spiral';
 @import '../components/VineUnderline/VineUnderline';
 @import '../components/VineBorder/VineBorder';
@@ -29,6 +30,7 @@
   --primary: pink;
   // --secondary: #b3ec68;
   --secondary: #ffd4bf;
+  --light-secondary: #ffe9ed;
   // --secondary: #ffbfea;
   --tertiary: #b6fff9;
 }
@@ -79,6 +81,13 @@ li {
   width: 130px;
   background-color: var(--secondary);
   margin: 27px auto;
+}
+
+.heading-underline-left {
+  height: 5px;
+  width: 130px;
+  background-color: var(--secondary);
+  margin-top: 27px;
 }
 
 section.section-intro {

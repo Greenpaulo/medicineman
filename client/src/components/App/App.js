@@ -14,6 +14,7 @@ import Education from '../Education/Education'
 import Beginner from '../Beginner/Beginner'
 import Intermediate from '../Intermediate/Intermediate'
 import Advanced from '../Advanced/Advanced'
+import Store from '../Store/Store'
 import About from '../About/About'
 
 
@@ -34,6 +35,7 @@ const App = () => {
       <Route path='/education/beginner' component={Beginner} />
       <Route path='/education/intermediate' component={Intermediate} />
       <Route path='/education/advanced' component={Advanced} />
+      <Route path='/store' component={Store} />
       <Route path='/about' component={About} />
     </BrowserRouter>
   );

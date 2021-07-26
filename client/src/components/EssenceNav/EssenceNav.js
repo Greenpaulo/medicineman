@@ -8,7 +8,7 @@ const EssenceNav = ({ essence }) => {
   }
   const showChakrasMeridians = () => {
     document.getElementById("description").style.display = "none"
-    document.getElementById("chakrasMeridians").style.display = "block"
+    document.getElementById("chakrasMeridians").style.display = "grid"
     document.getElementById("gallery").style.display = "none"
   }
   const showGallery = () => {
@@ -24,7 +24,9 @@ const EssenceNav = ({ essence }) => {
       <nav id="essence-nav">
         <ul>
           <li id="description-link"onClick={() => showDescription()}>Description</li>
-          <li id="chakrasMeridians-link"onClick={() => showChakrasMeridians()}>Chakras & Meridians</li>
+          {((essence.chakras.length > 0) || (essence.meridians.length > 0 )) &&
+            <li id="chakrasMeridians-link"onClick={() => showChakrasMeridians()}>Chakras & Meridians</li>
+          }
           <li id="gallery-link"onClick={() => showGallery()}>Gallery</li>
         </ul>
       </nav>

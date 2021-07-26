@@ -71,7 +71,7 @@ const Group = (props) => {
 
       {!isLoading &&
         <div className="container">
-          {renderCompanyName(groupInfo[0].company)}
+          <h1 id="company-heading">{renderCompanyName(groupInfo[0].company)}</h1> 
           {renderEssencePhoto()}
           <h2 id="group-heading">{group}</h2>
           <section id="group-info">

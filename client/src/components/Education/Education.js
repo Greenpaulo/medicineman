@@ -18,17 +18,23 @@ const Education = () => {
           <p>This information has been split up into 3 sections:</p>
 
           <div className="section-link mt-2">
-            <Link to="/education/beginner" className="btn btn-secondary mr-1">BEGINNER</Link>
+            <div className="btn-container">
+              <Link to="/education/beginner" className="btn btn-secondary mr-2">BEGINNER</Link>
+            </div>
             <p>If you are totally new to traditional medicine and you’ve only ever taken prescription drugs from your doctor, then start here. You will find an introduction to traditional medicine and the use of flower essences.</p>
           </div>
 
           <div className="section-link mt-2">
-            <Link to="/education/intermediate" className="btn btn-secondary mr-1">INTERMEDIATE</Link>
+            <div className="btn-container">
+              <Link to="/education/intermediate" className="btn btn-secondary mr-2">INTERMEDIATE</Link>
+            </div>
             <p>Here we will delve into the history of our current medical system and take a look at how we got here. We will also expand our knowledge of the human body and the role of emotions in health.</p>
           </div>
 
           <div className="section-link mt-2">
-            <Link to="/education/advanced" className="btn btn-secondary mr-1">ADVANCED</Link>
+            <div className="btn-container">
+              <Link to="/education/advanced" className="btn btn-secondary mr-2">ADVANCED</Link>
+            </div>
             <p>This section is for those who have moved way beyond “body = machine”, and towards a body/mind/spirit paradigm. Here you will find in-depth information on my current understanding on health and disease, and ultimately life itself.</p>
           </div>
         </div>

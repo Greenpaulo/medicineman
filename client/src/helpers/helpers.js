@@ -14,21 +14,21 @@ export function checkLoading ( resources, loaders) {
 export const renderCompanyName = (company) => {
       switch(company) {
         case 'ABFE':
-          return <h1 id="company-heading">Australian Bush Flower Essences</h1> 
+          return "Australian Bush Flower Essences"
         case 'Alaskan':
-          return <h1 id="company-heading">Alaskan Essences</h1> 
+          return "Alaskan Essences"
         case 'Bach':
-          return <h1 id="company-heading">Bach Flower Essences</h1> 
+          return "Bach Flower Essences"
         case 'Bailey':
-          return <h1 id="company-heading">Bailey Essences</h1> 
+          return "Bailey Essences"
         case 'Indigo':
-          return <h1 id="company-heading">Indigo Essences</h1> 
+          return "Indigo Essences"
         case 'Pacific':
-          return <h1 id="company-heading">Pacific Essences</h1> 
+          return "Pacific Essences"
         case 'WEAE':
-          return <h1 id="company-heading">Wild Earth Animal Essences</h1> 
+          return "Wild Earth Animal Essences"
         default:
-          return <h1 id="company-heading">{company}</h1> 
+          return `${company}`
       }
   }
 
