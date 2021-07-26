@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading } from "../../helpers/helpers"
+import CrossReferenceNav from "../CrossReferenceNav/CrossReferenceNav"
 
 const CrossReference = () => {
   const { referenceTitles, getAllReferenceTitles, setLoadingReferences, loadingReferences } = useContext(ReferencesContext);
@@ -32,13 +33,20 @@ const CrossReference = () => {
 
       {!isLoading &&
         <div className="container">
-          <h1 id="essence-heading">Cross-Reference</h1>
-          <section id="essence-info">
+          <CrossReferenceNav />
+          <div className="heading-underline-left"></div>
+          <section id="keywords" className="mt-2">
             <ul>
               {referenceTitles.map(ref => (
                 <li key={ref.title}><Link to={`/crossreference/${ref.slug}`}>{ref.title}</Link></li>
               ))}
             </ul>
+          </section>
+          <section id="chakras-meridians-list">
+            <h3>List of chakras and meridians</h3>
+          </section>
+          <section id="cross-reference-guide">
+            <h3>The Guide</h3>
           </section>
         </div>
       }

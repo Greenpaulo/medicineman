@@ -72,7 +72,12 @@ const Essence = (props) => {
           <h3>Chakra resonance</h3>
           <ul>
             {essence.chakras.map(chakra => (
-              <li key={uuid()} className="chakra">{chakra}</li>
+              <div className="chakra">
+                {renderChakraIcon(chakra)}
+                <li key={uuid()}>
+                  {chakra}
+                </li>
+              </div>
             ))}
           </ul>
         </section>
@@ -87,7 +92,12 @@ const Essence = (props) => {
           <h3>Secondary Chakra resonance</h3>
           <ul>
             {essence.chakrasSecondary.map(chakra => (
-              <li key={uuid()} className="chakra">{chakra}</li>
+              <div className="chakra">
+                {renderChakraIcon(chakra)}
+                <li key={uuid()}>
+                  {chakra}
+                </li>
+              </div>
             ))}
           </ul>
         </section>
@@ -102,7 +112,12 @@ const Essence = (props) => {
           <h3>Meridian resonance</h3>
           <ul>
             {essence.meridians.map(meridian => (
-              <li key={uuid()} className="meridian">{meridian}</li>
+              <div className="meridian">
+                {renderMeridianIcon(meridian)}
+                <li key={uuid()}>
+                  {meridian}
+                </li>
+              </div>
             ))}
           </ul>
         </section>
@@ -117,11 +132,74 @@ const Essence = (props) => {
           <h3>Secondary Meridian resonance</h3>
           <ul>
             {essence.meridiansSecondary.map(meridian => (
-              <li key={uuid()} className="meridian">{meridian}</li>
+              <div className="meridian">
+                {renderMeridianIcon(meridian)}
+                <li key={uuid()}>
+                  {meridian}
+                </li>
+              </div>
             ))}
           </ul>
         </section>
       )   
+    }
+  }
+
+  const renderChakraIcon = (chakra) => {
+    switch (chakra) {
+      case "root":
+        return <img className="icon" src="/images/muladhara-2.svg" alt="" />
+      case "sacral":
+        return <img className="icon" src="/images/svadhisthana-2.svg" alt="" />
+      case "solar plexus":
+        return <img className="icon" src="/images/manipura-2.svg" alt="" />
+      case "heart":
+        return <img className="icon" src="/images/anahata-2.svg" alt="" />
+      case "throat":
+        return <img className="icon" src="/images/vishuddha-2.svg" alt="" />
+      case "third eye":
+        return <img className="icon" src="/images/ajna-2.svg" alt="" />
+      case "crown":
+        return <img className="icon" src="/images/sahasrara-2.svg" alt="" />
+      case "ba'hui point":
+        return <img className="icon" src="/images/lotus-flower.svg" alt="" />
+      case "ajana centre":
+        return <img className="icon" src="/images/ajana-center.svg" alt="" />
+      default:
+        return <img className="icon" src="/images/mandala.svg" alt="" />;
+    }
+  }
+
+  const renderMeridianIcon = (meridian) => {
+    switch (meridian) {
+      case "heart":
+        return <img className="icon" src="/images/heart.svg" alt="" />
+      case "lung":
+        return <img className="icon" src="/images/lungs.svg" alt="" />
+      case "kidney":
+        return <img className="icon" src="/images/kidney.svg" alt="" />
+      case "bladder":
+        return <img className="icon" src="/images/bladder.svg" alt="" />
+      case "spleen":
+        return <img className="icon" src="/images/spleen.svg" alt="" />
+      case "heart protector":
+        return <img className="icon" src="/images/heart-protector.svg" alt="" />
+      case "conception vessel":
+        return <img className="icon" src="/images/pelvis.svg" alt="" />
+      case "governing vessel":
+        return <img className="icon" src="/images/spinal-cord.svg" alt="" />
+      case "stomach":
+        return <img className="icon" src="/images/stomach.svg" alt="" />
+      case "gall bladder":
+        return <img className="icon" src="/images/gallbladder.svg" alt="" />
+      case "liver":
+        return <img className="icon" src="/images/liver.svg" alt="" />
+      case "large intestine":
+        return <img className="icon" src="/images/large-intestine.svg" alt="" />
+      case "small intestine":
+        return <img className="icon" src="/images/small-intestine.svg" alt="" />
+      default:
+        return null;
     }
   }
 

@@ -13,7 +13,7 @@ exports.checkLengthAndSend = (res, resource, next) => {
 exports.getNamesFromData = (data) => {
   let names = [];
   data.forEach(element => {
-    names.push(element)
+    names.push(element.name)
   })
   return names;
 }

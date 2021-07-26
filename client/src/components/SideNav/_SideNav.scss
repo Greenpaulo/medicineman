@@ -2,7 +2,9 @@ section#sidenav {
   height: 80vh;
   width: 12vw;
   // background-color: #312450;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 125px;
   border-right: 5px solid pink;
   margin: 85px 0;
 

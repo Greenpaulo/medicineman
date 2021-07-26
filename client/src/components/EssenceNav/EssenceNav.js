@@ -19,7 +19,7 @@ const EssenceNav = ({ essence }) => {
   
   
   return (
-    <section  id="top-nav">
+    <section className="top-nav">
       <h1 id="essence-heading">{essence.name}</h1>
       <nav id="essence-nav">
         <ul>

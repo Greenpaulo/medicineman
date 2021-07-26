@@ -98,9 +98,24 @@ section#secondaryChakras {
     columns: 2;
     padding-top: 1rem;
   }
+
+  img {
+    width: 25px;
+    margin-left: 1rem;
+  }
 }
 
 .chakra,
 .meridian {
-  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  // padding-top: 10px;
+  // height: 50px;
+
+  li {
+    text-transform: capitalize;
+    list-style: none;
+    margin-left: 1rem;
+  }
 }
