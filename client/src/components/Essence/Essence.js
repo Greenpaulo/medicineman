@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
-import { checkLoading, renderCompanyName ,renderImagePath } from "../../helpers/helpers"
-import EssenceNav from "../EssenceNav/EssenceNav"
+import { checkLoading, renderCompanyName, renderImagePath } from "../../helpers/helpers"
+import TopNav from "../TopNav/TopNav"
 import uuid from 'react-uuid'
 
 const Essence = (props) => {
@@ -26,7 +26,6 @@ const Essence = (props) => {
     if (essence.description.length > 0) {
       return (
         <section id="essence-description">
-          <h2>Description</h2>
           {essence.description.map(paragraph => (
             <p key={uuid()}>{paragraph}</p>
           ))}
@@ -38,7 +37,7 @@ const Essence = (props) => {
   const renderIndications = () => {
     if (essence.indications.length > 0) {
       return (
-        <section id="essence-indications" className="bg-secondary px-2 py-2 br-10">
+        <section id="essence-indications" className="bg-secondary px-2 py-2 mb-2 br-10">
           <h3>Indications</h3>
           <ul>
             {essence.indications.map(indication => (
@@ -203,8 +202,46 @@ const Essence = (props) => {
     }
   }
 
+  // Creat
+
   // Check data has loaded before render
   let isLoading = checkLoading([essence], [loadingEssences]);
+
+  let sections;
+  if (!isLoading) {
+    if ((essence.chakras.length > 0) || (essence.meridians.length > 0 )) {
+      sections = [
+        {
+          title: "Description",
+          id: "description",
+          display: "flex"
+        },
+        {
+          title: "Chakras/Meridians",
+          id: "chakrasMeridians",
+          display: "grid"
+        },
+        {
+          title: "Gallery",
+          id: "gallery",
+          display: "block"
+        }
+      ] 
+    } else {
+      sections = [
+        {
+          title: "Description",
+          id: "description",
+          display: "flex"
+        },
+        {
+          title: "Gallery",
+          id: "gallery",
+          display: "block"
+        }
+      ] 
+    }
+  }
   
   return (
     <>
@@ -216,17 +253,20 @@ const Essence = (props) => {
 
       {!isLoading &&
         <div className="container">
-          <EssenceNav essence={essence}/>
+          <TopNav heading={essence.name} sections={sections}/>
           <div className="heading-underline-left"></div>
           <h4 id="company-subheading"><Link to={`/company/${essence.company}`}>{renderCompanyName(essence.company)}</Link></h4>
           <section id="description">
             <div id="essence-text">
               {renderDescription()}
+              {essence.description.length > 0 &&
+                <div className="heading-underline-my3"></div>
+              }
               {renderIndications()}
               {renderEffects()}
             </div>
             <div id="essence-main-img">
-              <img id="essence-img" src={renderImagePath(essence.images[0])} alt="" />
+              <img id="essence-img" src={renderImagePath(essence.images)} alt="" />
             </div>
           </section>
           <section id="chakrasMeridians">

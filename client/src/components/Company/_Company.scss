@@ -1,6 +1,8 @@
 #company-heading {
   padding-top: 5rem;
   display: inline-block;
+  font-weight: 400;
+  font-size: 2.5rem;
 }
 
 // #company-logo-with-border {
@@ -12,7 +14,7 @@
   float: right;
   height: 250px;
   width: 250px;
-  margin: 3.8rem 0 1rem 6rem;
+  margin: 0 0 1rem 6rem;
 }
 // Company specific logo styling
 #Bach-logo {
@@ -22,20 +24,15 @@
 #Indigo-logo {
   height: 140px;
   width: 360px;
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 section#company-info {
-  margin-top: 2rem;
+  display: none;
 
   p {
     margin: 1rem 0;
   }
-
-  // ul {
-  //   width: 100%;
-  //   height: 200px;
-  // }
 }
 
 .section-underline {
@@ -71,6 +68,10 @@ section#groups {
   img {
     height: 215px;
     border-radius: 50%;
+  }
+
+  img[src='/images/group-images/new_child_series.png'] {
+    height: 245px;
   }
 }
 

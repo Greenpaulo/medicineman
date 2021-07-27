@@ -11,7 +11,7 @@
 
 section#description {
   display: flex;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 
 a {
@@ -35,6 +35,10 @@ a {
     padding: 1rem;
   }
 
+  :nth-child(1) {
+    padding: 0 0 1rem 0;
+  }
+
   :nth-child(even) {
     padding: 2rem;
     border-radius: 10px;
@@ -42,7 +46,6 @@ a {
   }
 }
 
-section#essence-indications,
 section#essence-effects {
   margin: 1.5rem 0 2rem 0;
 }
@@ -66,6 +69,7 @@ section#essence-effects {
 img#essence-img {
   max-width: 400px;
   margin: auto;
+  // border-radius: 50%;
 }
 
 section#chakrasMeridians,

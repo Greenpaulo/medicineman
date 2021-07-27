@@ -54,8 +54,14 @@ export const randomNumber = (min, max) => {
 //   return numbers;  
 // } 
 
-export const renderImagePath = (path, format) => {
+export const renderImagePath = (images, format) => {
     // Just return the first image FOR NOW..................................................
+    let path = "";
+    if (images[0].includes("ABFE")){
+      path = images[1]
+    } else {
+      path = images[0]
+    }
     const pathWithUnderline = path.replaceAll(" ", "_")
     if (format === "200w") {
       return `/images/${format}/${pathWithUnderline}`

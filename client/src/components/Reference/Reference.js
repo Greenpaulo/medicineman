@@ -20,24 +20,23 @@ const Reference = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Check data has loaded before render
-  let isLoading = checkLoading([references], [loadingReferences]);
-
+  
   let indications, descriptions;
   if (references !== null) {
-    console.log(references[0])
     // Get the indications object from the reference
     indications = references[0].references
     // Get just the descriptions for each indication
     descriptions = Object.keys(indications)
   }
-
+  
   const renderEssences = (desc) => {
-    console.log(indications[desc])
     return indications[desc].map(essence => (
-      <p className="essence"><Link to={`/essence/${slugify(essence, { lower: true, replacement: '_' })}`}>- {essence}</Link></p>
-    ))
-  }
+      <p className="essence"><Link to={`/essence/${slugify(essence, { lower: true, replacement: '_' })}`}> {essence}</Link></p>
+      ))
+    }
+    
+  // Check data has loaded before render
+  let isLoading = checkLoading([references], [loadingReferences]);
   
   return (
     <>
@@ -49,14 +48,29 @@ const Reference = (props) => {
 
       {!isLoading &&
         <div className="container">
-          <h1 id="essence-heading">{references[0].title}</h1>
-          <section id="essence-info">
+          <h1 id="reference-heading">{references[0].title}</h1>
+          <section id="reference-info">
             <ul id="references">
               {descriptions.map(desc => (
-                <li className="reference"><h4 className="indication">{desc}</h4>{renderEssences(desc)}</li>
+                <li className="reference br-10 my-2 px-1 py-1">
+                  <h4 className="indication">{desc}</h4>
+                  <div className="essence-links">
+                    {renderEssences(desc)}
+                  </div>
+                </li>
               ))}
             </ul>
           </section>
+          {references[0].related.length > 0 &&
+            <section id="related">
+              <h3>Related</h3>
+              <ul id="related-references">
+                {references[0].related.map(ref => (
+                  <li className="related-ref"><Link to="#">{ref}</Link></li>
+                ))}
+              </ul>
+            </section>
+          }
         </div>
       }
     </>

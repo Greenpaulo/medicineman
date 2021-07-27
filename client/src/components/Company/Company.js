@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, renderCompanyName } from "../../helpers/helpers"
 import CompanyDescription from '../CompanyDescription/CompanyDescription'
+import TopNav from '../TopNav/TopNav'
 import uuid from "react-uuid"
 
 const Company = (props) => {
@@ -21,19 +22,33 @@ const Company = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Check data has loaded before render
-  let isLoading = checkLoading([groupInfo, groups], [loadingGroup]);
-
+  
   const renderLogo = () => {
     if (groupInfo[0].company === 'Living Tree Orchid Essences') {
       return (
         // <div id="company-logo-with-border">
-          <img src="/images/company-logos/ltoe.gif" className="description-logo" alt="orchid essence logo"/>
+        <img src="/images/company-logos/ltoe.gif" className="description-logo" alt="orchid essence logo"/>
         // </div>
-      )
+        )
+      }
+      return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} className="description-logo" id={`${groupInfo[0].company}-logo`} alt="essences producer's logo"/>
     }
-    return <img src={`/images/company-logos/${groupInfo[0].company}.gif`} className="description-logo" id={`${groupInfo[0].company}-logo`} alt="essences producer's logo"/>
-  }
+
+  const sections = [
+    {
+      title: "Essence Sets",
+      id: "groups",
+      display: "grid"
+    },
+    {
+      title: "Description",
+      id: "company-info",
+      display: "block" 
+    }
+  ]
+
+  // Check data has loaded before render
+  let isLoading = checkLoading([groupInfo, groups], [loadingGroup]);
 
   return (
     <>
@@ -45,15 +60,14 @@ const Company = (props) => {
 
       {!isLoading &&
         <div className="container">
-          <h1 id="company-heading">{renderCompanyName(groupInfo[0].company)}</h1> 
+          <TopNav heading={renderCompanyName(groupInfo[0].company)} sections={sections} />
+          
+          <section id="company-info" className="mt-4 pb-3">
           {renderLogo()}
-          <section id="company-info">
             <CompanyDescription groupInfo={groupInfo[0]}/>
           </section>
 
-          <div className="section-underline"></div>
-
-          <section id="groups">
+          <section id="groups" className="mt-3">
             <h2>Essence Sets</h2>
             <div id="group-links">
               {groups.map(group => (
@@ -66,6 +80,7 @@ const Company = (props) => {
               ))}
             </div>
           </section>
+
         </div>
       }
     </>

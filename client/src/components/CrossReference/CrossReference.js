@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading } from "../../helpers/helpers"
-import CrossReferenceNav from "../CrossReferenceNav/CrossReferenceNav"
+import TopNav from "../TopNav/TopNav"
 
 const CrossReference = () => {
   const { referenceTitles, getAllReferenceTitles, setLoadingReferences, loadingReferences } = useContext(ReferencesContext);
@@ -20,6 +20,25 @@ const CrossReference = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Create section object for top nav
+  const sections = [
+    {
+      title: "Keywords",
+      id: "keywords",
+      display: "block"
+    },
+    {
+      title: "Chakras/Meridians",
+      id: "chakras-meridians-list",
+      display: "block"
+    },
+    {
+      title: "Guide To Cross-Reference",
+      id: "cross-reference-guide",
+      display: "block"
+    },
+  ]
+
   // Check data has loaded before render
   let isLoading = checkLoading([referenceTitles], [loadingReferences]);
 
@@ -33,7 +52,7 @@ const CrossReference = () => {
 
       {!isLoading &&
         <div className="container">
-          <CrossReferenceNav />
+          <TopNav heading="Cross-Reference" sections={sections} />
           <div className="heading-underline-left"></div>
           <section id="keywords" className="mt-2">
             <ul>

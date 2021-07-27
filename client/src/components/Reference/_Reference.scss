@@ -1,11 +1,29 @@
-#references {
-  p.essence {
-    margin: 0.5rem 0;
+#reference-heading {
+  font-weight: 400;
+  font-size: 3rem;
+  padding-top: 5rem;
+}
+
+ul#references {
+  list-style: none;
+
+  li:nth-child(odd) {
+    background-color: var(--light-secondary);
+  }
+
+  li:nth-child(even) {
+    background-color: var(--primary);
   }
 }
 
-.reference {
-  margin: 2rem 0;
+.essence-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+p.essence {
+  margin-right: 2rem;
 }
 
 .indication {

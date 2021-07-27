@@ -20,7 +20,7 @@ const Medicine = () => {
         </Link>
         <Link to="/company/abfe" className="company-link">
           <img src="images/company-logos/abfe.gif" alt="Bush Flower Essences logo" />
-          <h4>Australian Bush Flower Essences</h4>
+          <h4>Bush Flower Essences</h4>
         </Link>
         <Link to="/company/bach" className="company-link">
           <img src="images/company-logos/bach.gif" alt="" />

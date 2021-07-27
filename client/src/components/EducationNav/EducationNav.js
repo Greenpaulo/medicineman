@@ -16,4 +16,4 @@ const EducationNav = () => {
   )
 }
 
-export default EssenceNav
+export default EducationNav

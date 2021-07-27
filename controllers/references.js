@@ -6,7 +6,7 @@ const { checkLengthAndSend, getNamesFromData } = require('../helpers/helpers');
 // @route     GET /api/v1/references
 // @access    Public
 exports.getAllReferences = asyncHandler(async (req, res, next) => {
-    const references = await Reference.find();
+    const references = await Reference.find().sort([['title', 1]]);
 
     checkLengthAndSend(res, references, next)
 });
@@ -15,7 +15,7 @@ exports.getAllReferences = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/references/names
 // @access    Public
 exports.getAllReferenceTitles = asyncHandler(async (req, res, next) => {
-    const references = await Reference.find();
+    const references = await Reference.find().sort([['title', 1]]);
 
     const getTitlesAndSlugsFromData = (references) => {
       let titles = [];

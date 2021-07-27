@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react'
 import { EssencesContext } from "../../context/EssencesState"
-import EssenceNav from '../EssenceNav/EssenceNav'
 import { checkLoading } from "../../helpers/helpers"
+import TopNav from '../TopNav/TopNav'
 
 
 const EssenceKeywords = (props) => {
@@ -20,6 +20,41 @@ const EssenceKeywords = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Create sections to pass in top nav
+  let sections;
+  if ((essence.chakras.length > 0) || (essence.meridians.length > 0 )) {
+    sections = [
+      {
+        title: "Description",
+        id: "description",
+        display: "flex"
+      },
+      {
+        title: "Chakras/Meridians",
+        id: "chakrasMeridians",
+        display: "grid"
+      },
+      {
+        title: "Gallery",
+        id: "gallery",
+        display: "block"
+      }
+    ] 
+  } else {
+    sections = [
+      {
+        title: "Description",
+        id: "description",
+        display: "flex"
+      },
+      {
+        title: "Gallery",
+        id: "gallery",
+        display: "block"
+      }
+    ] 
+  }
+
   // Check data has loaded before render
   let isLoading = checkLoading([essence], [loadingEssences]);
 
@@ -33,7 +68,7 @@ const EssenceKeywords = (props) => {
 
       {!isLoading &&
         <div className="container">
-          <EssenceNav essence={essence}/>
+          <TopNav heading={essence.name} sections={sections}/>
           <h3 className="section-heading">Keywords</h3>
         </div>
       }

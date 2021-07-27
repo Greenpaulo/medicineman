@@ -38,16 +38,16 @@ const Group = (props) => {
   // }
 
   const renderEssencePhoto = () => {
-    if (groupInfo[0].company === 'ABFE') {
-      return (
-        <div id="group-photo">
-          <img src={renderImagePath(essences[randomNumber(0, essences.length)].images[1])}className="group-photo-example" alt=""/>
-        </div>
-        )
-    }
+    // if (groupInfo[0].company === 'ABFE') {
+    //   return (
+    //     <div id="group-photo">
+    //       <img src={renderImagePath(essences[randomNumber(0, essences.length)].images)}className="group-photo-example" alt=""/>
+    //     </div>
+    //     )
+    // }
     return (
       <div id="group-photo">
-        <img src={renderImagePath(essences[randomNumber(0, essences.length)].images[0])}className="group-photo-example" alt=""/>
+        <img src={renderImagePath(essences[randomNumber(0, essences.length)].images)}className="group-photo-example" alt=""/>
       </div>
     )
   }

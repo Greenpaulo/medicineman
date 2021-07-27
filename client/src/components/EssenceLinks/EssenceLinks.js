@@ -115,10 +115,10 @@ const EssenceLinks = ({ essences, group }) => {
   }
 
   const renderImage = (essence, format) => {
-    if (group === 'Bush Flowers') {
-      return renderImagePath(essence.images[1], format)
-    }
-    return renderImagePath(essence.images[0], format)
+    // if (group === 'Bush Flowers') {
+    //   return renderImagePath(essence.images, format)
+    // }
+    return renderImagePath(essence.images, format)
   }
 
 
