@@ -68,7 +68,7 @@ const Company = (props) => {
           </section>
 
           <section id="groups" className="mt-3">
-            <h2>Essence Sets</h2>
+            {/* <h2>Essence Sets</h2> */}
             <div id="group-links">
               {groups.map(group => (
                 <div key={uuid()} className="group-link">

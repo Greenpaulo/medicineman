@@ -1,9 +1,16 @@
 section#keywords {
-  // width: 85%;
-  // margin: 3rem auto 0 auto;
+  width: 100%;
+  margin: 3rem auto 0 auto;
+  padding-left: 6rem;
+  padding-bottom: 3rem;
 
   ul {
     columns: 4;
     list-style: none;
   }
+}
+
+section#chakras-meridians-list,
+section#cross-reference-guide {
+  display: none;
 }

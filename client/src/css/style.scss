@@ -52,8 +52,8 @@ html {
   line-height: 2.3em;
   // color: #333;
   // background-color: #eee;
-  width: 82vw;
   margin: auto;
+  // overflow-y: scroll;
 }
 
 // li {
@@ -62,7 +62,8 @@ html {
 
 // Section container
 .container {
-  margin-left: 16vw;
+  width: 67vw;
+  margin-left: 24vw;
 }
 
 // Section heading
@@ -116,3 +117,11 @@ section.section-intro {
   margin: 4rem 0;
   text-align: center;
 }
+
+// Media query to adjust margin when scrollbar is added to x-axis
+// @media screen and (min-width: 960px) {
+//   html {
+//     margin-right: calc(100vw - 100%);
+//     // margin-right: 0;
+//   }
+// }

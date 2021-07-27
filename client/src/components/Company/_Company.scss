@@ -57,6 +57,7 @@ section#groups {
   grid-row-gap: 8rem;
   padding-top: 2rem;
   padding-bottom: 5rem;
+  align-items: center;
 }
 
 .group-link {
@@ -64,6 +65,7 @@ section#groups {
   width: 200px;
   text-align: center;
   font-size: 1.1rem;
+  margin: auto;
 
   img {
     height: 215px;

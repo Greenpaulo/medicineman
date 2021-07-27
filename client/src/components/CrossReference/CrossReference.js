@@ -53,7 +53,7 @@ const CrossReference = () => {
       {!isLoading &&
         <div className="container">
           <TopNav heading="Cross-Reference" sections={sections} />
-          <div className="heading-underline-left"></div>
+          <div className="heading-underline"></div>
           <section id="keywords" className="mt-2">
             <ul>
               {referenceTitles.map(ref => (

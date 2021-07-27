@@ -2,16 +2,23 @@ import uuid from 'react-uuid'
 
 const TopNav = ({heading, sections}) => {
 
-  const showSection = (id, display) => {
+  const showSection = (title, id, display) => {
     const otherSections = sections.filter((sec) => {
       return sec.id !== id
     })
     document.getElementById(`${id}`).style.display = `${display}`;
+    document.getElementById(`${title}`).classList.toggle("active");
 
     otherSections.forEach(sec => {
       document.getElementById(`${sec.id}`).style.display = "none";
+      document.getElementById(`${sec.title}`).classList.remove("active");
     })
   }
+
+  // const addInitialActive = () => {
+  //   document.getElementById(`${sections[0].display}`).classList.add("active");
+  // }
+  // addInitialActive();
   
   
   return (
@@ -19,8 +26,8 @@ const TopNav = ({heading, sections}) => {
       <h1 className="top-nav-heading">{heading}</h1>
       <nav id="top-nav-main">
         <ul>
-          {sections.map(sec => (
-            <li key={uuid()} onClick={() => showSection(sec.id, sec.display)}>{sec.title}</li>
+          {sections.map((sec, index) => (
+            <li id={`${sec.title}`} className={index === 0 ? 'active' : null} key={uuid()} onClick={() => showSection(sec.title, sec.id, sec.display)}>{sec.title}</li>
           ))}
         </ul>
       </nav>
