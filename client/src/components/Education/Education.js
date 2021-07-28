@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Education = () => {
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading">Education</h1>
       <section id="education-intro">
         <div id="text-section-1">

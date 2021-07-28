@@ -4,6 +4,9 @@ import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, randomNumber, renderCompanyName, renderImagePath } from "../../helpers/helpers"
 import uuid from 'react-uuid'
 import EssenceLinks from '../EssenceLinks/EssenceLinks'
+import CircleLoader from "react-spinners/CircleLoader";
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
+
 
 const Group = (props) => {
   const { essences, getEssencesByGroup, loadingEssences, setLoadingEssences } = useContext(EssencesContext);
@@ -65,12 +68,15 @@ const Group = (props) => {
     <>
       {isLoading && 
         <div className="container">
-          <h1>Loading</h1>
+          <div className="spinner">
+            <CircleLoader loading={isLoading} size={100} speedMultiplier={0.7} color="#ffd4bf"/>
+          </div>
         </div>
       }
 
       {!isLoading &&
-        <div className="container">
+        <div className="container animate__animated animate__fadeIn">
+          <Breadcrumbs props={props} company={renderCompanyName(groupInfo[0].company)} group={group} crumbs={props.crumbs} />
           <h1 id="company-heading">{renderCompanyName(groupInfo[0].company)}</h1> 
           {renderEssencePhoto()}
           <h2 id="group-heading">{group}</h2>

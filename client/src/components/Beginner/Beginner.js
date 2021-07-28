@@ -2,7 +2,7 @@
 
 const Beginner = () => {
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading">Beginner</h1>
       <div className="heading-underline"></div>
       <section id="beginner-education" className="mt-2">

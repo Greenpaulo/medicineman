@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Intro = () => {
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading" id="intro-heading">Introduction</h1>
       <div className="heading-underline"></div>
       <section className="section-intro">

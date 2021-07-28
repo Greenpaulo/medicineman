@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading } from "../../helpers/helpers"
 import TopNav from "../TopNav/TopNav"
+import CircleLoader from "react-spinners/CircleLoader";
+
 
 const CrossReference = () => {
   const { referenceTitles, getAllReferenceTitles, setLoadingReferences, loadingReferences } = useContext(ReferencesContext);
@@ -46,12 +48,14 @@ const CrossReference = () => {
     <>
       {isLoading && 
         <div className="container">
-          <h1>Loading</h1>
+          <div className="spinner">
+            <CircleLoader loading={isLoading} size={100} speedMultiplier={0.7} color="#ffd4bf"/>
+          </div>
         </div>
       }
 
       {!isLoading &&
-        <div className="container">
+        <div className="container animate__animated animate__fadeIn">
           <TopNav heading="Cross-Reference" sections={sections} />
           <div className="heading-underline"></div>
           <section id="keywords" className="mt-2">

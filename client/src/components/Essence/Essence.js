@@ -2,8 +2,10 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { checkLoading, renderCompanyName, renderImagePath } from "../../helpers/helpers"
-import TopNav from "../TopNav/TopNav"
 import uuid from 'react-uuid'
+import CircleLoader from "react-spinners/CircleLoader";
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
+import TopNav from "../TopNav/TopNav"
 
 const Essence = (props) => {
   const { essence, getEssenceByName, setLoadingEssences, loadingEssences } = useContext(EssencesContext);
@@ -247,14 +249,19 @@ const Essence = (props) => {
     <>
       {isLoading && 
         <div className="container">
-          <h1>Loading</h1>
+          <div className="spinner">
+            <CircleLoader loading={isLoading} size={100} speedMultiplier={0.7} color="#ffd4bf"/>
+          </div>
         </div>
       }
 
       {!isLoading &&
-        <div className="container">
+        <div className="container animate__animated animate__fadeIn">
+          <Breadcrumbs props={props} company={renderCompanyName(essence.company)} group={essence.group} essence={essence.name} crumbs={props.crumbs} />
+
           <TopNav heading={essence.name} sections={sections}/>
-          <div className="heading-underline-left"></div>
+
+          <div className="heading-underline"></div>
           <h4 id="company-subheading"><Link to={`/company/${essence.company}`}>{renderCompanyName(essence.company)}</Link></h4>
           <section id="description">
             <div id="essence-text">

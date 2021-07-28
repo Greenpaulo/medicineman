@@ -5,6 +5,9 @@ import { checkLoading, renderCompanyName } from "../../helpers/helpers"
 import CompanyDescription from '../CompanyDescription/CompanyDescription'
 import TopNav from '../TopNav/TopNav'
 import uuid from "react-uuid"
+import CircleLoader from "react-spinners/CircleLoader";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
+
 
 const Company = (props) => {
   const { groupInfo, groups, getGroupInfo, getGroupsByCompany, loadingGroup, setLoadingGroup } = useContext(GroupInfoContext);
@@ -54,13 +57,16 @@ const Company = (props) => {
     <>
       {isLoading && 
         <div className="container">
-          <h1>Loading</h1>
+          <div className="spinner">
+            <CircleLoader loading={isLoading} size={100} speedMultiplier={0.7} color="#ffd4bf"/>
+          </div>
         </div>
       }
 
       {!isLoading &&
-        <div className="container">
-          <TopNav heading={renderCompanyName(groupInfo[0].company)} sections={sections} />
+        <div className="container animate__animated animate__fadeIn">
+          <Breadcrumbs props={props} company={renderCompanyName(groupInfo[0].company)} crumbs={props.crumbs} />
+          <TopNav heading={renderCompanyName(groupInfo[0].company)} sections={sections}/>
           
           <section id="company-info" className="mt-4 pb-3">
           {renderLogo()}

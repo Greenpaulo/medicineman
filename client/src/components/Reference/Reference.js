@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading } from "../../helpers/helpers"
 import slugify from 'slugify'
+import CircleLoader from "react-spinners/CircleLoader";
+
 
 const Reference = (props) => {
   const { references, getSingleReference, setLoadingReferences, loadingReferences } = useContext(ReferencesContext);
@@ -42,12 +44,14 @@ const Reference = (props) => {
     <>
       {isLoading && 
         <div className="container">
-          <h1>Loading</h1>
+          <div className="spinner">
+            <CircleLoader loading={isLoading} size={100} speedMultiplier={0.7} color="#ffd4bf"/>
+          </div>
         </div>
       }
 
       {!isLoading &&
-        <div className="container">
+        <div className="container animate__animated animate__fadeIn">
           <h1 id="reference-heading">{references[0].title}</h1>
           <section id="reference-info">
             <ul id="references">
