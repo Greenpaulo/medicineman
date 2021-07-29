@@ -1,15 +1,17 @@
-// import { Link } from 'react-router-dom'
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 
-const Beginner = () => {
+const Beginner = (props) => {
   return (
     <div className="container animate__animated animate__fadeIn">
+      <Breadcrumbs props={props} crumbs={props.crumbs} />
       <h1 className="section-heading">Beginner</h1>
       <div className="heading-underline"></div>
-      <section id="beginner-education" className="mt-2">
+      <section id="beginner-education" className="mt-2 pb-2">
         <div className="contents">
           <h3>Section 1 – What is Traditional Medicine?</h3>
-          <h3>Section 2 – Flower Essences</h3>
-          <h3>Section 3 – Widening our Perspective on Essences</h3>
+          <h3>Section 2 – What Are Flower Essences?</h3>
+          <h3>Section 3 – How Do They Work?</h3>
+          <h3>Section 4 - What Are Gem / Environmental / Animal / Sea Essences?</h3>
         </div>
         <div id="beginner-section-1" className="my-2 py-2">
           <h3 className="mb-1">WHAT IS TRADITIONAL MEDICINE?</h3>
@@ -46,11 +48,9 @@ const Beginner = () => {
 
           <p>A few years later more producers appeared, preparing flower essences from the indigenous flowers in their countries.  In 1984 Steven Johnson set up the Alaskan Flower Essence Project and in 1986 the Australian Bush Flower Essences were founded.  These new essences expanded on the Bach essences and addressed issues surrounding sexuality, intimacy, creativity, communication and spirituality. Areas that were seemingly missing from the application of the Bach flower essences.  Because of the times, Ian White (2009) the founder of the Australian Bush Flower Essences, suggests that today’s society and needs are very different than that of sixty years ago and these newer essences are more in line with the problems we face today.</p>
 
-          <p>For an extended introduction to essences please see my final year dissertation available to download here:
-          (Download link for dissertation……………………)</p>
         </div>
 
-        <div id="beginner-section-4" className="bg-primary py-2 px-2 mt-2 br-10">
+        <div id="beginner-section-4" className="bg-primary py-2 px-2 mt-1 br-10">
           <h3>WHAT ARE GEM / ENVIRONMENTAL / ANIMAL / SEA ESSENCES?</h3>
           <p>Everything in the universe is energy. Shamans have known this for a long time and now even science has caught up to this understanding in areas such as quantum physics. Energy and spirit are synonyms.
 
@@ -58,21 +58,8 @@ const Beginner = () => {
           </p>
         </div>
 
-        <div id="beginner-section-5" className="py-2 mt-2">
-          <h3>WIDENING OUR PERSPECTVE ON ESSENCES</h3>
-          <p>Here is a fantastic article by Peter Tadd, a clairvoyant that has worked as “quality control” for several flower essence producers. Using his psychic abilities to understand how essences work at a deeper level of awareness:
-
-          LINK HERE
-          </p>
-        </div>
-
-        <div id="beginner-section-6" className="bg-tertiary py-2 px-2 mt-2 br-10">
+        <div id="beginner-section-5" className="bg-tertiary py-2 px-2 mt-2 br-10">
           <p>The essences work in very powerful ways, but are very different than the expected outcome of someone who is used to pharmaceutical drugs. They alter your energetic system, your frequency, and in turn you attract situations in your life that enable you to overcome and heal the issue that you original took the medicine for. This may not be apparent when first starting to take essences, but after some time you begin to see the essences in action, and how the transformation works in your life. They are a brilliant tool for healing!</p>
-        </div>
-        
-        <img src="images/ayahuasca.jpg" alt="" />
-        <img src="images/ayahuasca2.jpg" alt="" />
-        <div id="text-section-2">
         </div>
       </section>
     </div>

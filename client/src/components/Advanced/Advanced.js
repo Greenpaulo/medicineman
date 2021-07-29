@@ -1,11 +1,12 @@
-// import { Link } from 'react-router-dom'
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 
-const Advanced = () => {
+const Advanced = (props) => {
   return (
     <div className="container animate__animated animate__fadeIn">
+      <Breadcrumbs props={props} crumbs={props.crumbs} />
       <h1 className="section-heading">Advanced</h1>
       <div className="heading-underline"></div>
-      <section id="advanced-education">
+      <section id="advanced-education" className="pb-2">
         <div className="contents">
           <h3>Section 1 – Intro & Understanding Medicine</h3>
           <h3>Section 2 – Who are we? Where are we? What is happening?</h3>
@@ -225,7 +226,7 @@ const Advanced = () => {
 
           <p>So from this perspective, it’s OK that we feel these emotions. It’s OK to feel anger, guilt, fear etc – it’s a consequence of our manipulation. We don’t need to beat ourselves up for feeling these emotions (energy-in-motion). We have a lot of stored and stuck energies in our body that need to be released as part of our ascension. As our consciousness expands and we begin to see the truth of life and that we have made incorrect beliefs about life, then these “crossed” energies begin to straighten, we will release all the blocked and stored energies that corresponded to these incongruences. This is an energetic “purge”, and is a pivotal part of the healing process. We need to purge these stuck low frequency energies to make room for higher frequency energies to enter the body and transform our frequency from a lower state to a higher state, which we know as “healing”.</p>
 
-          <p>Hence, it’s OK to feel these emotions, we need to feel these emotions as they come up to be released through our bodies energetic system. We don’t want to hold onto these stored up negative emotions any longer. We can feel them, and release them. We also don’t want to fall into the trap of trying to “change” these emotions as they could up, and try to “positively think” our way to a “better emotion”. This just delays the processing of the emotion through the body, and can add to the accumulation of negative emotions in the body, that get stored to be processed at a later date.</p>
+          <p>We need to feel these emotions as they come up to be released through our bodies energetic system. We don’t want to hold onto these stored up negative emotions any longer. We can feel them, and release them. We also don’t want to fall into the trap of trying to “change” these emotions as they come up, and try to “positively think” our way to a “better emotion”. This just delays the processing of the emotion through the body, and can add to the accumulation of negative emotions in the body, that get stored to be processed at a later date.</p>
 
           <p>We should always fully feel whatever emotion is in our body, it’s just energy passing through our body. We have been programmed since childhood to not fully feel these emotions, with phrases such as “stop crying”. That’s not what we want to do. We NEED to fully feel every emotion so it can move through us and be released. </p>
 

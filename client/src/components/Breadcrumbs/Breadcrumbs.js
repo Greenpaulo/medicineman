@@ -15,7 +15,7 @@ const Breadcrumbs = ({props, crumbs, company, group, essence}) => {
               {group}
             </span>
           ) : (
-            <Link key={key} className="mr-2" to={path}>
+            <Link key={key} className="mr-1" to={path}>
               {`${group} >`}
             </Link>
           )
@@ -27,7 +27,7 @@ const Breadcrumbs = ({props, crumbs, company, group, essence}) => {
               {company}
             </span>
           ) : (
-            <Link key={key} className="mr-2" to={path}>
+            <Link key={key} className="mr-1" to={path}>
               {`${company} >`}
             </Link>
           )
@@ -39,7 +39,7 @@ const Breadcrumbs = ({props, crumbs, company, group, essence}) => {
               {essence}
             </span>
           ) : (
-            <Link key={key} className="mr-2" to={path}>
+            <Link key={key} className="mr-1" to={path}>
               {`${essence} >`}
             </Link>
           )
@@ -51,7 +51,7 @@ const Breadcrumbs = ({props, crumbs, company, group, essence}) => {
               {name}
             </span>
           ) : (
-            <Link key={key} className="mr-2" to={path}>
+            <Link key={key} className="mr-1" to={path}>
               {`${name} >`}
             </Link>
           )
@@ -60,7 +60,7 @@ const Breadcrumbs = ({props, crumbs, company, group, essence}) => {
   }
 
   return (
-    <div className="mb-4">
+    <div className="pt-2">
       {/* Link back to any previous steps of the breadcrumb. */}
       {crumbs.map(({ name, path }, key) => (
 

@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 
-const Education = () => {
+const Education = (props) => {
   return (
     <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading">Education</h1>
-      <section id="education-intro">
+      <div className="heading-underline"></div>
+      <section id="education-intro" className="pb-2" >
         <div id="text-section-1">
           <p>In the Western education system we have no real teachings on medicine. We are not taught about it in school, and we are never introduced to it at college. We do not even cover it in science classes that teach biology. We basically grow up with no real understanding of the causes of health and disease and we hand all our power over to the decisions of doctors. Such an important topic, which is literally life or death, should be taught in schools. </p>
 
@@ -28,7 +29,7 @@ const Education = () => {
             <div className="btn-container">
               <Link to="/education/intermediate" className="btn btn-secondary mr-2">INTERMEDIATE</Link>
             </div>
-            <p>Here we will delve into the history of our current medical system and take a look at how we got here. We will also expand our knowledge of the human body and the role of emotions in health.</p>
+            <p>Here we will delve into the history of our current medical system and take a look at how we got here. We will also expand our knowledge of the human body, the role of emotions in health and take a deeper look at essences.</p>
           </div>
 
           <div className="section-link mt-2">

@@ -14,35 +14,35 @@ const Medicine = () => {
       </section>
       <VineUnderline />
       <section id="company-links">
-        <Link to="/company/alaskan" className="company-link">
+        <Link to="/medicine/alaskan" className="company-link">
           <img src="images/company-logos/alaskan.gif" alt="Alaskan Essences logo" />
           <h4>Alaskan Essences</h4>
         </Link>
-        <Link to="/company/abfe" className="company-link">
+        <Link to="/medicine/abfe" className="company-link">
           <img src="images/company-logos/abfe.gif" alt="Bush Flower Essences logo" />
           <h4>Bush Flower Essences</h4>
         </Link>
-        <Link to="/company/bach" className="company-link">
+        <Link to="/medicine/bach" className="company-link">
           <img src="images/company-logos/bach.gif" alt="" />
           <h4>Bach Flower Essences</h4>
         </Link>
-        <Link to="/company/bailey" className="company-link">
+        <Link to="/medicine/bailey" className="company-link">
           <img src="images/company-logos/bailey.gif" alt="" />
           <h4>Bailey Essences</h4>
         </Link>
-        <Link to="/company/indigo" className="company-link" id="indigo-link">
+        <Link to="/medicine/indigo" className="company-link" id="indigo-link">
           <img src="images/company-logos/indigo.gif" id="indigo-logo" alt="" />
           <h4>Indigo Essences</h4>
         </Link>
-        <Link to="/company/living_tree_orchid_essences" className="company-link">
+        <Link to="/medicine/living_tree_orchid_essences" className="company-link">
           <img src="images/company-logos/ltoe.gif" alt="" />
           <h4>Living Tree Orchid Essences</h4>
         </Link>
-        <Link to="/company/pacific" className="company-link">
+        <Link to="/medicine/pacific" className="company-link">
           <img src="images/company-logos/pacific.gif" alt="" />
           <h4>Pacific Essences</h4>
         </Link>
-        <Link to="/company/weae" className="company-link">
+        <Link to="/medicine/weae" className="company-link">
           <img src="images/company-logos/weae.gif" alt="" />
           <h4>Wild Earth Animal Essences</h4>
         </Link>

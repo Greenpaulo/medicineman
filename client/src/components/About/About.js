@@ -3,6 +3,7 @@ const About = () => {
   return (
     <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading">About</h1>
+      <div className="heading-underline"></div>
 
       <h3>WHY ESSENCES?</h3>
 
