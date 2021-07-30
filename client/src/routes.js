@@ -14,7 +14,7 @@ import Advanced from './components/Advanced/Advanced'
 import Store from './components/Store/Store'
 import About from './components/About/About'
 
-export default [
+const routes = [
   { path: "/", name: "Home", Component: Landing },
   { path: "/intro", name: "Introduction", Component: Intro },
   { path: "/medicine", name: "Medicine", Component: Medicine },
@@ -30,3 +30,5 @@ export default [
   { path: "/store", name: "Store", Component: Store },
   { path: "/about", name: "About", Component: About }
 ];
+
+export default routes;

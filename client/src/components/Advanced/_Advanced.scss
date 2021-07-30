@@ -27,6 +27,16 @@ section#advanced-education {
   }
 }
 
+#advanced-section-1,
+#advanced-section-2,
+#advanced-section-3,
+#advanced-section-4,
+#advanced-section-5,
+#advanced-section-6 {
+  display: none;
+  padding-bottom: 2rem;
+}
+
 .video-container {
   width: 918px;
   margin: auto;

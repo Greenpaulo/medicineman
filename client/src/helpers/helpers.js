@@ -68,3 +68,21 @@ export const renderImagePath = (images, format) => {
     }
     return `/images/${pathWithUnderline}`
   }
+
+export const createEducationSectionsObject = (num, title) => {
+  let sections = [{
+    title: "Contents",
+    id: `${title}-section-contents`,
+    display: "block"
+  }]
+
+  for (let i = 0; i < num; i++) {
+    sections.push({
+      title: `Section ${ i + 1}`,
+      id: `${title}-section-${ i + 1 }`,
+      display: "block"
+
+    })
+  }
+  return sections;
+}

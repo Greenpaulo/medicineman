@@ -1,11 +1,6 @@
 import { BrowserRouter, Route } from 'react-router-dom'
-
 import routes from "../../routes"
-// import uuid from 'react-uuid'
-
 import SideNav from '../SideNav/SideNav'
-
-
 
 const App = () => {
   return (
@@ -32,9 +27,6 @@ const App = () => {
                     : path,
                   ...rest
                 }));
-
-              console.log(`Generated crumbs for ${props.match.path}`);
-              crumbs.map(({ name, path }) => console.log({ name, path }));
 
               return (
                 <div className="p-8">
