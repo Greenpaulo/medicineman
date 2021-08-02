@@ -31,7 +31,18 @@ section#intermediate-education {
 #intermediate-section-4,
 #intermediate-section-5,
 #intermediate-section-6,
-#intermediate-section-7 {
+#intermediate-section-7,
+#intermediate-section-references {
   display: none;
   padding-bottom: 2rem;
+}
+
+#intermediate-section-references {
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
 }

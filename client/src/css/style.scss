@@ -127,3 +127,12 @@ section.section-intro {
 .animate__animated.animate__fadeIn {
   --animate-duration: 1.2s;
 }
+
+sup {
+  font-size: 11px;
+
+  // Stop superscript changing line height
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}

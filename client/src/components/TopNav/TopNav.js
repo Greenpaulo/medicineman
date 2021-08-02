@@ -7,7 +7,10 @@ const TopNav = ({heading, sections}) => {
       return sec.id !== id
     })
     document.getElementById(`${id}`).style.display = `${display}`;
-    document.getElementById(`${title}`).classList.toggle("active");
+    
+    if (!document.getElementById(`${title}`).classList.contains("active")){
+      document.getElementById(`${title}`).classList.toggle("active");
+    }
 
     otherSections.forEach(sec => {
       document.getElementById(`${sec.id}`).style.display = "none";

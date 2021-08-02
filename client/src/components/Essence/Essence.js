@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { checkLoading, renderCompanyName, renderImagePath } from "../../helpers/helpers"
 import uuid from 'react-uuid'
+import slugify from 'slugify'
 import CircleLoader from "react-spinners/CircleLoader";
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
 import TopNav from "../TopNav/TopNav"
@@ -204,11 +205,20 @@ const Essence = (props) => {
     }
   }
 
-  // Creat
-
+  const renderKeywords = () => {
+    return (
+      <ul>
+        {essence.keywords.map(keyword => (
+          <li><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`}>{keyword}</Link></li>
+          ))}
+          
+      </ul>
+    )
+  }
+  
   // Check data has loaded before render
   let isLoading = checkLoading([essence], [loadingEssences]);
-
+  
   let sections;
   if (!isLoading) {
     if ((essence.chakras.length > 0) || (essence.meridians.length > 0 )) {
@@ -224,6 +234,11 @@ const Essence = (props) => {
           display: "grid"
         },
         {
+          title: "Keywords",
+          id: "keywords",
+          display: "block"
+        },
+        {
           title: "Gallery",
           id: "gallery",
           display: "block"
@@ -237,6 +252,11 @@ const Essence = (props) => {
           display: "flex"
         },
         {
+          title: "Keywords",
+          id: "keywords",
+          display: "block"
+        },
+        {
           title: "Gallery",
           id: "gallery",
           display: "block"
@@ -245,6 +265,7 @@ const Essence = (props) => {
     }
   }
   
+
   return (
     <>
       {isLoading && 
@@ -281,6 +302,9 @@ const Essence = (props) => {
             {renderSecondaryChakras()}
             {renderMeridians()}
             {renderSecondaryMeridians()}
+          </section>
+          <section id="keywords">
+            {renderKeywords()}
           </section>
           <section id="gallery">
             <p>gallery...........</p>

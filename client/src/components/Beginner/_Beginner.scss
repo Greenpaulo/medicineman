@@ -20,6 +20,17 @@ section#beginner-education {
 #beginner-section-1,
 #beginner-section-2,
 #beginner-section-3,
-#beginner-section-4 {
+#beginner-section-4,
+#beginner-section-references {
   display: none;
+}
+
+#beginner-section-references {
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
 }

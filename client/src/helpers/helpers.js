@@ -84,5 +84,12 @@ export const createEducationSectionsObject = (num, title) => {
 
     })
   }
+  if (title === "beginner" || title === "intermediate") {
+    sections.push({
+      title: "References",
+      id: `${title}-section-references`,
+      display: "block"
+    })
+  }
   return sections;
 }
