@@ -52,6 +52,17 @@ app.use('/api/v1/orders', orders);
 // Error handler middleware - define error-handling middleware last, after other app.use() and routes calls
 app.use(errorHandler);
 
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('client/build'));
+
+  // If there is no file in build dir - serve index.html file
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
+
 const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.cyan.bold));
