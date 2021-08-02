@@ -20,7 +20,7 @@ export const ReferencesProvider = ({ children }) => {
   // Actions
   async function getAllReferences() {
     try {
-      const res = await axios.get('http://localhost:5000/api/v1/references');
+      const res = await axios.get('/api/v1/references');
 
       dispatch({
         type: 'GET_ALL_REFERENCES',
@@ -36,7 +36,7 @@ export const ReferencesProvider = ({ children }) => {
 
   async function getAllReferenceTitles() {
     try {
-      const res = await axios.get('http://localhost:5000/api/v1/references/titles');
+      const res = await axios.get('/api/v1/references/titles');
 
       dispatch({
         type: 'GET_ALL_REFERENCE_TITLES',
@@ -52,7 +52,7 @@ export const ReferencesProvider = ({ children }) => {
 
   async function getSingleReference(reference) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1/references/${reference}`);
+      const res = await axios.get(`/api/v1/references/${reference}`);
 
       dispatch({
         type: 'GET_SINGLE_REFERENCE',

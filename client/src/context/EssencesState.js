@@ -20,7 +20,7 @@ export const EssencesProvider = ({ children }) => {
   // Actions
   async function getEssenceByName(name) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1/essences/${name}`);
+      const res = await axios.get(`/api/v1/essences/${name}`);
 
       dispatch({
         type: 'GET_ESSENCE_BY_NAME',
@@ -36,7 +36,7 @@ export const EssencesProvider = ({ children }) => {
 
   async function getEssencesByCompany(company) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1/essences/company/${company}`);
+      const res = await axios.get(`/api/v1/essences/company/${company}`);
 
       dispatch({
         type: 'GET_ESSENCES_BY_COMPANY',
@@ -52,7 +52,7 @@ export const EssencesProvider = ({ children }) => {
 
   async function getEssencesByGroup(group) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1/essences/group/${group}`);
+      const res = await axios.get(`/api/v1/essences/group/${group}`);
 
       dispatch({
         type: 'GET_ESSENCES_BY_GROUP',

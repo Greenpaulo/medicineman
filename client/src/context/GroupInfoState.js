@@ -20,7 +20,7 @@ export const GroupInfoProvider = ({ children }) => {
   // Actions
   async function getGroupInfo(company, group) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1/groupinfo/${company}/${group}`);
+      const res = await axios.get(`/api/v1/groupinfo/${company}/${group}`);
 
       dispatch({
         type: 'GET_GROUP_INFO',
@@ -36,7 +36,7 @@ export const GroupInfoProvider = ({ children }) => {
 
   async function getGroupsByCompany(company) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1/groupinfo/${company}`);
+      const res = await axios.get(`/api/v1/groupinfo/${company}`);
 
       dispatch({
         type: 'GET_GROUPS_BY_COMPANY',
