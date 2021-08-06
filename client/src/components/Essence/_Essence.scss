@@ -28,7 +28,7 @@ a {
   // margin-top: 2rem;
 
   p {
-    margin-top: 1rem;
+    // margin-top: 1rem;
   }
 
   :nth-child(odd) {
@@ -68,12 +68,14 @@ section#essence-effects {
 
 img#essence-img {
   max-width: 400px;
+  max-height: 500px;
   margin: auto;
   // border-radius: 50%;
 }
 
 section#chakrasMeridians,
-section#gallery {
+section#gallery,
+section#essence-keywords {
   display: none;
   padding-top: 2rem;
 }
@@ -121,10 +123,11 @@ section#secondaryChakras {
     text-transform: capitalize;
     list-style: none;
     margin-left: 1rem;
+    line-height: 30px;
   }
 }
 
-section#keywords {
+section#essence-keywords {
   li {
     text-transform: capitalize;
   }

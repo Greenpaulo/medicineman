@@ -30,3 +30,17 @@ nav#top-nav-main {
   padding-top: 5rem;
   text-align: center;
 }
+
+#top-nav-logo {
+  height: 100px;
+  max-width: 100px;
+  position: absolute;
+  top: 56px;
+  left: 10px;
+
+  [src='/images/company-logos/indigo.gif'] {
+    width: 100px;
+  }
+  // right: 281px;
+  // float: left;
+}

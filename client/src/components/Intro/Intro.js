@@ -26,10 +26,14 @@ const Intro = () => {
             <img src="images/love.svg" alt="" />
             <h4>Education</h4>  
           </Link>
-          <Link to="#" className="page-link">
+          <Link to="/contact" className="page-link">
+            <img src="images/email.svg" alt="" />
+            <h4>Contact</h4>  
+          </Link>
+          {/* <Link to="#" className="page-link">
             <img src="images/healing2.svg" alt="" />
             <h4>About</h4>  
-          </Link>
+          </Link> */}
         </div>
       </section>
     </div>

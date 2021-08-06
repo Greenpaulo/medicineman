@@ -13,6 +13,7 @@ import Intermediate from './components/Intermediate/Intermediate'
 import Advanced from './components/Advanced/Advanced'
 import Store from './components/Store/Store'
 import About from './components/About/About'
+import Contact from './components/Contact/Contact'
 
 const routes = [
   { path: "/", name: "Home", Component: Landing },
@@ -28,7 +29,8 @@ const routes = [
   { path: "/education/intermediate", name: "Intermediate", Component: Intermediate },
   { path: "/education/advanced", name: "Advanced", Component: Advanced },
   { path: "/store", name: "Store", Component: Store },
-  { path: "/about", name: "About", Component: About }
+  { path: "/about", name: "About", Component: About },
+  { path: "/contact", name: "Contact", Component: Contact },
 ];
 
 export default routes;

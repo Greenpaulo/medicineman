@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import uuid from 'react-uuid'
 
-const TopNav = ({heading, sections}) => {
+const TopNav = ({heading, sections, companyInfo}) => {
 
   const showSection = (title, id, display) => {
     const otherSections = sections.filter((sec) => {
@@ -17,16 +18,15 @@ const TopNav = ({heading, sections}) => {
       document.getElementById(`${sec.title}`).classList.remove("active");
     })
   }
-
-  // const addInitialActive = () => {
-  //   document.getElementById(`${sections[0].display}`).classList.add("active");
-  // }
-  // addInitialActive();
-  
   
   return (
     <section className="top-nav">
       <h1 className="top-nav-heading">{heading}</h1>
+      {companyInfo &&
+        <Link to={`/medicine/${companyInfo.slug}`}>
+          <img src={companyInfo.img} alt="" id="top-nav-logo"/>
+        </Link> 
+      }
       <nav id="top-nav-main">
         <ul>
           {sections.map((sec, index) => (

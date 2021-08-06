@@ -28,6 +28,8 @@ const Group = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  console.log(essences)
+
   // const renderEssencePhotos = () => {
   //   const numbers = randomUniqueNumbers(4, 0, essences.length)
   //   return (

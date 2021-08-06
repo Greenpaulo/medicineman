@@ -6,7 +6,6 @@ const SideNav = () => {
         <nav id="main-nav">
           <ul>
             <li id="logo-link"><Link to="/">Medicine Man</Link></li>
-            {/* <li><Link to="/">Home</Link></li> */}
             <li>
               <Link to="/intro">
                 <img src="/images/hello.svg" alt="" />
@@ -37,10 +36,16 @@ const SideNav = () => {
                 Store 
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/about">
                 <img src="/images/healing2.svg" alt="" />
                 About
+              </Link>
+            </li> */}
+            <li>
+              <Link to="/contact">
+                <img src="/images/email.svg" alt="" />
+                Contact
               </Link>
             </li>
             {/* <li><Link to="/medicine">Medicine</Link></li> */}

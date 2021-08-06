@@ -215,6 +215,53 @@ const Essence = (props) => {
       </ul>
     )
   }
+
+  const renderCompanyInfo = () => {
+    switch (essence.company) {
+      case "Alaskan":
+        return {
+          img: "/images/company-logos/alaskan.gif",
+          slug: essence.companySlug
+        }
+      case "ABFE":
+        return {
+          img: "/images/company-logos/abfe.gif",
+          slug: essence.companySlug
+        }
+      case "Bach":
+        return {
+          img: "/images/company-logos/bach.gif",
+          slug: essence.companySlug
+        }
+      case "Bailey":
+        return {
+          img: "/images/company-logos/bailey.gif",
+          slug: essence.companySlug
+        }
+      case "Indigo":
+        return {
+          img: "/images/company-logos/indigo.gif",
+          slug: essence.companySlug
+        }
+      case "Living Tree Orchid Essences":
+        return {
+          img: "/images/company-logos/ltoe.gif",
+          slug: essence.companySlug
+        }
+      case "Pacific":
+        return {
+          img: "/images/company-logos/pacific.gif",
+          slug: essence.companySlug
+        }
+      case "WEAE":
+        return {
+          img: "/images/company-logos/weae.gif",
+          slug: essence.companySlug
+        }
+      default:
+        return null;
+    }
+  } 
   
   // Check data has loaded before render
   let isLoading = checkLoading([essence], [loadingEssences]);
@@ -235,7 +282,7 @@ const Essence = (props) => {
         },
         {
           title: "Keywords",
-          id: "keywords",
+          id: "essence-keywords",
           display: "block"
         },
         {
@@ -253,7 +300,7 @@ const Essence = (props) => {
         },
         {
           title: "Keywords",
-          id: "keywords",
+          id: "essence-keywords",
           display: "block"
         },
         {
@@ -280,11 +327,11 @@ const Essence = (props) => {
         <div className="container animate__animated animate__fadeIn">
           <Breadcrumbs props={props} company={renderCompanyName(essence.company)} group={essence.group} essence={essence.name} crumbs={props.crumbs} />
 
-          <TopNav heading={essence.name} sections={sections}/>
+          <TopNav heading={essence.name} sections={sections} companyInfo={renderCompanyInfo()}/>
 
           <div className="heading-underline"></div>
-          <h4 id="company-subheading"><Link to={`/company/${essence.company}`}>{renderCompanyName(essence.company)}</Link></h4>
-          <section id="description">
+          {/* <h4 id="company-subheading"><Link to={`/company/${essence.company}`}>{renderCompanyName(essence.company)}</Link></h4> */}
+          <section id="description" className="animate__animated animate__fadeIn">
             <div id="essence-text">
               {renderDescription()}
               {essence.description.length > 0 &&
@@ -297,16 +344,16 @@ const Essence = (props) => {
               <img id="essence-img" src={renderImagePath(essence.images)} alt="" />
             </div>
           </section>
-          <section id="chakrasMeridians">
+          <section id="chakrasMeridians" className="animate__animated animate__fadeIn">
             {renderChakras()}
             {renderSecondaryChakras()}
             {renderMeridians()}
             {renderSecondaryMeridians()}
           </section>
-          <section id="keywords">
+          <section id="essence-keywords" className="animate__animated animate__fadeIn">
             {renderKeywords()}
           </section>
-          <section id="gallery">
+          <section id="gallery" className="animate__animated animate__fadeIn">
             <p>gallery...........</p>
           </section>
         </div>
