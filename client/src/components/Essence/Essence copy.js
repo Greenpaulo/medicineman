@@ -40,9 +40,9 @@ const Essence = (props) => {
   const renderIndications = () => {
     if (essence.indications.length > 0) {
       return (
-        <section id="essence-indications" className="bg-secondary px-3 py-2 br-10">
+        <section id="essence-indications" className="bg-secondary px-2 py-2 mb-2 br-10">
           <h3>Indications</h3>
-          <ul className="pl-2 pt-1">
+          <ul>
             {essence.indications.map(indication => (
               <li key={uuid()} className="essence-indication">{indication}</li>
             ))}
@@ -55,9 +55,9 @@ const Essence = (props) => {
   const renderEffects = () => {
     if (essence.effects.length > 0) {
       return (
-        <section id="essence-effects" className="bg-primary px-3 py-2 br-10">
+        <section id="essence-effects" className="bg-primary px-2 py-2 br-10">
           <h3>Effects</h3>
-          <ul className="pl-2 pt-1">
+          <ul>
             {essence.effects.map(effect => (
               <li key={uuid()} className="essence-effect">{effect}</li>
             ))}
@@ -287,16 +287,10 @@ const Essence = (props) => {
             id: "chakrasMeridians",
             display: "grid"
           }
-        )
+          )
       }
-      // Got description and indications
-      if (essence.indications.length > 0 && essence.description.length > 0) {
+      if (essence.indications.length > 0 && essence.description.length === 0) {
         sections.unshift(
-          {
-            title: "Description",
-            id: "description",
-            display: "flex"
-          },
           {
             title: "Indications/Effects",
             id: "indications-effects",
@@ -304,8 +298,16 @@ const Essence = (props) => {
           },
         )
       }
-      // Got description but no indications
-      if (essence.indications.length === 0 && essence.description.length > 0) {
+      if (essence.indications.length > 0 && essence.description.length > 0) {
+        sections.unshift(
+          {
+            title: "Indications/Effects",
+            id: "indications-effects",
+            display: "block"
+          },
+        )
+      }
+      if (essence.description.length > 0) {
         sections.unshift(
           {
             title: "Description",
@@ -313,19 +315,9 @@ const Essence = (props) => {
             display: "flex"
           }
         )
-      
-      }
-      // Got indications but no description 
-      if (essence.indications.length > 0 && essence.description.length === 0) {
-        sections.unshift(
-          {
-            title: "Indications/Effects",
-            id: "description",
-            display: "flex"
-          }
-        )
       }
   }
+  
 
   return (
     <>
@@ -344,23 +336,24 @@ const Essence = (props) => {
           <TopNav heading={essence.name} sections={sections} companyInfo={renderCompanyInfo()}/>
 
           <div className="heading-underline"></div>
-          <section id="description" className="animate__animated animate__fadeIn">
-            <div id="essence-text">
-              {renderDescription()}
+          {essence.description.length > 0 && 
+            <section id="description" className="animate__animated animate__fadeIn">
+              <div id="essence-text">
+                {renderDescription()}
+              </div>
+              <div id="essence-main-img">
+                <img id="essence-img" src={renderImagePath(essence.images)} alt="" />
+              </div>
+            </section>
+          }
+          <section id="indications-effects">
+              {renderIndications()}
+              {renderEffects()}
               {essence.description.length === 0 && 
-                <>
-                  {renderIndications()}
-                  {renderEffects()}
-                </>
+                <div id="essence-main-img">
+                  <img id="essence-img" src={renderImagePath(essence.images)} alt="" />
+                </div>
               }
-            </div>
-            <div id="essence-main-img">
-              <img id="essence-img" src={renderImagePath(essence.images)} alt="" />
-            </div>
-          </section>
-          <section id="indications-effects" className="animate__animated animate__fadeIn">
-            {renderIndications()}
-            {renderEffects()}
           </section>
           <section id="chakrasMeridians" className="animate__animated animate__fadeIn">
             {renderChakras()}

@@ -152,7 +152,7 @@ const Intermediate = (props) => {
           </div>
         </section>
 
-        <section id="intermediate-section-6">
+        <section id="intermediate-section-6" className="animate__animated animate__fadeIn">
           <div className="bg-primary px-2 py-2 br-10">
             <h3>THE ROLE OF EMOTIONS IN HEALTH</h3>
 

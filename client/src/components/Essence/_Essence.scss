@@ -25,35 +25,41 @@ a {
 }
 
 #essence-description {
-  // margin-top: 2rem;
+  // :nth-child(odd) {
+  //   padding: 2rem;
+  // }
 
-  p {
-    // margin-top: 1rem;
-  }
+  // :nth-child(1) {
+  //   // padding: 0 0 1rem 0;
+  //   padding: 2rem;
+  // }
 
+  // :nth-child(even) {
+  //   padding: 2rem;
+  //   border-radius: 10px;
+  //   background-color: var(--light-secondary);
+  // }
   :nth-child(odd) {
     padding: 1rem;
   }
 
   :nth-child(1) {
-    padding: 0 0 1rem 0;
+    padding: 0 1rem 1rem 1rem;
   }
 
   :nth-child(even) {
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: var(--light-secondary);
+    padding: 1rem;
   }
 }
 
-section#essence-effects {
-  margin: 1.5rem 0 2rem 0;
-}
+// section#essence-effects {
+//   margin: 1.5rem 0 2rem 0;
+// }
 
-.essence-indication,
-.essence-effect {
-  margin: 0.5rem 0 0 1.5rem;
-}
+// .essence-indication,
+// .essence-effect {
+//   margin: 0.5rem 0 0 1.5rem;
+// }
 
 .essence-indication::first-letter,
 .essence-effect::first-letter {
@@ -73,11 +79,21 @@ img#essence-img {
   // border-radius: 50%;
 }
 
+section#indications-effects,
 section#chakrasMeridians,
 section#gallery,
 section#essence-keywords {
   display: none;
   padding-top: 2rem;
+}
+
+section#indications-effects {
+  justify-content: space-around;
+
+  section {
+    width: 45%;
+    // height: 100%;
+  }
 }
 
 section#chakrasMeridians {
