@@ -13,4 +13,22 @@ section#keywords {
 section#chakras-meridians-list,
 section#cross-reference-guide {
   display: none;
+  a {
+    margin-bottom: 1rem;
+  }
+}
+
+#chakra-list {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    columns: 4;
+  }
+}
+
+ul#meridian-list {
+  list-style: none;
+  columns: 3;
 }

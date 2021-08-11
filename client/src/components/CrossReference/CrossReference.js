@@ -1,9 +1,10 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
-import { checkLoading } from "../../helpers/helpers"
+import { checkLoading, renderChakraIcon, renderMeridianIcon } from "../../helpers/helpers"
 import TopNav from "../TopNav/TopNav"
 import CircleLoader from "react-spinners/CircleLoader";
+import uuid from 'react-uuid'
 
 
 const CrossReference = () => {
@@ -21,6 +22,48 @@ const CrossReference = () => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const chakras = [ "root", "sacral", "solar plexus", "3rd chakra belt", "heart", "inner chamber of the heart", "throat", "back of the throat chakra", "third eye", "ajana centre", "crown", "ba'hui point", "dreamtime point", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th"]
+
+  const renderChakras = () => {
+    return (
+      <div id="chakras" className="px-2 py-2 bg-primary br-10">
+        <h2>Chakras and Energy Centres</h2>
+        <div id="chakra-list" className="px-1 py-2">
+          <ul>
+            {chakras.map(chakra => (
+              <Link to="#" className="chakra">
+                {renderChakraIcon(chakra)}
+                <li key={uuid()}>
+                  {chakra}
+                </li>
+              </Link>
+            ))}
+          </ul>       
+        </div>
+      </div>
+    )
+  }
+
+  const meridians = [ "conception vessel", "governing vessel", "bladder", "kidney", "large intestine", "small intestine", "liver", "gall bladder", "stomach", "spleen", "lung", "heart", "heart protector", "triple warmer"]
+
+  const renderMeridians = () => {
+    return (
+      <div id="meridians" className="mt-2 px-2 py-2 bg-secondary br-10">
+        <h2>Meridians</h2>
+        <ul id="meridian-list" className="px-1 py-2">
+          {meridians.map(meridian => (
+              <Link to="#" className="meridian">
+                {renderMeridianIcon(meridian)}
+                <li key={uuid()}>
+                  {meridian}
+                </li>
+              </Link>
+            ))}
+        </ul>
+      </div>
+    )
+  }
 
   // Create section object for top nav
   const sections = [
@@ -66,7 +109,8 @@ const CrossReference = () => {
             </ul>
           </section>
           <section id="chakras-meridians-list">
-            <h3>List of chakras and meridians</h3>
+            {renderChakras()}
+            {renderMeridians()}
           </section>
           <section id="cross-reference-guide">
             <h3>The Guide</h3>

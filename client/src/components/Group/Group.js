@@ -28,28 +28,7 @@ const Group = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log(essences)
-
-  // const renderEssencePhotos = () => {
-  //   const numbers = randomUniqueNumbers(4, 0, essences.length)
-  //   return (
-  //     <div id="group-photo-examples">
-  //       <img src={renderImagePath(essences[numbers[0]].images[0])}className="group-photo-example" alt=""/>
-  //       <img src={renderImagePath(essences[numbers[1]].images[0])}className="group-photo-example" alt=""/>
-  //       <img src={renderImagePath(essences[numbers[2]].images[0])}className="group-photo-example" alt=""/>
-  //       <img src={renderImagePath(essences[numbers[3]].images[0])}className="group-photo-example" alt=""/>
-  //     </div>
-  //   )
-  // }
-
   const renderEssencePhoto = () => {
-    // if (groupInfo[0].company === 'ABFE') {
-    //   return (
-    //     <div id="group-photo">
-    //       <img src={renderImagePath(essences[randomNumber(0, essences.length)].images)}className="group-photo-example" alt=""/>
-    //     </div>
-    //     )
-    // }
     return (
       <div id="group-photo">
         <img src={renderImagePath(essences[randomNumber(0, essences.length)].images)}className="group-photo-example" alt=""/>
@@ -62,7 +41,6 @@ const Group = (props) => {
     // Assign variables
     let group;
     if (isLoading === false) {
-      // company = essences[0].company;
       group = essences[0].group;
     }
 
