@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
+import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading, renderCompanyName, renderImagePath, renderChakraIcon, renderMeridianIcon } from "../../helpers/helpers"
 import uuid from 'react-uuid'
 import slugify from 'slugify'
@@ -10,21 +11,27 @@ import TopNav from "../TopNav/TopNav"
 
 const Essence = (props) => {
   const { essence, getEssenceByName, setLoadingEssences, loadingEssences } = useContext(EssencesContext);
+  const { referenceTitlesWithoutSlugs, getAllReferenceTitlesWithoutSlugs, setLoadingReferences, loadingReferences } = useContext(ReferencesContext);
 
   useEffect(() => {
     async function getEssence(){
       await getEssenceByName(props.match.params.name);
       setLoadingEssences(false);
     }
+    async function getReferenceTitlesWithoutSlugs(){
+      getAllReferenceTitlesWithoutSlugs();
+      setLoadingReferences(false);
+    }
     getEssence();
+    getReferenceTitlesWithoutSlugs();
     return () => {
       // Reset loading to true when component is removed
       setLoadingEssences(true);
+      setLoadingReferences(true);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  
   const renderDescription = () => {
     if (essence.description.length > 0) {
       return (
@@ -149,12 +156,22 @@ const Essence = (props) => {
 
   const renderKeywords = () => {
     return (
-      <ul>
-        {essence.keywords.map(keyword => (
-          <li><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`}>{keyword}</Link></li>
-          ))}
-          
-      </ul>
+      <div className="bg-primary px-2 py-2 br-10">
+        <h3>Keywords</h3>
+        <ul id="keywords" className="px-2 py-1">
+          {essence.keywords.map(keyword => {
+            if (referenceTitlesWithoutSlugs.includes(keyword)) {
+              return (
+                <li><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`} className="reference-link">{keyword}</Link></li>
+              )
+            } else {
+              return (
+                <li>{keyword}</li>
+              )
+            }
+          })}
+        </ul>
+      </div>
     )
   }
 
@@ -206,8 +223,8 @@ const Essence = (props) => {
   } 
   
   // Check data has loaded before render
-  let isLoading = checkLoading([essence], [loadingEssences]);
-  
+  let isLoading = (checkLoading([essence], [loadingEssences]) || checkLoading([referenceTitlesWithoutSlugs], [loadingReferences]));
+
   let sections;
   if (!isLoading) {
     sections = [
@@ -216,11 +233,11 @@ const Essence = (props) => {
           id: "essence-keywords",
           display: "block"
         },
-        {
-          title: "Gallery",
-          id: "gallery",
-          display: "block"
-        }
+        // {
+        //   title: "Gallery",
+        //   id: "gallery",
+        //   display: "block"
+        // }
       ]
       if ((essence.chakras.length > 0) || (essence.meridians.length > 0 )) {
         sections.unshift(
@@ -292,7 +309,9 @@ const Essence = (props) => {
               {essence.description.length === 0 && 
                 <>
                   {renderIndications()}
+                  <div className="mt-1">
                   {renderEffects()}
+                  </div>
                 </>
               }
             </div>

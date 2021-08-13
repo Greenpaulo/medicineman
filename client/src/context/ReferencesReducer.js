@@ -10,6 +10,11 @@ const referencesReducer = (state, action) => {
         ...state,
         referenceTitles: action.payload
       }
+    case 'GET_ALL_REFERENCE_TITLES_WITHOUT_SLUGS':
+      return {
+        ...state,
+        referenceTitlesWithoutSlugs: action.payload
+      }
     case 'GET_SINGLE_REFERENCE':
       return {
         ...state,

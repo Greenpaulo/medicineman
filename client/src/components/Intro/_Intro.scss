@@ -5,11 +5,12 @@
 #website-page-links {
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
   margin-top: 2rem;
 
   .page-link:nth-child(1),
-  .page-link:nth-child(3) {
+  .page-link:nth-child(3),
+  .page-link:nth-child(5) {
     background-color: rgb(248, 245, 245);
   }
   .page-link:nth-child(2),

@@ -32,3 +32,9 @@
     margin-top: 2rem;
   }
 }
+
+@media (max-width: 1024px) {
+  section#medicine {
+    margin-left: 25vw;
+  }
+}

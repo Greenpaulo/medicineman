@@ -56,7 +56,7 @@ html {
 // Section container
 .container {
   width: 67vw;
-  margin-left: 24vw;
+  margin-left: 25vw;
 }
 
 // Section heading
@@ -90,7 +90,7 @@ html {
 }
 
 section.section-intro {
-  padding-top: 2rem;
+  // padding-top: 2rem;
 
   p {
     margin: 1rem 0;
@@ -135,4 +135,13 @@ sup {
   vertical-align: baseline;
   position: relative;
   top: -0.4em;
+}
+
+// Media queries
+// @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .container {
+    width: 100vw;
+    margin: 6rem 0 0 0;
+  }
 }

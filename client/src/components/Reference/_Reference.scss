@@ -7,6 +7,10 @@
 ul#references {
   list-style: none;
 
+  li.reference {
+    display: flex;
+  }
+
   li:nth-child(odd) {
     background-color: var(--light-secondary);
   }

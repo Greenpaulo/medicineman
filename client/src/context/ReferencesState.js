@@ -6,6 +6,7 @@ import axios from 'axios';
 const initialState = {
   references: null,
   referenceTitles: null,
+  referenceTitlesWithoutSlugs: null,
   error: null,
   loadingReferences: true
 }
@@ -50,6 +51,30 @@ export const ReferencesProvider = ({ children }) => {
     }
   }
 
+  async function getAllReferenceTitlesWithoutSlugs() {
+    try {
+      const res = await axios.get('/api/v1/references/titles');
+
+      const references = res.data.data;
+
+      let justTitles = []
+      
+      references.forEach(ref => {
+        justTitles.push(ref.title.toLowerCase())
+      })
+
+      dispatch({
+        type: 'GET_ALL_REFERENCE_TITLES_WITHOUT_SLUGS',
+        payload: justTitles
+      })
+    } catch (err) {
+      dispatch({
+        type: 'REFERENCE_ERROR',
+        payload: err.response.data.error
+      })
+    }
+  }
+
   async function getSingleReference(reference) {
     try {
       const res = await axios.get(`/api/v1/references/${reference}`);
@@ -78,10 +103,12 @@ export const ReferencesProvider = ({ children }) => {
     <ReferencesContext.Provider value={{
       references: state.references,
       referenceTitles: state.referenceTitles,
+      referenceTitlesWithoutSlugs: state.referenceTitlesWithoutSlugs,
       error: state.error,
       loadingReferences: state.loadingReferences,
       getAllReferences,
       getAllReferenceTitles,
+      getAllReferenceTitlesWithoutSlugs,
       getSingleReference,
       setLoadingReferences
   }}>

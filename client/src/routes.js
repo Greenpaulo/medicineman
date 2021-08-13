@@ -22,6 +22,7 @@ const routes = [
   { path: "/medicine/:company", name: "Company", Component: Company },
   { path: "/medicine/:company/:group", name: "Group", Component: Group },
   { path: "/medicine/:company/:group/:name", name: "Essence", Component: Essence },
+  { path: "/essence/:name", name: "Essence", Component: Essence },
   { path: "/crossreference", name: "Cross Reference", Component: CrossReference },
   { path: "/crossreference/:reference", name: "Reference", Component: Reference },
   { path: "/education", name: "Education", Component: Education },

@@ -5,13 +5,13 @@ const Education = (props) => {
     <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading">Education</h1>
       <div className="heading-underline"></div>
-      <section id="education-intro" className="pb-2" >
+      <section id="education-intro">
         <div id="text-section-1">
           <p>In the Western education system we have no real teachings on medicine. We are not taught about it in school, and we are never introduced to it at college. We do not even cover it in science classes that teach biology. We basically grow up with no real understanding of the causes of health and disease and we hand all our power over to the decisions of doctors. Such an important topic, which is literally life or death, should be taught in schools. </p>
 
-          <p>The aim of this Education section is to fill in this missing information and enable you to take your power back and make your own decisions about your health. This information is the summary of the main findings from my study of medicine for the last 20 years, and is continually growing.</p>
+          <p className="mt-1">The aim of this Education section is to fill in this missing information and enable you to take your power back and make your own decisions about your health. This information is the summary of the main findings from my study of medicine for the last 20 years, and is continually growing.</p>
 
-          <p className="mt-1">PLEASE NOTE: If you were born in the Western world then this information, especially in the Advanced Section, will most likely be VERY different from what has been presented to you as “medicine” previously, and we will get into the reason why that is.</p>
+          {/* <p className="mt-1">PLEASE NOTE: If you were born in the Western world then this information, especially in the Advanced Section, will most likely be VERY different from what has been presented to you as “medicine” previously, and we will get into the reason why that is.</p> */}
         </div>
         {/* <img src="images/ayahuasca.jpg" alt="" /> */}
         {/* <img src="images/ayahuasca2.jpg" alt="" /> */}

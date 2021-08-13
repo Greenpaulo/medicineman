@@ -144,7 +144,25 @@ img.icon {
 }
 
 section#essence-keywords {
+  width: 70%;
+  margin: auto;
+
+  ul {
+    list-style: none;
+  }
+
   li {
     text-transform: capitalize;
   }
+}
+
+ul#keywords {
+  columns: 2;
+}
+
+.reference-link {
+  transition: font-weight 0.3s;
+}
+.reference-link:hover {
+  font-weight: bolder;
 }

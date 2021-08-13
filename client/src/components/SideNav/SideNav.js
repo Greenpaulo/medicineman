@@ -1,36 +1,82 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const SideNav = () => {
+
+  const [dropdownActive, setDropdownActive ] = useState({
+    active: false
+  })
+
+  const toggleDropdown = () => {
+    
+    // If not already showing and then open
+    // Note: check the browser width to stop dropdown opening when the login button is clicked on wider screens
+    if (dropdownActive.active === false && window.innerWidth < 1131) {
+      console.log('hit')
+
+      const dropdown = document.querySelector("#dropdown-nav");
+      dropdown.classList.toggle('animate__animated');
+      dropdown.classList.toggle('animate_fadeInDown');
+      dropdown.style.zIndex = "2";
+      dropdown.style.display = "flex"
+      dropdown.style.opacity = "1";
+      setDropdownActive({ active: true });
+
+      // Set variable opacity dependent on width of display
+      // if (window.innerWidth < 500) {
+      //   dropdown.style.opacity = "1";
+      // } else {
+      //   dropdown.style.opacity = "0";
+      // };
+
+    } else {
+      // Its open, so close
+      const dropdown = document.querySelector("#dropdown-nav");
+      dropdown.classList.toggle('animated');
+      dropdown.classList.toggle('fadeInDown');
+      dropdown.style.opacity = "0";
+      dropdown.style.display = "none";
+      dropdown.style.zIndex = "0";
+      setDropdownActive({ active: false });
+    }
+  }
+
+  const handleClick = () => {
+    toggleDropdown();
+  }
+
+
+
   return (
 			<section id="sidenav">
         <nav id="main-nav">
-          <ul>
+          <ul id="nav-links">
             <li id="logo-link"><Link to="/">Medicine Man</Link></li>
-            <li>
+            <li className="page-link">
               <Link to="/intro">
                 <img src="/images/hello.svg" alt="" />
                 Introduction
                 </Link>
             </li>
-            <li>
+            <li className="page-link">
               <Link to="/medicine">
                 <img src="/images/medicine.svg" alt="" />
                 Medicine  
               </Link>
             </li>
-            <li>
+            <li className="page-link">
               <Link to="/crossreference">
                 <img src="/images/storytelling.svg" alt="" />
                 Cross Reference  
               </Link>
             </li>
-            <li>
+            <li className="page-link">
               <Link to="/education">
                 <img src="/images/love.svg" alt="" />
                 Education  
               </Link>
             </li>
-            <li>
+            <li className="page-link">
               <Link to="/store">
                 <img src="/images/online-shopping-2.svg" alt="" />
                 Store 
@@ -42,17 +88,12 @@ const SideNav = () => {
                 About
               </Link>
             </li> */}
-            <li>
+            <li className="page-link">
               <Link to="/contact">
                 <img src="/images/email.svg" alt="" />
                 Contact
               </Link>
             </li>
-            {/* <li><Link to="/medicine">Medicine</Link></li> */}
-            {/* <li><Link to="/crossreference">Cross Reference</Link></li> */}
-            {/* <li><Link to="/education">Education</Link></li> */}
-            {/* <li><Link to="#">About</Link></li> */}
-            {/* <li><Link to="#">Contact</Link></li> */}
           </ul>
           <div id="links">
             <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
@@ -60,7 +101,20 @@ const SideNav = () => {
             {/* <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a> */}
             <a href="www.instagram.com"><i className="fab fa-instagram fa-2x"></i></a>
           </div>
+
+          <div id="open-slide">
+            <i className="fa fa-bars fa-3x" onClick={toggleDropdown}></i>
+          </div>
         </nav>
+
+        <div id="dropdown-nav" className="dropdown-nav bg-dark">
+          <li><Link to="/intro" onClick={handleClick}>Intro</Link></li>
+          <li><Link to="/medicine" onClick={handleClick}>Medicine</Link></li>
+          <li><Link to="/crossreference" onClick={handleClick}>Cross Reference</Link></li>
+          <li><Link to="/education" onClick={handleClick}>Education</Link></li>
+          <li><Link to="/store" onClick={handleClick}>Store</Link></li>
+          <li><Link to="/contact" onClick={handleClick}>Contact</Link></li>
+        </div>
 			</section>
   )
 }

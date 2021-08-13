@@ -32,9 +32,16 @@ const Reference = (props) => {
   }
   
   const renderEssences = (desc) => {
-    return indications[desc].map(essence => (
-      <p className="essence"><Link to={`/essence/${slugify(essence, { lower: true, replacement: '_' })}`}> {essence}</Link></p>
-      ))
+    return indications[desc].map(essence => {
+      return (
+      <p className="essence">
+        <Link to={`/essence/${slugify(essence, { lower: true, replacement: '_' })}`}> 
+          {essence}
+        </Link>
+      </p>
+
+      )
+      })
     }
     
   // Check data has loaded before render
@@ -53,12 +60,12 @@ const Reference = (props) => {
       {!isLoading &&
         <div className="container animate__animated animate__fadeIn">
           <h1 id="reference-heading">{references[0].title}</h1>
-          <section id="reference-info">
+          <section id="reference-info" className="mt-2">
             <ul id="references">
               {descriptions.map(desc => (
-                <li className="reference br-10 my-2 px-1 py-1">
-                  <h4 className="indication">{desc}</h4>
-                  <div className="essence-links">
+                <li className="reference br-10 px-1 my-1">
+                  <h4 className="indication mr-2">{desc} </h4>
+                  <div className="essence-links ml-2">
                     {renderEssences(desc)}
                   </div>
                 </li>

@@ -4,15 +4,15 @@ import VineUnderline from '../VineUnderline/VineUnderline'
 const Medicine = () => {
   return (
     <div className="container animate__animated animate__fadeIn">
+      <section className="section-intro">
       <h1 className="section-heading">Medicine</h1>
       <div className="heading-underline"></div>
-      <section className="section-intro">
         <div className="section-text" id="medicine-intro-text">
           <p>Essences are vibrational medicines made from nature. They work on the human energetic body to help us dissolve the root of disease. They can be subtle but they are powerful and work on a much deeper level than orthodox drugs.</p>
           <p>Essences contain the living energies of nature and can teach us how we became disconnected from the truth of the universe</p>
         </div>
-      </section>
       <VineUnderline />
+      </section>
       <section id="company-links">
         <Link to="/medicine/alaskan" className="company-link">
           <img src="images/company-logos/alaskan.gif" alt="Alaskan Essences logo" />
@@ -47,7 +47,6 @@ const Medicine = () => {
           <h4>Wild Earth Animal Essences</h4>
         </Link>
       </section>
-
     </div>
   )
 }
