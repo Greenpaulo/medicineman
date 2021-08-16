@@ -144,4 +144,10 @@ sup {
     width: 100vw;
     margin: 6rem 0 0 0;
   }
+
+  #company-links {
+    grid-template-columns: repeat(2, auto);
+    width: 84vw;
+    margin: auto;
+  }
 }

@@ -2,3 +2,9 @@
   font-weight: bold;
   text-transform: capitalize;
 }
+
+@media (max-width: 1024px) {
+  #breadcrumbs:first-child {
+    margin-left: 2rem;
+  }
+}

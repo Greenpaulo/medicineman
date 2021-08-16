@@ -88,3 +88,62 @@ section#groups {
     font-size: 1.2rem;
   }
 }
+
+// Media queries
+@media (max-width: 1024px) {
+  #group-links {
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .group-link {
+    font-size: 1rem;
+
+    img {
+      height: 175px;
+    }
+
+    img[src='/images/group-images/new_child_series.png'] {
+      height: 250px;
+    }
+  }
+
+  #company-info {
+    width: 85vw;
+    margin: 2.5rem auto 0 auto;
+    font-size: 0.9rem;
+
+    .description-logo {
+      height: 200px;
+      width: 200px;
+      margin: 0;
+    }
+
+    #uses-list ul li {
+      margin-left: 1rem;
+    }
+
+    .bg-primary,
+    .bg-secondary {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  #Bach-logo {
+    width: 244px;
+    height: 204px;
+  }
+
+  #Indigo-logo {
+    height: 150px;
+    width: 150px;
+  }
+
+  img[src='/images/group-images/animal_essences.png'],
+  img[src='/images/group-images/animal_essence_combinations.png'],
+  img[src='/images/group-images/healing_path.png'] {
+    height: 186px;
+  }
+}

@@ -32,3 +32,17 @@ ul#meridian-list {
   list-style: none;
   columns: 3;
 }
+
+@media (max-width: 1024px) {
+  section#keywords {
+    padding-left: 7rem;
+
+    ul {
+      columns: 3;
+
+      li a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -60,7 +60,7 @@ const Breadcrumbs = ({props, crumbs, company, group, essence}) => {
   }
 
   return (
-    <div className="pt-2">
+    <div id="breadcrumbs" className="pt-2">
       {/* Link back to any previous steps of the breadcrumb. */}
       {crumbs.map(({ name, path }, key) => (
 

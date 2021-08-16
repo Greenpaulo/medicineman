@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const SideNav = () => {
-
+  
   const [dropdownActive, setDropdownActive ] = useState({
     active: false
   })
@@ -32,9 +32,9 @@ const SideNav = () => {
     } else {
       // Its open, so close
       const dropdown = document.querySelector("#dropdown-nav");
-      dropdown.classList.toggle('animated');
-      dropdown.classList.toggle('fadeInDown');
-      dropdown.style.opacity = "0";
+      dropdown.classList.toggle('animate_animated');
+      dropdown.classList.toggle('animate_fadeInDown');
+      // dropdown.style.opacity = "0";
       dropdown.style.display = "none";
       dropdown.style.zIndex = "0";
       setDropdownActive({ active: false });
@@ -44,39 +44,39 @@ const SideNav = () => {
   const handleClick = () => {
     toggleDropdown();
   }
-
-
-
+  
+  
   return (
 			<section id="sidenav">
         <nav id="main-nav">
           <ul id="nav-links">
-            <li id="logo-link"><Link to="/">Medicine Man</Link></li>
-            <li className="page-link">
+            <li id="side-logo-link" className="logo-link"><Link to="/">Medicine Man</Link></li>
+            <li id="top-logo-link" className="logo-link" onClick={handleClick}><Link to="/">Medicine Man</Link></li>
+            <li className="nav-link">
               <Link to="/intro">
                 <img src="/images/hello.svg" alt="" />
                 Introduction
                 </Link>
             </li>
-            <li className="page-link">
+            <li className="nav-link">
               <Link to="/medicine">
                 <img src="/images/medicine.svg" alt="" />
                 Medicine  
               </Link>
             </li>
-            <li className="page-link">
+            <li className="nav-link">
               <Link to="/crossreference">
                 <img src="/images/storytelling.svg" alt="" />
                 Cross Reference  
               </Link>
             </li>
-            <li className="page-link">
+            <li className="nav-link">
               <Link to="/education">
                 <img src="/images/love.svg" alt="" />
                 Education  
               </Link>
             </li>
-            <li className="page-link">
+            <li className="nav-link">
               <Link to="/store">
                 <img src="/images/online-shopping-2.svg" alt="" />
                 Store 
@@ -88,12 +88,17 @@ const SideNav = () => {
                 About
               </Link>
             </li> */}
-            <li className="page-link">
+            <li className="nav-link">
               <Link to="/contact">
                 <img src="/images/email.svg" alt="" />
                 Contact
               </Link>
             </li>
+            {/* <li><Link to="/medicine">Medicine</Link></li> */}
+            {/* <li><Link to="/crossreference">Cross Reference</Link></li> */}
+            {/* <li><Link to="/education">Education</Link></li> */}
+            {/* <li><Link to="#">About</Link></li> */}
+            {/* <li><Link to="#">Contact</Link></li> */}
           </ul>
           <div id="links">
             <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
@@ -101,7 +106,6 @@ const SideNav = () => {
             {/* <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a> */}
             <a href="www.instagram.com"><i className="fab fa-instagram fa-2x"></i></a>
           </div>
-
           <div id="open-slide">
             <i className="fa fa-bars fa-3x" onClick={toggleDropdown}></i>
           </div>

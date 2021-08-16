@@ -2,7 +2,7 @@ import VineUnderline from '../VineUnderline/VineUnderline'
 
 const Landing = () => {
   return (
-    <div id="landing" className="container animate__animated animate__fadeIn">
+    <div id="landing" className="animate__animated animate__fadeIn">
       <div id="logo">
         <h1 id="logo-h1">Medicine Man</h1>
         <VineUnderline />

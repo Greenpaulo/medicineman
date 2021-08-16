@@ -25,6 +25,10 @@ section#sidenav {
     margin: 40px 0;
   }
 
+  li#top-logo-link {
+    display: none;
+  }
+
   li a {
     font-size: 1.15rem;
     text-decoration: none;
@@ -39,7 +43,7 @@ section#sidenav {
     }
   }
 
-  li#logo-link {
+  li.logo-link {
     font-family: 'Dawning of a New Day', cursive;
     font-weight: 600;
     // width: 80%;
@@ -85,7 +89,8 @@ section#sidenav {
 
 .dropdown-nav {
   position: fixed;
-  top: 4.5rem;
+  top: 5.7rem;
+  height: 4.7rem;
   // padding: 2rem;
   z-index: 2;
   background-color: var(--primary);
@@ -94,6 +99,7 @@ section#sidenav {
   opacity: 0;
   transition: 0.3s ease-in;
   display: none;
+  justify-content: space-around;
 
   li {
     list-style: none;
@@ -107,44 +113,62 @@ section#sidenav {
   }
 }
 
-// @media (max-width: 1024px) {
-//   // Side Nav
-//   section#sidenav {
-//     background-color: var(--secondary);
-//     z-index: 2;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 10vh;
-//     margin: 0;
-//     border-bottom: 5px solid var(--secondary);
-//     border-right: none;
+@media (max-width: 1024px) {
+  // Side Nav
+  section#sidenav {
+    background-color: var(--secondary);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9vh;
+    margin: 0;
+    border-bottom: 5px solid var(--secondary);
+    border-right: none;
 
-//     #links {
-//       display: none;
-//     }
+    #links {
+      display: none;
+    }
 
-//     li#logo-link a {
-//       font-size: 2rem;
-//       line-height: 2.5rem;
-//       width: 50px;
-//       padding: 0.25rem 0 0 1rem;
-//     }
-//   }
+    li {
+      margin-top: 10px;
 
-//   #main-nav {
-//     ul {
-//       display: flex;
+      a {
+        font-size: 1rem;
+      }
+    }
 
-//       li.page-link {
-//         display: none;
-//       }
-//     }
-//   }
+    li#side-logo-link {
+      display: none;
+    }
 
-//   #open-slide {
-//     display: inline;
-//     float: right;
-//   }
-// }
+    li#top-logo-link {
+      display: inline-block;
+    }
+
+    li.logo-link a {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      width: 50px;
+      padding: 0.25rem 0 0 1rem;
+      margin-top: 30px;
+    }
+  }
+
+  #main-nav {
+    ul {
+      display: flex;
+
+      li.nav-link {
+        display: none;
+      }
+    }
+  }
+
+  #open-slide {
+    display: inline;
+    float: right;
+    margin-top: 5px;
+  }
+}
