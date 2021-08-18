@@ -35,14 +35,34 @@ ul#meridian-list {
 
 @media (max-width: 1024px) {
   section#keywords {
-    padding-left: 7rem;
+    padding-left: 4rem;
 
     ul {
       columns: 3;
+      width: 80vw;
+      margin: auto;
 
       li a {
         font-size: 0.9rem;
       }
+    }
+  }
+
+  #chakra-list {
+    ul {
+      columns: 3;
+
+      a {
+        border-bottom: 1px solid var(--primary);
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+
+  #meridian-list {
+    a {
+      border-bottom: 1px solid #ffae89;
+      padding-bottom: 0.5rem;
     }
   }
 }

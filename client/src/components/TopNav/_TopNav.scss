@@ -44,3 +44,12 @@ nav#top-nav-main {
   // right: 281px;
   // float: left;
 }
+
+// Media queries
+@media (max-width: 1024px) {
+  nav#top-nav-main ul li {
+    margin: 0;
+    padding: 0 0.75rem;
+    font-size: 0.9rem;
+  }
+}

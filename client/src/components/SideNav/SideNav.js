@@ -12,7 +12,6 @@ const SideNav = () => {
     // If not already showing and then open
     // Note: check the browser width to stop dropdown opening when the login button is clicked on wider screens
     if (dropdownActive.active === false && window.innerWidth < 1131) {
-      console.log('hit')
 
       const dropdown = document.querySelector("#dropdown-nav");
       dropdown.classList.toggle('animate__animated');

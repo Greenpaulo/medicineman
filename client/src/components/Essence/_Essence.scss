@@ -166,3 +166,32 @@ ul#keywords {
 .reference-link:hover {
   font-weight: bolder;
 }
+
+// Media queries
+@media (max-width: 1024px) {
+  #essence-text {
+    width: initial;
+  }
+
+  #essence-main-img {
+    margin: auto;
+    width: initial;
+    height: initial;
+    max-height: 500px;
+    margin-bottom: 2rem;
+  }
+
+  img#essence-img {
+    max-width: 300px;
+    max-height: 500px;
+  }
+
+  section#description {
+    flex-direction: column-reverse;
+    padding-bottom: 2rem;
+  }
+
+  section#chakrasMeridians {
+    grid-template-columns: repeat(1, auto);
+  }
+}

@@ -36,3 +36,33 @@
     font-size: 1.1rem;
   }
 }
+
+// Media queries
+@media (max-width: 1024px) {
+  #website-page-links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    grid-gap: 2rem;
+    width: 80vw;
+    padding-bottom: 2rem;
+  }
+
+  .page-link {
+    height: 175px;
+    width: 175px;
+    border-radius: 15px;
+    padding: 2rem 3rem 3rem 3rem;
+    text-align: center;
+
+    img {
+      height: 80px;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+  }
+}

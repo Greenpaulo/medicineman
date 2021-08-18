@@ -141,8 +141,10 @@ sup {
 // @media (max-width: 1024px) {
 @media (max-width: 1024px) {
   .container {
-    width: 100vw;
-    margin: 6rem 0 0 0;
+    // width: 100vw;
+    // margin: 6rem 0 0 0;
+    width: 85vw;
+    margin: 6rem auto 0 auto;
   }
 
   #company-links {

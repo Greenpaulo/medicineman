@@ -6,7 +6,7 @@ section#advanced-education {
   img {
     float: right;
     margin: 0 0 2rem 2rem;
-    width: 400px;
+    max-width: 400px;
     padding-top: 0.5rem;
   }
 
@@ -23,6 +23,32 @@ section#advanced-education {
 
     p {
       margin: 1rem 0 2rem 0;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 1024px) {
+  section#advanced-education {
+    width: 92%;
+
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      // float: none;
+      max-width: 300px;
+      max-height: 400px;
+      margin-left: 1rem;
+    }
+
+    .video-container {
+      width: 100%;
+
+      iframe {
+        width: 80vw;
+      }
     }
   }
 }

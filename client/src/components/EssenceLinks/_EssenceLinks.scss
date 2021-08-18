@@ -57,3 +57,14 @@ td {
   vertical-align: top;
   width: 130px;
 }
+
+//Media queries
+@media (max-width: 1024px) {
+  section#essence-links {
+    margin-top: 0;
+  }
+
+  #image-grid {
+    grid-template-columns: repeat(3, auto);
+  }
+}

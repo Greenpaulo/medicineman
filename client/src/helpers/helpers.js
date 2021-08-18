@@ -70,20 +70,33 @@ export const renderImagePath = (images, format) => {
   }
 
 export const createEducationSectionsObject = (num, title) => {
+  console.log(window.innerWidth)
   let sections = [{
     title: "Contents",
     id: `${title}-section-contents`,
     display: "block"
   }]
 
-  for (let i = 0; i < num; i++) {
-    sections.push({
-      title: `Section ${ i + 1}`,
-      id: `${title}-section-${ i + 1 }`,
-      display: "block"
-
-    })
+  if(window.innerWidth > 1024) {
+    for (let i = 0; i < num; i++) {
+      sections.push({
+        title: `Section ${ i + 1}`,
+        id: `${title}-section-${ i + 1 }`,
+        display: "block"
+  
+      })
+    }
+  } else {
+    for (let i = 0; i < num; i++) {
+      sections.push({
+        title: `Sec. ${ i + 1}`,
+        id: `${title}-section-${ i + 1 }`,
+        display: "block"
+  
+      })
+    }
   }
+
   if (title === "beginner" || title === "intermediate") {
     sections.push({
       title: "References",

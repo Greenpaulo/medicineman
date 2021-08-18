@@ -58,12 +58,21 @@ const Group = (props) => {
         <div className="container animate__animated animate__fadeIn">
           <Breadcrumbs props={props} company={renderCompanyName(groupInfo[0].company)} group={group} crumbs={props.crumbs} />
           <h1 id="company-heading">{renderCompanyName(groupInfo[0].company)}</h1> 
-          {renderEssencePhoto()}
-          <h2 id="group-heading">{group}</h2>
-          <section id="group-info">
-            {groupInfo[0].description.map(paragraph => (
-              <p key={uuid()}>{paragraph}</p>
-            ))}
+          <section id="group">
+            <div>
+              <div id="mobile-group-photo">
+                {renderEssencePhoto()}
+              </div>
+              <h2 id="group-heading">{group}</h2>
+              <section id="group-info">
+                {groupInfo[0].description.map(paragraph => (
+                  <p key={uuid()}>{paragraph}</p>
+                  ))}
+              </section>
+            </div>
+            <div id="desktop-group-photo">
+              {renderEssencePhoto()}
+            </div>
           </section>
           <EssenceLinks essences={essences} group={group}/>
         </div>

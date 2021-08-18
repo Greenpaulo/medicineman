@@ -34,3 +34,18 @@ section#beginner-education {
     }
   }
 }
+
+//Media queries
+@media (max-width: 1024px) {
+  section#beginner-education {
+    width: 92%;
+
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      width: 250px;
+    }
+  }
+}
