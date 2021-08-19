@@ -1,11 +1,11 @@
 import { BrowserRouter, Route } from 'react-router-dom'
 import routes from "../../routes"
-import SideNav from '../SideNav/SideNav'
+import MainNav from '../MainNav/MainNav'
 
 const App = () => {
   return (
     <BrowserRouter>
-        <Route path='/' component={SideNav} />
+        <Route path='/' component={MainNav} />
         {routes.map(({ path, name, Component }, key) => (
           <Route
             exact

@@ -5,7 +5,7 @@ const Intro = () => {
     <div className="container animate__animated animate__fadeIn">
       <h1 className="section-heading" id="intro-heading">Introduction</h1>
       <div className="heading-underline"></div>
-      <section className="section-intro">
+      <section className="section-intro" id="intro">
         <div className="section-text">
           <p>For as long as most of us can remember, in the Western world, we have had a healthcare system out of touch with nature. This is changing. Our current healthcare system is based on an extremely materialistic view of the world and its primary “medicine” is petrochemical drugs.</p>
 

@@ -29,6 +29,65 @@
   }
 }
 
+@media (max-width: 1600px) {
+  #landing {
+    #logo-h1 {
+      font-size: 5rem;
+    }
+
+    #vine-underline-container,
+    svg#vine-underline {
+      width: 190px;
+    }
+
+    img#tree {
+      height: 70vh;
+      width: 40vw;
+      margin-top: 5rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  #landing {
+    #logo-h1 {
+      font-size: 4.7rem;
+      line-height: 6rem;
+    }
+
+    #vine-underline-container,
+    svg#vine-underline {
+      width: 170px;
+    }
+
+    img#tree {
+      width: 42vw;
+      margin-top: 7rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #landing {
+    #logo-h1 {
+      font-size: 4.2rem;
+      line-height: 5.6rem;
+      margin-top: 20rem;
+    }
+
+    #vine-underline-container,
+    svg#vine-underline {
+      width: 150px;
+    }
+
+    img#tree {
+      height: 61vh;
+      width: 44vw;
+      margin-top: 9rem;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   #landing {
     flex-direction: column-reverse;
@@ -37,17 +96,254 @@
     margin: 0;
     padding-top: 2rem;
 
+    #tree-container {
+      margin: auto;
+      position: relative;
+      top: 30%;
+    }
+
     img#tree {
       height: auto;
-      width: 51vh;
-      margin: 5rem auto 0 auto;
-      position: absolute;
-      top: 50px;
-      left: 120px;
+      width: 583px;
+    }
+
+    #logo {
+      position: relative;
+      top: 6%;
+      width: 27%;
+      margin: auto;
     }
   }
 
   #logo-h1 {
     margin: 0 auto 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #landing {
+    #tree-container {
+      top: 25vh;
+    }
+
+    img#tree {
+      height: auto;
+      width: 85vw;
+      // margin: 15rem auto 0 auto;
+    }
+
+    #logo {
+      position: relative;
+      top: -4%;
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #logo-h1 {
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  #landing {
+    #tree-container {
+      top: 25vh;
+    }
+
+    img#tree {
+      height: auto;
+      width: 90vw;
+      // margin: 15rem auto 0 auto;
+    }
+
+    #logo {
+      position: relative;
+      top: -7%;
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #logo-h1 {
+    line-height: 5.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #landing {
+    #tree-container {
+      top: 20vh;
+    }
+
+    img#tree {
+      height: auto;
+      width: 90vw;
+      // margin: 15rem auto 0 auto;
+    }
+
+    #logo {
+      position: relative;
+      top: -7%;
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #logo-h1 {
+    line-height: 5.3rem;
+  }
+}
+
+// Height and width queries for smaller devices
+
+// Really Large Tablet - portrait
+@media (max-width: 1024px) and (max-height: 1366px) {
+  #landing {
+    #tree-container {
+      margin: auto;
+      position: relative;
+      top: -8%;
+    }
+
+    img#tree {
+      height: 50vh;
+      width: auto;
+    }
+
+    #logo-h1 {
+      margin-top: -23rem;
+    }
+  }
+}
+
+// Large Tablet - portrait
+@media (max-width: 800px) and (max-height: 1280px) {
+  #landing {
+    #tree-container {
+      margin: auto;
+      position: relative;
+      top: -8%;
+    }
+
+    img#tree {
+      height: 50vh;
+      width: auto;
+    }
+
+    #logo-h1 {
+      margin-top: -23rem;
+    }
+  }
+}
+
+// Medium tablet - portrait
+@media (max-width: 800px) and (max-height: 1024px) {
+  #landing {
+    #tree-container {
+      top: -12%;
+    }
+
+    #logo-h1 {
+      margin-top: -21rem;
+    }
+  }
+}
+
+// Small tablet - portrait
+@media (max-width: 600px) and (max-height: 960px) {
+  #landing {
+    #tree-container {
+      margin: auto;
+      position: relative;
+      top: -11%;
+    }
+
+    img#tree {
+      height: 45vh;
+      width: auto;
+    }
+
+    #logo {
+      position: relative;
+      top: 8%;
+    }
+
+    #logo-h1 {
+      margin-top: -23rem;
+    }
+  }
+}
+
+// Tablet - landscape
+@media (max-width: 1024px) and (max-height: 768px) {
+  #landing {
+    #tree-container {
+      margin: auto;
+      position: relative;
+      top: 49%;
+    }
+
+    img#tree {
+      height: 60vh;
+      width: auto;
+    }
+
+    #vine-underline-container,
+    svg#vine-underline {
+      width: 170px;
+    }
+
+    #logo {
+      position: relative;
+      top: 1%;
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #logo-h1 {
+    margin: 0 auto 0 auto;
+  }
+}
+
+// Mobile - large screen
+@media (max-width: 414px) and (max-height: 896px) {
+  #landing {
+    #tree-container {
+      margin: auto;
+      position: relative;
+      top: -2%;
+    }
+
+    img#tree {
+      height: 45vh;
+      width: auto;
+    }
+
+    #vine-underline-container,
+    svg#vine-underline {
+      width: 100px;
+    }
+
+    #logo {
+      top: -2%;
+    }
+
+    #logo-h1 {
+      font-size: 3.6rem;
+      line-height: 4.3rem;
+      margin: 0 auto 0 auto;
+    }
+  }
+}
+
+// Mobile - medium screen
+@media (max-width: 375px) and (max-height: 812px) {
+  #landing {
+    #logo-h1 {
+      font-size: 2.9rem;
+      line-height: 3.2rem;
+    }
   }
 }

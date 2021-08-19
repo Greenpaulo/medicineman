@@ -70,7 +70,6 @@ export const renderImagePath = (images, format) => {
   }
 
 export const createEducationSectionsObject = (num, title) => {
-  console.log(window.innerWidth)
   let sections = [{
     title: "Contents",
     id: `${title}-section-contents`,

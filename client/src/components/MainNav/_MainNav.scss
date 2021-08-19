@@ -1,4 +1,4 @@
-section#sidenav {
+section#mainnav {
   height: 80vh;
   width: 12vw;
   // background-color: #312450;
@@ -113,16 +113,44 @@ section#sidenav {
   }
 }
 
+// Media queries
+
+@media (max-width: 1750px) {
+  section#mainnav {
+    left: 120px;
+
+    li a {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  section#mainnav {
+    left: 75px;
+    width: 14vw;
+
+    li a {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  section#mainnav {
+    width: 15vw;
+  }
+}
+
 @media (max-width: 1024px) {
-  // Side Nav
-  section#sidenav {
+  section#mainnav {
     background-color: var(--secondary);
     z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 9vh;
+    height: 92px;
     margin: 0;
     border-bottom: 5px solid var(--secondary);
     border-right: none;

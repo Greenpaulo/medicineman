@@ -8,7 +8,9 @@ const Landing = () => {
         <VineUnderline />
         {/* <img id="underline" src="images/swirl-line.png" alt="" /> */}
       </div>
-      <img id="tree" src="images/tree_of_life.jpg" alt="" />
+      <div id="tree-container">
+        <img id="tree" src="images/tree_of_life.jpg" alt="" />
+      </div>
     </div>
   )
 }

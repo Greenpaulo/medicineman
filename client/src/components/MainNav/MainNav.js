@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
-const SideNav = () => {
+const MainNav = () => {
   
   const [dropdownActive, setDropdownActive ] = useState({
     active: false
@@ -11,7 +11,7 @@ const SideNav = () => {
     
     // If not already showing and then open
     // Note: check the browser width to stop dropdown opening when the login button is clicked on wider screens
-    if (dropdownActive.active === false && window.innerWidth < 1131) {
+    if (dropdownActive.active === false && window.innerWidth <= 1550) {
 
       const dropdown = document.querySelector("#dropdown-nav");
       dropdown.classList.toggle('animate__animated');
@@ -46,7 +46,7 @@ const SideNav = () => {
   
   
   return (
-			<section id="sidenav">
+			<section id="mainnav">
         <nav id="main-nav">
           <ul id="nav-links">
             <li id="side-logo-link" className="logo-link"><Link to="/">Medicine Man</Link></li>
@@ -122,4 +122,4 @@ const SideNav = () => {
   )
 }
 
-export default SideNav
+export default MainNav
