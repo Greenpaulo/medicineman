@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+import VineUnderline from '../VineUnderline/VineUnderline'
 
 const MainNav = () => {
   
@@ -17,7 +18,7 @@ const MainNav = () => {
       dropdown.classList.toggle('animate__animated');
       dropdown.classList.toggle('animate_fadeInDown');
       dropdown.style.zIndex = "2";
-      dropdown.style.display = "flex"
+      dropdown.style.display = "block"
       dropdown.style.opacity = "1";
       setDropdownActive({ active: true });
 
@@ -49,7 +50,10 @@ const MainNav = () => {
 			<section id="mainnav">
         <nav id="main-nav">
           <ul id="nav-links">
-            <li id="side-logo-link" className="logo-link"><Link to="/">Medicine Man</Link></li>
+            <div id="side-logo">
+              <li id="side-logo-link" className="logo-link"><Link to="/">Medicine Man</Link></li>
+              <VineUnderline />
+            </div>
             <li id="top-logo-link" className="logo-link" onClick={handleClick}><Link to="/">Medicine Man</Link></li>
             <li className="nav-link">
               <Link to="/intro">
@@ -93,11 +97,6 @@ const MainNav = () => {
                 Contact
               </Link>
             </li>
-            {/* <li><Link to="/medicine">Medicine</Link></li> */}
-            {/* <li><Link to="/crossreference">Cross Reference</Link></li> */}
-            {/* <li><Link to="/education">Education</Link></li> */}
-            {/* <li><Link to="#">About</Link></li> */}
-            {/* <li><Link to="#">Contact</Link></li> */}
           </ul>
           <div id="links">
             <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
@@ -111,12 +110,14 @@ const MainNav = () => {
         </nav>
 
         <div id="dropdown-nav" className="dropdown-nav bg-dark">
-          <li><Link to="/intro" onClick={handleClick}>Intro</Link></li>
-          <li><Link to="/medicine" onClick={handleClick}>Medicine</Link></li>
-          <li><Link to="/crossreference" onClick={handleClick}>Cross Reference</Link></li>
-          <li><Link to="/education" onClick={handleClick}>Education</Link></li>
-          <li><Link to="/store" onClick={handleClick}>Store</Link></li>
-          <li><Link to="/contact" onClick={handleClick}>Contact</Link></li>
+          <ul id="dropdown-nav-links">
+            <li><Link to="/intro" onClick={handleClick}>Intro</Link></li>
+            <li><Link to="/medicine" onClick={handleClick}>Medicine</Link></li>
+            <li><Link to="/crossreference" onClick={handleClick}>Cross Reference</Link></li>
+            <li><Link to="/education" onClick={handleClick}>Education</Link></li>
+            <li><Link to="/store" onClick={handleClick}>Store</Link></li>
+            <li><Link to="/contact" onClick={handleClick}>Contact</Link></li>
+          </ul>
         </div>
 			</section>
   )
