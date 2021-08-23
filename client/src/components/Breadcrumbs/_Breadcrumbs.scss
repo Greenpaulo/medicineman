@@ -8,3 +8,9 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 414px) {
+  #breadcrumbs {
+    margin-left: 1rem;
+  }
+}

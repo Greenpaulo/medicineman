@@ -18,10 +18,15 @@ const TopNav = ({heading, sections, companyInfo}) => {
       document.getElementById(`${sec.title}`).classList.remove("active");
     })
   }
+
+  const toggleDowndownMenu = () => {
+    console.log('clicked')
+    document.getElementById('dropdown-selector').classList.toggle("active");
+  }
   
   return (
     <section className="top-nav">
-      <h1 className="top-nav-heading">{heading}</h1>
+      <h1 className="top-nav-heading" id={`${heading.toLowerCase()}-section-heading`}>{heading}</h1>
       {companyInfo &&
         <Link to={`/medicine/${companyInfo.slug}`}>
           <img src={companyInfo.img} alt="" id="top-nav-logo"/>
@@ -33,6 +38,15 @@ const TopNav = ({heading, sections, companyInfo}) => {
             <li id={`${sec.title}`} className={index === 0 ? 'active' : null} key={uuid()} onClick={() => showSection(sec.title, sec.id, sec.display)}>{sec.title}</li>
           ))}
         </ul>
+
+        <div id="dropdown-selector" onClick={toggleDowndownMenu}>
+          <button id="dropbtn">Section Menu</button>
+          <div id="dropdown-content">
+            {sections.map((sec, index) => (
+              <li id={`${sec.title}`} className={index === 0 ? 'active' : null} key={uuid()} onClick={() => showSection(sec.title, sec.id, sec.display)}>{sec.title}</li>
+            ))}
+          </div>
+        </div>
       </nav>
     </section>
   )

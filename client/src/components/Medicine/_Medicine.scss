@@ -56,3 +56,9 @@
     }
   }
 }
+
+@media (max-width: 414px) {
+  section#company-links {
+    grid-template-columns: repeat(1, auto);
+  }
+}

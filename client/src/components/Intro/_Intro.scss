@@ -71,3 +71,14 @@
     }
   }
 }
+
+// Media queries
+@media (max-width: 414px) {
+  h1#intro-heading {
+    font-size: 2.5rem;
+  }
+
+  #intro p {
+    text-align: center;
+  }
+}

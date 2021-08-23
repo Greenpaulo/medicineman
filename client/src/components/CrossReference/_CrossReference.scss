@@ -28,9 +28,11 @@ section#cross-reference-guide {
   }
 }
 
-ul#meridian-list {
-  list-style: none;
-  columns: 3;
+#meridian-list {
+  ul {
+    list-style: none;
+    columns: 3;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -48,7 +50,8 @@ ul#meridian-list {
     }
   }
 
-  #chakra-list {
+  #chakra-list,
+  #meridian-list {
     ul {
       columns: 3;
 
@@ -58,11 +61,39 @@ ul#meridian-list {
       }
     }
   }
+}
 
+@media (max-width: 414px) {
+  section#keywords {
+    padding-left: 0;
+    text-align: center;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+
+      li {
+        margin-bottom: 2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  #chakras h2,
+  #meridians h2 {
+    text-align: center;
+  }
+
+  #chakra-list,
   #meridian-list {
-    a {
-      border-bottom: 1px solid #ffae89;
-      padding-bottom: 0.5rem;
+    padding: 2rem 0;
+    ul {
+      columns: 2;
+
+      a {
+        border-bottom: 1px solid var(--primary);
+        padding-bottom: 0.5rem;
+      }
     }
   }
 }

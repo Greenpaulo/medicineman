@@ -41,8 +41,50 @@ nav#top-nav-main {
   [src='/images/company-logos/indigo.gif'] {
     width: 100px;
   }
-  // right: 281px;
-  // float: left;
+}
+
+// Drowndown selector for mobile
+#dropdown-selector {
+  position: relative;
+  display: none;
+}
+
+#dropbtn {
+  background-color: var(--primary);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 143px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+
+  li {
+    color: black;
+    padding: 12px 0.9rem;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+#dropdown-selector.active {
+  #dropdown-content {
+    display: block;
+  }
+
+  #dropbtn {
+    background-color: darken(pink, 10%);
+  }
 }
 
 // Media queries
@@ -51,5 +93,33 @@ nav#top-nav-main {
     margin: 0;
     padding: 0 0.75rem;
     font-size: 0.9rem;
+  }
+}
+
+// Media queries
+@media (max-width: 414px) {
+  nav#top-nav-main {
+    padding-top: 2rem;
+
+    ul {
+      // flex-direction: column;
+      // align-items: center;
+      display: none;
+
+      li {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  h1#beginner-section-heading,
+  h1#intermediate-section-heading,
+  h1#advanced-section-heading {
+    padding-top: 3rem;
+  }
+
+  #dropdown-selector {
+    display: inline-block;
   }
 }

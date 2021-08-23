@@ -153,3 +153,20 @@ sup {
     margin: auto;
   }
 }
+
+@media (max-width: 414px) {
+  .container {
+    width: 95vw;
+  }
+
+  .section-heading {
+    padding-top: 4rem;
+    font-size: 2.5rem;
+  }
+
+  section.section-intro {
+    div.section-text {
+      width: 90%;
+    }
+  }
+}

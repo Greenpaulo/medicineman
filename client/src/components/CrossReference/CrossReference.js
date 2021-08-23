@@ -51,16 +51,18 @@ const CrossReference = () => {
     return (
       <div id="meridians" className="mt-2 px-2 py-2 bg-secondary br-10">
         <h2>Meridians</h2>
-        <ul id="meridian-list" className="px-1 py-2">
-          {meridians.map(meridian => (
-              <Link to="#" className="meridian">
-                {renderMeridianIcon(meridian)}
-                <li key={uuid()}>
-                  {meridian}
-                </li>
-              </Link>
-            ))}
-        </ul>
+        <div id="meridian-list" className="px-1 py-2">
+          <ul>
+            {meridians.map(meridian => (
+                <Link to="#" className="meridian">
+                  {renderMeridianIcon(meridian)}
+                  <li key={uuid()}>
+                    {meridian}
+                  </li>
+                </Link>
+              ))}
+          </ul>
+        </div>
       </div>
     )
   }
@@ -77,11 +79,11 @@ const CrossReference = () => {
       id: "chakras-meridians-list",
       display: "block"
     },
-    {
-      title: "Guide To Cross-Reference",
-      id: "cross-reference-guide",
-      display: "block"
-    },
+    // {
+    //   title: "Guide To Cross-Reference",
+    //   id: "cross-reference-guide",
+    //   display: "block"
+    // },
   ]
 
   // Check data has loaded before render
