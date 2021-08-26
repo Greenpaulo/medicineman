@@ -83,7 +83,7 @@ section#mainnav {
   display: none;
 }
 
-.dropdown-nav {
+#dropdown-nav {
   position: fixed;
   top: 5.7rem;
   height: 4.7rem;
@@ -111,6 +111,10 @@ section#mainnav {
 
   a {
     transition: all 0.2s ease-in;
+  }
+
+  &.animate__animated.animate__fadeIn {
+    --animate-duration: 0.7s;
   }
 }
 

@@ -68,6 +68,10 @@ nav#top-nav-main {
   z-index: 1;
   text-align: center;
 
+  &.animate__animated.animate__fadeIn {
+    --animate-duration: 0.5s;
+  }
+
   li {
     color: black;
     padding: 12px 0.9rem;
@@ -97,7 +101,7 @@ nav#top-nav-main {
 }
 
 // Media queries
-@media (max-width: 414px) {
+@media (max-width: 768px) {
   nav#top-nav-main {
     padding-top: 2rem;
 

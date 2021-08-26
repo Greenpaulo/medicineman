@@ -15,8 +15,6 @@ const MainNav = () => {
     if (dropdownActive.active === false && window.innerWidth <= 1550) {
 
       const dropdown = document.querySelector("#dropdown-nav");
-      dropdown.classList.toggle('animate__animated');
-      dropdown.classList.toggle('animate_fadeInDown');
       dropdown.style.zIndex = "2";
       dropdown.style.display = "block"
       dropdown.style.opacity = "1";
@@ -32,9 +30,6 @@ const MainNav = () => {
     } else {
       // Its open, so close
       const dropdown = document.querySelector("#dropdown-nav");
-      dropdown.classList.toggle('animate_animated');
-      dropdown.classList.toggle('animate_fadeInDown');
-      // dropdown.style.opacity = "0";
       dropdown.style.display = "none";
       dropdown.style.zIndex = "0";
       setDropdownActive({ active: false });
@@ -109,7 +104,7 @@ const MainNav = () => {
           </div>
         </nav>
 
-        <div id="dropdown-nav" className="dropdown-nav bg-dark">
+        <div id="dropdown-nav" className="bg-dark animate__animated animate__fadeIn">
           <ul id="dropdown-nav-links">
             <li><Link to="/intro" onClick={handleClick}>Intro</Link></li>
             <li><Link to="/medicine" onClick={handleClick}>Medicine</Link></li>

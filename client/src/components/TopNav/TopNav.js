@@ -41,7 +41,7 @@ const TopNav = ({heading, sections, companyInfo}) => {
 
         <div id="dropdown-selector" onClick={toggleDowndownMenu}>
           <button id="dropbtn">Section Menu</button>
-          <div id="dropdown-content">
+          <div id="dropdown-content" className="animate__animated animate__fadeIn">
             {sections.map((sec, index) => (
               <li id={`${sec.title}`} className={index === 0 ? 'active' : null} key={uuid()} onClick={() => showSection(sec.title, sec.id, sec.display)}>{sec.title}</li>
             ))}
