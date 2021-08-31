@@ -8,7 +8,7 @@ const WEAE = () => {
 
       <p>Vibrational remedies are characterized by their energetic nature -- each remedy contains the energetic imprint of the animal/flower/gem/star/etc from which it is derived.</p>
 
-      <div className="bg-secondary mt-1 mb-2 py-2 px-1 br-10">
+      <div className="bg-secondary mt-1 mb-2 py-2 px-2 br-10">
         <h3>How are Wild Earth Animal Essences made?</h3>
 
         <p>No animals are captured or harmed to develop these products. The essences are made during a ceremonial process in a wilderness area of the Blue Ridge Mountains in Virginia. This ceremonial process includes attuning with and invoking the spirit of the animal involved. The resulting liquid contains the energy of the animal but does not contain any animal parts.</p>
@@ -37,11 +37,11 @@ const WEAE = () => {
 
       </div>
 
-      <h3>What else is in the essences?</h3>
+      <h3 className="mt-2">What else is in the essences?</h3>
 
       <p>Along with the energy of the animal, each essence contains distilled water and brandy (40%) as a vibrational preservative. Without the brandy, the vibration would quickly dissipate. (If you are alcohol sensitive, drops may be added to a cup of boiling water and the alcohol will quickly evaporate.)</p>
 
-      <h3>How much and how often do I take the essences?</h3>
+      <h3 className="mt-2">How much and how often do I take the essences?</h3>
 
       <p>There are many ways to take the essences, and you can experiment and do what feels right to you. We recommend taking 5-7 drops, 3-4 times per day, but not with food. Of course, you may take them more or less frequently if you wish. With vibrational remedies, it is best to take them more frequently rather than taking more drops at any given time. Taking more drops is not harmful, just wasteful. It is fine to take two essences at a time if you wish.</p>
 

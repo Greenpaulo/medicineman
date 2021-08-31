@@ -25,7 +25,7 @@ const Pacific = () => {
         <p>Pacific Essences® do NOT contain any physical elements of the plant, animal, gem or crystal sources, instead their individual “frequency” is captured and stored in water. Alcohol or Brandy is used as a preservative with a dilution of 50% spring water, 50% Brandy (20% alcohol by volume).</p>
       </div>
 
-      <div className="bg-secondary mt-1 mb-2 py-2 px-1 br-5">
+      <div className="bg-secondary mt-1 mb-2 py-2 px-1 br-10">
         <h3>How are they made?</h3>
 
         <p>The flower is placed into a crystal bowl filled with pure spring water. The bowl is kept in sunlight for a short while, up to a couple of hours, in order to transfer the vibrational energy of the plant to the water. In the case of a living creature like Whale or Dolphin, the water that the animal has passed through is collected. No animal is ever harmed in this process. When possible, we don’t harm the plant when making the essences. Rather than clipping a flower off, we prefer to dip the flower or submerge it for a short time in the spring water. The plant remains whole and living.</p>
@@ -51,7 +51,7 @@ const Pacific = () => {
         <p>They are safe to use in all situations and highly effective and immediate for children and animals.</p>
       </div>
 
-      <h3>Current research</h3>
+      <h3 className="mt-2">Current research</h3>
 
       <p>Recent testing with an energy measuring device in Japan show extremely high and consistent energy ratings for our combination essences. This means that energetically Pacific Essences® are pure energy from the plant source from which they are made with little or no influence from outside interference. Some of the categories of measurement included: Immune System, Vitality, Autonomic Nervous System, Manic Depression, Stress, Happiness, Fear, Despair, Loneliness, Shyness, Pressure, Mental Fatigue, Worry/Anxiety, Confidence, Concentration, Memory, and Free from Trauma.</p>
     </div>

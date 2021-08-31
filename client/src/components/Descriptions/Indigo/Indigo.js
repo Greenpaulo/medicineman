@@ -2,7 +2,7 @@
 const Indigo = () => {
   return (
     <div>
-      <h3>What are the Indigo Essences?</h3>
+      <h3 className="mt-2">What are the Indigo Essences?</h3>
       <p>These extraordinary Indigo gem essences have been created in Ireland by Ann Callaghan, her nephews Ben and Mica and their 'team'. We had already been drawn to them and were getting great results when Ann asked us if we would like to make them available to customers in the UK for her. We are delighted to be doing so. So many people who come into contact with the Indigo gem essences are captivated by their lightness and strength. These characteristics also allow children to open themselves to their healing qualities and Indigo Essences have been especially formulated to help the new children stay balanced and fairly sane through these times of intense change.</p>
 
       <p>These 'Indigo' children can have a very difficult time integrating with others, both at home and in school and many of them have very strong energy and definite views about life which can be challenging both for the children and for their care givers. Ann says 'One of the biggest problems for children is not being listened to and understood.' A lot of adults are very bad communicators and don't know how to really listen to children which in turn leads to the children resorting to more extreme behaviours to try and get their point across. Listening to your child is key to growing together harmoniously as a family. If you are having a stressful time at home a combination of good communication and essences will help to move energy very quickly.</p>

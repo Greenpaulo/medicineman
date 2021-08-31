@@ -127,3 +127,22 @@ nav#top-nav-main {
     display: inline-block;
   }
 }
+
+// Media queries
+@media (max-width: 640px) {
+  section.top-nav {
+    .top-nav-heading {
+      line-height: 3.3rem;
+      padding-top: 3rem;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 440px) {
+  section.top-nav {
+    .top-nav-heading {
+      font-size: 2.1rem;
+    }
+  }
+}

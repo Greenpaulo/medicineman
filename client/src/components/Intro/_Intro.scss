@@ -81,4 +81,39 @@
   #intro p {
     text-align: center;
   }
+
+  .page-link {
+    height: 150px;
+    width: 150px;
+    padding: 1.5rem 2rem;
+
+    img {
+      height: 65px;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 350px) {
+  #website-page-links {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .page-link {
+    height: 200px;
+    width: 200px;
+    padding: 2rem 3rem;
+
+    img {
+      height: 100px;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+    }
+  }
 }

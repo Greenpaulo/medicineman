@@ -147,3 +147,118 @@ section#groups {
     height: 186px;
   }
 }
+
+// Media queries
+@media (max-width: 670px) {
+  #group-links {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .group-link {
+    height: 180px;
+    width: 180px;
+
+    a {
+      font-size: 1rem;
+    }
+
+    img {
+      height: 150px;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 414px) {
+  #group-links {
+    grid-template-columns: repeat(1, auto);
+    grid-row-gap: 5rem;
+  }
+
+  .group-link {
+    height: 200px;
+    width: 200px;
+
+    a {
+      font-size: 1.2rem;
+    }
+
+    img {
+      height: 175px;
+    }
+  }
+
+  section#company-info {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
+
+    p {
+      width: 85%;
+      margin: 1rem auto;
+    }
+
+    // Remove border radius and specific margins, just from coloured background section inside #company-info
+    .br-10 {
+      border-radius: 0;
+    }
+
+    .my-1 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .mb-1 {
+      margin-bottom: 0;
+    }
+
+    .mt-1 {
+      margin-top: 0;
+    }
+
+    .bg-primary,
+    .bg-secondary,
+    .bg-tertiary {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .description-logo {
+      float: none;
+      display: block;
+      margin: auto;
+    }
+
+    #uses-list ul li {
+      margin-left: 0.5rem;
+    }
+
+    .section-underline {
+      margin: 3rem auto;
+    }
+
+    #threefold-system {
+      text-align: center;
+    }
+
+    #Bach-logo {
+      width: 270px;
+    }
+
+    #Bailey-logo {
+      margin-bottom: 2rem;
+    }
+
+    #Indigo-logo {
+      margin-top: 2rem;
+    }
+
+    #Pacific-logo {
+      margin: 2rem auto;
+    }
+
+    #WEAE-logo {
+      margin: 2rem auto;
+    }
+  }
+}
