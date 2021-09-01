@@ -123,6 +123,18 @@ section.section-intro {
   }
 }
 
+// Back To Top button
+button.back-to-top-btn {
+  display: none;
+  padding: 1rem 1.25rem;
+  margin: auto;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
 // Animate.css
 .animate__animated.animate__fadeIn {
   --animate-duration: 1.2s;
@@ -138,7 +150,6 @@ sup {
 }
 
 // Media queries
-// @media (max-width: 1024px) {
 @media (max-width: 1024px) {
   .container {
     // width: 100vw;
@@ -172,5 +183,16 @@ sup {
 
   p {
     text-align: center;
+  }
+
+  button.back-to-top-btn {
+    display: block;
+  }
+}
+
+/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+@media (max-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }

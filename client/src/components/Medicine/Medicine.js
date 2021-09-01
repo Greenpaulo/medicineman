@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import VineUnderline from '../VineUnderline/VineUnderline'
+// import VineUnderline from '../VineUnderline/VineUnderline'
 
 const Medicine = () => {
   return (

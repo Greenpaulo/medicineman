@@ -8,7 +8,7 @@ const Beginner = (props) => {
   return (
     <div className="container animate__animated animate__fadeIn">
       <Breadcrumbs props={props} crumbs={props.crumbs} />
-      <TopNav heading="Beginner" sections={createEducationSectionsObject(4, "beginner")}/>
+      <TopNav heading="Beginner" sections={createEducationSectionsObject(3, "beginner")}/>
       <div className="heading-underline"></div>
       <section id="beginner-education" className="mt-2 pb-2">
         <section id="beginner-section-contents" className="animate__animated animate__fadeIn">
@@ -16,7 +16,7 @@ const Beginner = (props) => {
             <h3>Section 1 – What is Traditional Medicine?</h3>
             <h3>Section 2 – What Are Flower Essences?</h3>
             <h3>Section 3 – How Do They Work?</h3>
-            <h3>Section 4 - What Are Gem / Environmental / Animal / Sea Essences?</h3>
+            {/* <h3>Section 4 - What Are Gem / Environmental / Animal / Sea Essences?</h3> */}
           </div>
           <VineUnderline />
         </section>
@@ -62,10 +62,12 @@ const Beginner = (props) => {
 
             <p>A few years later more producers appeared, preparing flower essences from the indigenous flowers in their countries.  In 1984 Steven Johnson set up the Alaskan Flower Essence Project and in 1986 the Australian Bush Flower Essences were founded.  These new essences expanded on the Bach essences and addressed issues surrounding sexuality, intimacy, creativity, communication and spirituality. Areas that were seemingly missing from the application of the Bach flower essences.  Because of the times, Ian White, the founder of the Australian Bush Flower Essences, suggests that today’s society and needs are very different than that of sixty years ago and these newer essences are more in line with the problems we face today.<sup>1</sup></p>
 
+            <p>The essences work in very powerful ways, but are very different than the expected outcome of someone who is used to pharmaceutical drugs. They alter your energetic system, your frequency, and in turn you attract situations in your life that enable you to overcome and heal the issue that you original took the medicine for. This may not be apparent when first starting to take essences, but after some time you begin to see the essences in action, and how the transformation works in your life. They are a brilliant tool for healing!</p>
+
           </div>
         </section>
 
-        <section id="beginner-section-4" className="animate__animated animate__fadeIn">
+        {/* <section id="beginner-section-4" className="animate__animated animate__fadeIn">
 
           <div className="bg-primary py-2 px-2 mt-1 br-10">
             <h3>WHAT ARE GEM / ENVIRONMENTAL / ANIMAL / SEA ESSENCES?</h3>
@@ -78,7 +80,7 @@ const Beginner = (props) => {
           <div className="bg-tertiary py-2 px-2 mt-2 br-10">
             <p>The essences work in very powerful ways, but are very different than the expected outcome of someone who is used to pharmaceutical drugs. They alter your energetic system, your frequency, and in turn you attract situations in your life that enable you to overcome and heal the issue that you original took the medicine for. This may not be apparent when first starting to take essences, but after some time you begin to see the essences in action, and how the transformation works in your life. They are a brilliant tool for healing!</p>
           </div>
-        </section>
+        </section> */}
 
         <section id="beginner-section-references" className="animate__animated animate__fadeIn">
           <ul className="pt-2">

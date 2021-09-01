@@ -68,3 +68,23 @@ td {
     grid-template-columns: repeat(3, auto);
   }
 }
+
+//Media queries
+@media (max-width: 414px) {
+  section#essence-links {
+    #image-grid {
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 1.5rem;
+      justify-content: center;
+
+      .essence-link-container,
+      .essence-link-image {
+        width: 140px;
+      }
+    }
+
+    #images-selector {
+      display: none;
+    }
+  }
+}

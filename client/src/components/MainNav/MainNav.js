@@ -86,15 +86,15 @@ const MainNav = () => {
                 About
               </Link>
             </li> */}
-            <li className="nav-link">
+            {/* <li className="nav-link">
               <Link to="/contact">
                 <img src="/images/email.svg" alt="" />
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div id="links">
-            <a href="www.facebook.com"><i className="fab fa-facebook fa-2x"></i></a>
+            <a href="www.facebook.com/"><i className="fab fa-facebook fa-2x"></i></a>
             <a href="www.twitter.com"><i className="fab fa-twitter fa-2x"></i></a>
             {/* <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a> */}
             <a href="www.instagram.com"><i className="fab fa-instagram fa-2x"></i></a>
@@ -111,7 +111,7 @@ const MainNav = () => {
             <li><Link to="/crossreference" onClick={handleClick}>Cross Reference</Link></li>
             <li><Link to="/education" onClick={handleClick}>Education</Link></li>
             <li><Link to="/store" onClick={handleClick}>Store</Link></li>
-            <li><Link to="/contact" onClick={handleClick}>Contact</Link></li>
+            {/* <li><Link to="/contact" onClick={handleClick}>Contact</Link></li> */}
           </ul>
         </div>
 			</section>

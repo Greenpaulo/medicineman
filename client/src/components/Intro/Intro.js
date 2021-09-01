@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { scrollToTop } from '../../helpers/helpers'
 
 const Intro = () => {
   return (
@@ -14,26 +15,26 @@ const Intro = () => {
           <p>The role of the new Medicine Man in the West, is to bring us back to our roots. To bring us home. To show to once again that nature provides everything we need to heal our bodies and minds.</p>
         </div>
         <div id="website-page-links">
-          <Link to="/medicine" className="page-link">
+          <Link to="/medicine" onClick={scrollToTop} className="page-link">
             <img src="images/medicine.svg" alt="" />
             <h4>Medicine</h4>  
           </Link>
-          <Link to="/crossreference" className="page-link">
+          <Link to="/crossreference" onClick={scrollToTop} className="page-link">
             <img src="images/storytelling.svg" alt="" />
             <h4>Cross Reference</h4>  
           </Link>
-          <Link to="/education" className="page-link">
+          <Link to="/education" onClick={scrollToTop} className="page-link">
             <img src="images/love.svg" alt="" />
             <h4>Education</h4>  
           </Link>
-          <Link to="/store" className="page-link">
+          <Link to="/store" onClick={scrollToTop} className="page-link">
             <img src="images/online-shopping-2.svg" alt="" />
             <h4>Store</h4>  
           </Link>
-          <Link to="/contact" className="page-link">
+          {/* <Link to="/contact" onClick={scrollToTop} className="page-link">
             <img src="images/email.svg" alt="" />
             <h4>Contact</h4>  
-          </Link>
+          </Link> */}
         </div>
       </section>
     </div>

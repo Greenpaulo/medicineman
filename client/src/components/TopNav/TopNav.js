@@ -20,7 +20,6 @@ const TopNav = ({heading, sections, companyInfo}) => {
   }
 
   const toggleDowndownMenu = () => {
-    console.log('clicked')
     document.getElementById('dropdown-selector').classList.toggle("active");
   }
   

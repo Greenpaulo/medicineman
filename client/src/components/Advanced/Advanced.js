@@ -1,7 +1,7 @@
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import TopNav from "../TopNav/TopNav"
 import VineUnderline from '../VineUnderline/VineUnderline'
-import { createEducationSectionsObject } from "../../helpers/helpers"
+import { createEducationSectionsObject, scrollToTop } from "../../helpers/helpers"
 
 const Advanced = (props) => {
   return (
@@ -60,6 +60,8 @@ const Advanced = (props) => {
 
             <p>So the process of healing, is really breaking down all these misconceptions and replacing them with truths.</p>
           </div>
+
+          <button onClick={scrollToTop} className="back-to-top-btn" title="Back to top">Back To Top</button> 
         </section>
 
         <section id="advanced-section-2" className="animate__animated animate__fadeIn">
@@ -80,22 +82,21 @@ const Advanced = (props) => {
             <p>...If you are still here, then please understand that I have made this education section of the website with the full intent of sharing EVERYTHING that the plants have directly taught me about medicine, or sources of information that I have been led to, and this DEFINITELY includes those subjects that are termed “conspiracy theories” - but this is my truth and this is the truth that I will share, because it’s the only one I can. As mentioned previously the majority of this information can NOT be backed up by “scientific evidence” because the majority of science ONLY measures the material world. I’m not going to beat around the bush, I’m just gonna go all out and say it like it is, and then provide you with additional resources for further reading. I truly hope this helps widen your consciousness and brings more medicine into your life!</p>
           </div>
 
-        <div className="py-2 mt-3">
-          <h3>WHO ARE WE AND WHERE ARE WE?</h3>
-
-          <p>As many shamans and mystics have said over the thousands of years of recorded history - We are all that exists. We are infinite consciousness having an experience as human. This is what the plants teach. Everything is energy, everything in the universe is connected, we are all ONE consciousness.</p>
-            
-          <p>Right now, we are all participating in the “Earth Experiment”, which was an experiment to experience the transformation of consciousness/frequency inside a physical form. From a 3rd dimensional frequency, to a 5th dimensional frequency.</p>
-
-          <p>This video by Lorie Ladd is the best explanation I have ever heard:</p>
-
-          {/* <iframe width="918" height="567" frameBorder="0" allowFullScreen allow="autoplay" src="https://www.youtube-nocookie.com/embed/foz7Qh_bkDA " title="Reptilians Video"></iframe> */}
-          <div className="video-container">
-            <iframe width="918" height="567" src="https://www.youtube-nocookie.com/embed/UbxAVAfM41w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          </div>
-
-          </div>
           <div className="py-2 mt-3">
+            <h3>WHO ARE WE AND WHERE ARE WE?</h3>
+
+            <p>As many shamans and mystics have said over the thousands of years of recorded history - We are all that exists. We are infinite consciousness having an experience as human. This is what the plants teach. Everything is energy, everything in the universe is connected, we are all ONE consciousness.</p>
+              
+            <p>Right now, we are all participating in the “Earth Experiment”, which was an experiment to experience the transformation of consciousness/frequency inside a physical form. From a 3rd dimensional frequency, to a 5th dimensional frequency.</p>
+
+            <p>This video by Lorie Ladd is the best explanation I have ever heard:</p>
+
+            <div className="video-container">
+              <iframe width="918" height="567" src="https://www.youtube-nocookie.com/embed/UbxAVAfM41w" title="YouTube video player" frameBorder="0" allowFullScreen></iframe>
+            </div>
+          </div>
+
+          <div id="what-is-happening" className="py-2 mt-3">
             <h3>WHAT IS HAPPENING ON THE PLANET RIGHT NOW?</h3>
 
             <p>As I previously mentioned, humanity has been manipulated. We need to understand this so we can expand our consiousness and begin to see what we have been living in. From this perspective we can break free of our old version of reality, which includes our manipulated version of health and disease.</p> 
@@ -109,10 +110,11 @@ const Advanced = (props) => {
             <p>This second video by Lorie, is again a brilliant explanation of what is happening right now:</p>
 
             <div className="video-container">
-              <iframe width="918" height="567" src="https://www.youtube-nocookie.com/embed/foz7Qh_bkDA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <iframe width="918" height="567" src="https://www.youtube-nocookie.com/embed/foz7Qh_bkDA" title="YouTube video player" frameBorder="0" allowFullScreen></iframe>
             </div>
 
           </div>
+          <button onClick={scrollToTop} className="back-to-top-btn" title="Back to top">Back To Top</button> 
         </section>
 
         <section id="advanced-section-3" className="animate__animated animate__fadeIn">
@@ -171,6 +173,8 @@ const Advanced = (props) => {
 
             <p>As you can see, this misunderstanding of the nature of reality, and consequently how manifestation works, leads to the negative thought of worry. As we shall see below, all negative thoughts are the consequence of an incorrect perception of the universe.</p>
           </div>
+
+          <button onClick={scrollToTop} className="back-to-top-btn" title="Back to top">Back To Top</button> 
         </section>
 
         <section id="advanced-section-4" className="animate__animated animate__fadeIn">
@@ -255,6 +259,8 @@ const Advanced = (props) => {
 
             {/* <p>(MAYBE add clip of lorie/phil video – non-phyical beings – where they discuss trauma, triggers, and the processing of emotions)</p> */}
           </div>
+
+          <button onClick={scrollToTop} className="back-to-top-btn" title="Back to top">Back To Top</button> 
         </section>
 
         <section id="advanced-section-5" className="animate__animated animate__fadeIn">
@@ -268,7 +274,7 @@ const Advanced = (props) => {
 
             <p>People will say, I don’t believe it, why would someone choose to be born with an illness, or die as a baby from an illness. From this level of understanding it makes perfect sense though. It’s just an experience. Infinite consciousness decides to experience itself/ourselves as an individual point of attention and so incarnates into a physical form (or incarnates into a higher dimensional consciousness that then partially incarnates into a physical form) and chooses to experience dying very young from an “illness”. It’s a choice, like any other choice, it’s just an experience. We see death as a tragedy because we self-identify with the “I” and the perception of “what I can see is all that exists” and “there is only one life and death is the end”. These beliefs are from a very narrow perception of the nature of reality, and are the outcome of perceptual programming and manipulation by a 4th dimensional Reptilian race.</p>
 
-            “Healing” is just a choice, it’s just an experience.
+            <p>“Healing” is just a choice, it’s just an experience.</p> 
 
           </div>
           <div className="py-2 mt-3">
@@ -287,6 +293,9 @@ const Advanced = (props) => {
 
             <p>The best thing about essences, is that even if we don’t understand the whole manifestation process, and we haven’t a clue what we have chosen (at a higher level) to experience in this lifetime – we can be sure that as soon as we start to take essences, we will start shifting our vibration to a higher frequency. This really helps with letting go of control of our lives from the ego. We may not know what’s coming in our life, but if we keep working with the medicine then our frequency can only rise, and we can rest assured that we will only create higher and higher frequency situations in our life or events that will enable us to release lower frequencies from our bodies in order to continue to rise. We won’t go “downhill” or experience lower frequency situations permanently. We will be on an “uphill” expansion of consciousness, and increase in frequency, and that’s a nice feeling!</p>
           </div>
+
+           <button onClick={scrollToTop} className="back-to-top-btn" title="Back to top">Back To Top</button> 
+
         </section>
         
         <section id="advanced-section-6" className="animate__animated animate__fadeIn">

@@ -59,3 +59,41 @@ section#group {
     }
   }
 }
+
+// Media queries
+@media (max-width: 414px) {
+  h1#company-heading {
+    font-size: 2.1rem;
+    line-height: 3.3rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  section#group {
+    text-align: center;
+  }
+
+  #mobile-group-photo {
+    float: none;
+  }
+
+  img.group-photo-example {
+    max-height: 300px;
+    max-width: 400px;
+    margin: 2rem auto 1rem 0;
+  }
+
+  h2#group-heading {
+    margin-top: 1rem;
+  }
+
+  #group-info {
+    font-size: 0.9rem;
+
+    p {
+      width: 85%;
+      margin: auto;
+    }
+  }
+}

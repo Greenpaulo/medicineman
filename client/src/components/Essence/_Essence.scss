@@ -195,3 +195,25 @@ ul#keywords {
     grid-template-columns: repeat(1, auto);
   }
 }
+
+@media (max-width: 414px) {
+  #essence-text {
+    width: 100%;
+
+    .br-10 {
+      border-radius: 0;
+    }
+
+    .mt-1 {
+      margin-top: 0;
+    }
+  }
+
+  section#description {
+    padding-bottom: 0;
+  }
+
+  section#chakrasMeridians {
+    grid-template-columns: repeat(1, auto);
+  }
+}

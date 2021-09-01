@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { scrollToTop } from '../../helpers/helpers'
 
 const Education = (props) => {
   return (
@@ -20,21 +21,21 @@ const Education = (props) => {
 
           <div className="section-link mt-2">
             <div className="btn-container">
-              <Link to="/education/beginner" className="btn btn-secondary mr-2">BEGINNER</Link>
+              <Link to="/education/beginner" onClick={scrollToTop} className="btn btn-secondary mr-2">BEGINNER</Link>
             </div>
             <p>If you are totally new to traditional medicine and you’ve only ever taken prescription drugs from your doctor, then start here. You will find an introduction to traditional medicine and the use of flower essences.</p>
           </div>
 
           <div className="section-link mt-2">
             <div className="btn-container">
-              <Link to="/education/intermediate" className="btn btn-secondary mr-2">INTERMEDIATE</Link>
+              <Link to="/education/intermediate" onClick={scrollToTop} className="btn btn-secondary mr-2">INTERMEDIATE</Link>
             </div>
             <p>Here we will delve into the history of our current medical system and take a look at how we got here. We will also expand our knowledge of the human body, the role of emotions in health and take a deeper look at essences.</p>
           </div>
 
           <div className="section-link mt-2">
             <div className="btn-container">
-              <Link to="/education/advanced" className="btn btn-secondary mr-2">ADVANCED</Link>
+              <Link to="/education/advanced" onClick={scrollToTop} className="btn btn-secondary mr-2">ADVANCED</Link>
             </div>
             <p>This section is for those who have moved way beyond “body = machine”, and towards a body/mind/spirit paradigm. Here you will find in-depth information on my current understanding on health and disease, and ultimately life itself.</p>
           </div>
