@@ -94,10 +94,10 @@ const MainNav = () => {
             </li> */}
           </ul>
           <div id="links">
-            <a href="www.facebook.com/"><i className="fab fa-facebook fa-2x"></i></a>
-            <a href="www.twitter.com"><i className="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.facebook.com/Paul-Bingham-Herbalist-218598888200420" target="_blank" rel="noreferrer"><i className="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/PaulBinghamDev" target="_blank" rel="noreferrer"><i className="fab fa-twitter fa-2x"></i></a>
             {/* <a href="www.youtube.com"><i className="fab fa-youtube fa-2x"></i></a> */}
-            <a href="www.instagram.com"><i className="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/greenpaulo79/" target="_blank" rel="noreferrer"><i className="fab fa-instagram fa-2x"></i></a>
           </div>
           <div id="open-slide">
             <i className="fa fa-bars fa-3x" onClick={toggleDropdown}></i>

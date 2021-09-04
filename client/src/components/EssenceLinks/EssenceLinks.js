@@ -23,7 +23,7 @@ const EssenceLinks = ({ essences, group }) => {
                 <ul>
                   {essences.map((essence, index) => {
                     if (index > 0 && index <= columnLength) {
-                      return <li key={essence.name}><Link to={`medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
+                      return <li key={essence.name}><Link to={`/medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
                     }
                       return <li key={essence.name}></li>
                     }
@@ -34,7 +34,7 @@ const EssenceLinks = ({ essences, group }) => {
                 <ul>
                   {essences.map((essence, index) => {
                     if (index > columnLength && index <= columnLength*2 ) {
-                      return <li key={essence.name}><Link to={`medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
+                      return <li key={essence.name}><Link to={`/medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
                     }
                       return <li key={essence.name}></li>
                     }
@@ -45,7 +45,7 @@ const EssenceLinks = ({ essences, group }) => {
                 <ul>
                   {essences.map((essence, index) => {
                     if (index > columnLength*2 && index <= columnLength*3) {
-                      return <li key={essence.name}><Link to={`medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
+                      return <li key={essence.name}><Link to={`/medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
                     }
                       return <li key={essence.name}></li>
                     }
@@ -56,7 +56,7 @@ const EssenceLinks = ({ essences, group }) => {
                 <ul>
                   {essences.map((essence, index) => {
                     if (index > columnLength*3 && index <= columnLength*4) {
-                      return <li key={essence.name}><Link to={`medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
+                      return <li key={essence.name}><Link to={`/medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
                     }
                       return <li key={essence.name}></li>
                     }
