@@ -86,12 +86,12 @@ const MainNav = () => {
                 About
               </Link>
             </li> */}
-            {/* <li className="nav-link">
+            <li className="nav-link">
               <Link to="/contact">
                 <img src="/images/email.svg" alt="" />
                 Contact
               </Link>
-            </li> */}
+            </li>
           </ul>
           <div id="links">
             <a href="https://www.facebook.com/Paul-Bingham-Herbalist-218598888200420" target="_blank" rel="noreferrer"><i className="fab fa-facebook fa-2x"></i></a>

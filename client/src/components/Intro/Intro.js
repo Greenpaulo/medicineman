@@ -31,10 +31,10 @@ const Intro = () => {
             <img src="images/online-shopping-2.svg" alt="" />
             <h4>Store</h4>  
           </Link>
-          {/* <Link to="/contact" onClick={scrollToTop} className="page-link">
+          <Link to="/contact" onClick={scrollToTop} className="page-link">
             <img src="images/email.svg" alt="" />
             <h4>Contact</h4>  
-          </Link> */}
+          </Link>
         </div>
       </section>
     </div>
