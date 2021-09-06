@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-// import VineUnderline from '../VineUnderline/VineUnderline'
 
 const Medicine = () => {
   return (
@@ -11,7 +10,6 @@ const Medicine = () => {
           <p>Essences are vibrational medicines made from nature. They work on the human energetic body to help us dissolve the root of disease. They can be subtle but they are powerful and work on a much deeper level than orthodox drugs.</p>
           <p>Essences contain the living energies of nature and can teach us how we became disconnected from the truth of the universe</p>
         </div>
-      {/* <VineUnderline /> */}
       </section>
       <section id="company-links">
         <Link to="/medicine/alaskan" className="company-link">

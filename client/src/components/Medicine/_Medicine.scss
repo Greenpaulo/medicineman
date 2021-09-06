@@ -6,30 +6,35 @@
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-row-gap: 1.5rem;
-  // justify-content: space-between;
-  // width: 95%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
-  padding-bottom: 4rem;
-
-  // .company-link:nth-child(even) {
-  //   border: 8px solid var(--secondary);
-  // }
 }
 
 .company-link {
-  height: 275px;
-  width: 275px;
+  height: 250px;
+  width: 250px;
   border-radius: 50px;
   border: 8px solid var(--secondary);
-  // padding: 2rem 3rem 3rem 3rem;
   text-align: center;
   margin: auto;
 
   img {
-    height: 135px;
-    margin-bottom: 1rem;
+    height: 120px;
+    margin-bottom: 0.5rem;
     margin-top: 2rem;
+  }
+
+  img[src='images/company-logos/ltoe.gif'] {
+    height: 150px;
+    margin-bottom: -0.4rem;
+    margin-top: 1rem;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    width: 75%;
+    margin: auto;
+    line-height: 1.5rem;
   }
 }
 
