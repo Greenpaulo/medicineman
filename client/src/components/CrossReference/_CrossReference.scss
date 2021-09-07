@@ -63,22 +63,30 @@ section#cross-reference-guide {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 800px) {
   section#keywords {
-    padding-left: 0;
-    text-align: center;
+    padding: 0;
 
     ul {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-
-      li {
-        margin-bottom: 2rem;
-        line-height: 1.5rem;
-      }
+      width: 90%;
+      padding-left: 4rem;
+      columns: 2;
     }
   }
+}
 
+@media (max-width: 630px) {
+  section#keywords {
+    ul {
+      width: 100%;
+      padding-left: 0;
+      columns: 2;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 414px) {
   #chakras h2,
   #meridians h2 {
     text-align: center;
@@ -94,6 +102,15 @@ section#cross-reference-guide {
         border-bottom: 1px solid var(--primary);
         padding-bottom: 0.5rem;
       }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  section#keywords {
+    width: 90%;
+    ul li a {
+      font-size: 0.8rem;
     }
   }
 }
