@@ -25,20 +25,6 @@ a {
 }
 
 #essence-description {
-  // :nth-child(odd) {
-  //   padding: 2rem;
-  // }
-
-  // :nth-child(1) {
-  //   // padding: 0 0 1rem 0;
-  //   padding: 2rem;
-  // }
-
-  // :nth-child(even) {
-  //   padding: 2rem;
-  //   border-radius: 10px;
-  //   background-color: var(--light-secondary);
-  // }
   :nth-child(odd) {
     padding: 1rem;
   }
@@ -51,15 +37,6 @@ a {
     padding: 1rem;
   }
 }
-
-// section#essence-effects {
-//   margin: 1.5rem 0 2rem 0;
-// }
-
-// .essence-indication,
-// .essence-effect {
-//   margin: 0.5rem 0 0 1.5rem;
-// }
 
 .essence-indication::first-letter,
 .essence-effect::first-letter {
@@ -76,7 +53,6 @@ img#essence-img {
   max-width: 400px;
   max-height: 500px;
   margin: auto;
-  // border-radius: 50%;
 }
 
 section#indications-effects,
@@ -92,7 +68,6 @@ section#indications-effects {
 
   section {
     width: 45%;
-    // height: 100%;
   }
 }
 
@@ -131,15 +106,13 @@ img.icon {
 .meridian {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
-  // padding-top: 10px;
-  // height: 50px;
+  margin-bottom: 1rem;
 
   li {
     text-transform: capitalize;
     list-style: none;
     margin-left: 1rem;
-    line-height: 30px;
+    line-height: 19px;
   }
 }
 
@@ -149,15 +122,12 @@ section#essence-keywords {
 
   ul {
     list-style: none;
+    columns: 2;
   }
 
   li {
     text-transform: capitalize;
   }
-}
-
-ul#keywords {
-  columns: 2;
 }
 
 .reference-link {
@@ -168,6 +138,27 @@ ul#keywords {
 }
 
 // Media queries
+@media (max-width: 1800px) {
+  section#chakrasMeridians {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  section#meridians,
+  section#secondaryMeridians,
+  section#chakras,
+  section#secondaryChakras {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  #essence-indications-list,
+  #essence-effects-list {
+    padding-left: 1rem;
+  }
+}
+
 @media (max-width: 1024px) {
   #essence-text {
     width: initial;
@@ -191,8 +182,38 @@ ul#keywords {
     padding-bottom: 2rem;
   }
 
-  section#chakrasMeridians {
-    grid-template-columns: repeat(1, auto);
+  section#indications-effects {
+    flex-direction: column;
+    align-items: center;
+
+    section {
+      width: 80%;
+    }
+
+    section#essence-indications {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 700px) {
+  section#meridians,
+  section#secondaryMeridians,
+  section#chakras,
+  section#secondaryChakras {
+    width: 80%;
+    // margin: auto;
+    ul {
+      columns: 1;
+      padding-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  section#essence-keywords {
+    width: 90%;
   }
 }
 
@@ -215,5 +236,16 @@ ul#keywords {
 
   section#chakrasMeridians {
     grid-template-columns: repeat(1, auto);
+  }
+
+  #essence-indications-list,
+  #essence-effects-list {
+    padding-left: 0;
+  }
+
+  section#essence-keywords {
+    ul {
+      columns: 1;
+    }
   }
 }

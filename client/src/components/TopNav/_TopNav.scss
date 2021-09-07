@@ -110,8 +110,6 @@ nav#top-nav-main {
     padding-top: 2rem;
 
     ul {
-      // flex-direction: column;
-      // align-items: center;
       display: none;
 
       li {
@@ -129,6 +127,10 @@ nav#top-nav-main {
 
   #dropdown-selector {
     display: inline-block;
+  }
+
+  #dropdown-content {
+    transform: translateX(-25%);
   }
 }
 

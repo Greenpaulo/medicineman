@@ -25,12 +25,12 @@ section#group {
 
   p {
     margin-bottom: 1rem;
-    max-width: 80%;
+    // max-width: 80%;
   }
 }
 
 // Media queries
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   #desktop-group-photo {
     display: none;
   }

@@ -49,7 +49,7 @@ const Essence = (props) => {
       return (
         <section id="essence-indications" className="bg-secondary px-3 py-2 br-10">
           <h3>Indications</h3>
-          <ul className="pl-2 pt-1">
+          <ul className="pl-2 pt-1" id="essence-indications-list">
             {essence.indications.map(indication => (
               <li key={uuid()} className="essence-indication">{indication}</li>
             ))}
@@ -64,7 +64,7 @@ const Essence = (props) => {
       return (
         <section id="essence-effects" className="bg-primary px-3 py-2 br-10">
           <h3>Effects</h3>
-          <ul className="pl-2 pt-1">
+          <ul className="pl-2 pt-1" id="essence-effects-list">
             {essence.effects.map(effect => (
               <li key={uuid()} className="essence-effect">{effect}</li>
             ))}
@@ -162,7 +162,7 @@ const Essence = (props) => {
           {essence.keywords.map(keyword => {
             if (referenceTitlesWithoutSlugs.includes(keyword)) {
               return (
-                <li><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`} className="reference-link">{keyword}</Link></li>
+                <li key={uuid()}><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`} className="reference-link">{keyword}</Link></li>
               )
             } else {
               return (
