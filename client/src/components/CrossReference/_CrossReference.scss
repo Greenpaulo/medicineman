@@ -84,13 +84,6 @@ section#cross-reference-guide {
       text-align: center;
     }
   }
-}
-
-@media (max-width: 414px) {
-  #chakras h2,
-  #meridians h2 {
-    text-align: center;
-  }
 
   #chakra-list,
   #meridian-list {
@@ -103,6 +96,28 @@ section#cross-reference-guide {
         padding-bottom: 0.5rem;
       }
     }
+  }
+}
+
+@media (max-width: 414px) {
+  #chakras,
+  #meridians {
+    border-radius: 0;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  #meridians {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  #chakra-list ul,
+  #meridian-list ul {
+    columns: 1;
   }
 }
 
