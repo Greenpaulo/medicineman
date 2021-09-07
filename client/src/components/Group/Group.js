@@ -4,7 +4,7 @@ import { GroupInfoContext } from "../../context/GroupInfoState"
 import { checkLoading, randomNumber, renderCompanyName, renderImagePath } from "../../helpers/helpers"
 import uuid from 'react-uuid'
 import EssenceLinks from '../EssenceLinks/EssenceLinks'
-import CircleLoader from "react-spinners/CircleLoader";
+import CircleLoader from "react-spinners/CircleLoader"
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
 
 
@@ -61,7 +61,7 @@ const Group = (props) => {
           <section id="group">
             <div>
               <div id="mobile-group-photo">
-                {renderEssencePhoto()}
+                {/* {renderEssencePhoto()} */}
               </div>
               <h2 id="group-heading">{group}</h2>
               <section id="group-info">
@@ -71,7 +71,7 @@ const Group = (props) => {
               </section>
             </div>
             <div id="desktop-group-photo">
-              {renderEssencePhoto()}
+              {/* {renderEssencePhoto()} */}
             </div>
           </section>
           <EssenceLinks essences={essences} group={group}/>
