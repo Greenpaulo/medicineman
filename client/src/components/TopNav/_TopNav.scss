@@ -102,9 +102,12 @@ nav#top-nav-main {
   #top-nav-logo {
     display: none;
   }
+
+  .top-nav-heading {
+    padding-top: 4rem;
+  }
 }
 
-// Media queries
 @media (max-width: 768px) {
   nav#top-nav-main {
     padding-top: 2rem;

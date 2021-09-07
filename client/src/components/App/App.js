@@ -29,7 +29,7 @@ const App = () => {
                 }));
 
               return (
-                <div className="p-8">
+                <div id="app">
                   {/* <Breadcrumbs crumbs={crumbs} /> */}
                   <Component {...props} crumbs={crumbs}/>
                 </div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { scrollToTop } from '../../helpers/helpers'
 
 const Medicine = () => {
   return (
@@ -12,35 +13,35 @@ const Medicine = () => {
         </div>
       </section>
       <section id="company-links">
-        <Link to="/medicine/alaskan" className="company-link">
+        <Link to="/medicine/alaskan" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/alaskan.gif" alt="Alaskan Essences logo" />
           <h4>Alaskan Essences</h4>
         </Link>
-        <Link to="/medicine/abfe" className="company-link">
+        <Link to="/medicine/abfe" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/abfe.gif" alt="Bush Flower Essences logo" />
           <h4>Bush Flower Essences</h4>
         </Link>
-        <Link to="/medicine/bach" className="company-link">
+        <Link to="/medicine/bach" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/bach.gif" alt="Bach Flower logo " />
           <h4>Bach Flower Remedies</h4>
         </Link>
-        <Link to="/medicine/bailey" className="company-link">
+        <Link to="/medicine/bailey" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/bailey.gif" alt="Bailey Essence logo" />
           <h4>Bailey Essences</h4>
         </Link>
-        <Link to="/medicine/indigo" className="company-link">
+        <Link to="/medicine/indigo" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/indigo.gif" alt="Indigo Essences logo" />
           <h4>Indigo Essences</h4>
         </Link>
-        <Link to="/medicine/living_tree_orchid_essences" className="company-link">
+        <Link to="/medicine/living_tree_orchid_essences" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/ltoe.gif" alt="Living Tree Orchid Essences logo" />
           <h4>Living Tree Orchid Essences</h4>
         </Link>
-        <Link to="/medicine/pacific" className="company-link">
+        <Link to="/medicine/pacific" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/pacific.gif" alt="Pacific Essences logo" />
           <h4>Pacific Essences</h4>
         </Link>
-        <Link to="/medicine/weae" className="company-link">
+        <Link to="/medicine/weae" className="company-link" onClick={scrollToTop}>
           <img src="images/company-logos/weae.gif" alt="Wild Earth Animal Essences logo" />
           <h4>Wild Earth Animal Essences</h4>
         </Link>

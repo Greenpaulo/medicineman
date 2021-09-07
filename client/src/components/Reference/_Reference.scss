@@ -8,15 +8,17 @@ ul#references {
   list-style: none;
 
   li.reference {
-    display: flex;
-  }
+    padding-bottom: 2rem;
 
-  li:nth-child(odd) {
-    background-color: var(--light-secondary);
-  }
+    &:nth-child(odd) {
+      // background-color: var(--light-secondary);
+      border-bottom: 2px solid var(--light-secondary);
+    }
 
-  li:nth-child(even) {
-    background-color: var(--primary);
+    &:nth-child(even) {
+      border-bottom: 2px solid var(--light-secondary);
+      // background-color: var(--primary);
+    }
   }
 }
 
@@ -30,10 +32,21 @@ p.essence {
   margin-right: 2rem;
 }
 
-.indication {
-  margin: 1rem 0;
+h4.indication {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  font-weight: 600;
 }
 
-.indication::first-letter {
+h4.indication::first-letter {
   text-transform: capitalize;
+}
+
+section#related {
+  padding-bottom: 2rem;
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
 }

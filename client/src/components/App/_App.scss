@@ -1,0 +1,11 @@
+#app {
+  transform: translateY(-92px);
+  padding-top: 92px;
+}
+
+@media (max-width: 480px) {
+  #app {
+    transform: translateY(-75px);
+    padding-top: 75px;
+  }
+}

@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
-import { checkLoading } from "../../helpers/helpers"
+import { checkLoading, scrollToTop } from "../../helpers/helpers"
 import slugify from 'slugify'
+import uuid from 'react-uuid'
 import CircleLoader from "react-spinners/CircleLoader";
 
 
@@ -20,7 +21,7 @@ const Reference = (props) => {
       setLoadingReferences(true);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [props.match.params.reference])
 
   
   let indications, descriptions;
@@ -63,7 +64,7 @@ const Reference = (props) => {
           <section id="reference-info" className="mt-2">
             <ul id="references">
               {descriptions.map(desc => (
-                <li className="reference br-10 px-1 my-1">
+                <li className="reference px-1 mt-1 mb-2" key={uuid()}>
                   <h4 className="indication mr-2">{desc} </h4>
                   <div className="essence-links ml-2">
                     {renderEssences(desc)}
@@ -74,10 +75,10 @@ const Reference = (props) => {
           </section>
           {references[0].related.length > 0 &&
             <section id="related">
-              <h3>Related</h3>
+              <h3 className="py-1">Related Keywords</h3>
               <ul id="related-references">
                 {references[0].related.map(ref => (
-                  <li className="related-ref"><Link to="#">{ref}</Link></li>
+                  <li onClick={scrollToTop} className="related-ref"><Link to={`/crossreference/${slugify(ref, { lower: true, replacement: '_' })}`}>{ref}</Link></li>
                 ))}
               </ul>
             </section>

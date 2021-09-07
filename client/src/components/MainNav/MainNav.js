@@ -20,13 +20,6 @@ const MainNav = () => {
       dropdown.style.opacity = "1";
       setDropdownActive({ active: true });
 
-      // Set variable opacity dependent on width of display
-      // if (window.innerWidth < 500) {
-      //   dropdown.style.opacity = "1";
-      // } else {
-      //   dropdown.style.opacity = "0";
-      // };
-
     } else {
       // Its open, so close
       const dropdown = document.querySelector("#dropdown-nav");

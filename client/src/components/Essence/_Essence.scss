@@ -53,6 +53,10 @@ img#essence-img {
   max-width: 400px;
   max-height: 500px;
   margin: auto;
+
+  &[src^='/images/WEAE/Combinations'] {
+    max-height: 370px;
+  }
 }
 
 section#indications-effects,

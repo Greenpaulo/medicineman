@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { ReferencesContext } from "../../context/ReferencesState"
-import { checkLoading, renderCompanyName, renderImagePath, renderChakraIcon, renderMeridianIcon } from "../../helpers/helpers"
+import { checkLoading, renderCompanyName, renderImagePath, renderChakraIcon, renderMeridianIcon, scrollToTop } from "../../helpers/helpers"
 import uuid from 'react-uuid'
 import slugify from 'slugify'
 import CircleLoader from "react-spinners/CircleLoader";
@@ -162,7 +162,7 @@ const Essence = (props) => {
           {essence.keywords.map(keyword => {
             if (referenceTitlesWithoutSlugs.includes(keyword)) {
               return (
-                <li key={uuid()}><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`} className="reference-link">{keyword}</Link></li>
+                <li onClick={scrollToTop} key={uuid()}><Link to={`/crossreference/${slugify(keyword, { lower: true, replacement: '_' })}`} className="reference-link">{keyword}</Link></li>
               )
             } else {
               return (
@@ -316,7 +316,7 @@ const Essence = (props) => {
               }
             </div>
             <div id="essence-main-img">
-              <img id="essence-img" src={renderImagePath(essence.images)} alt="" />
+              <img id="essence-img" src={renderImagePath(essence.images)} alt="Essence" />
             </div>
           </section>
           <section id="indications-effects" className="animate__animated animate__fadeIn">

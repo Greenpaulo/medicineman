@@ -70,42 +70,6 @@ const EssenceLinks = ({ essences, group }) => {
     )
   }
 
-  const renderMobileTable = (columnLength) => {
-    return (
-      <div id="mobile-table-container">
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <ul>
-                  {essences.map((essence, index) => {
-                    if (index > 0 && index <= columnLength) {
-                      return <li key={essence.name}><Link to={`/medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
-                    }
-                      return <li key={essence.name}></li>
-                    }
-                  )}
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  {essences.map((essence, index) => {
-                    if (index > columnLength && index <= columnLength*2 ) {
-                      return <li key={essence.name}><Link to={`/medicine/${essence.companySlug}/${essence.groupSlug}/${essence.nameSlug}`}>{essence.name}</Link></li>
-                    }
-                      return <li key={essence.name}></li>
-                    }
-                  )}
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    )
-  }
-  
-
   const renderTableForLargeScreens = () => {
     let columnLength = 10;
     
