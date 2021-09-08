@@ -6,15 +6,13 @@ import uuid from 'react-uuid'
 
 const EssenceLinks = ({ essences, group }) => {
 
-  const [isGrid, setIsGrid] = useState({
-    isGrid: true
-  })
+  const [isGrid, setIsGrid] = useState(false)
 
   const renderTable = (columnLength) => {
     return (
       <div id="table-container">
         <div id="view-selector">
-          <h5 id="images-selector" onClick={toggleTableImages}>Toggle images</h5>
+          <button className="images-toggler" onClick={toggleTableImages}>Toggle images</button>
         </div>
         <table>
           <tbody>
@@ -95,7 +93,7 @@ const EssenceLinks = ({ essences, group }) => {
   const renderImageGrid = () => (
       <div id="image-grid-container">
         <div id="view-selector">
-          <h5 id="images-selector" onClick={toggleTableImages}>Toggle images</h5>
+          <button className="images-toggler" onClick={toggleTableImages}>Toggle images</button>
         </div>
         <div id="image-grid">
           {essences.map((essence) => (

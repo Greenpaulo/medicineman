@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading, renderCompanyName, renderImagePath, renderChakraIcon, renderMeridianIcon, scrollToTop } from "../../helpers/helpers"
-import uuid from 'react-uuid'
+import uuid from "react-uuid"
 import slugify from 'slugify'
 import CircleLoader from "react-spinners/CircleLoader";
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
