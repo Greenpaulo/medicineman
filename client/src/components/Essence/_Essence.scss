@@ -207,7 +207,6 @@ section#essence-keywords {
   section#chakras,
   section#secondaryChakras {
     width: 80%;
-    // margin: auto;
     ul {
       columns: 1;
       padding-top: 1rem;
@@ -224,6 +223,7 @@ section#essence-keywords {
 @media (max-width: 414px) {
   #essence-text {
     width: 100%;
+    font-size: 0.9rem;
 
     .br-10 {
       border-radius: 0;
@@ -236,10 +236,33 @@ section#essence-keywords {
 
   section#description {
     padding-bottom: 0;
+
+    p {
+      width: 85%;
+      margin: auto;
+    }
   }
 
   section#chakrasMeridians {
     grid-template-columns: repeat(1, auto);
+    grid-row-gap: 0;
+  }
+
+  section#meridians,
+  section#secondaryMeridians,
+  section#chakras,
+  section#secondaryChakras {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  section#chakras,
+  section#secondaryChakras {
+    border-bottom: 2px solid lighten(lightgreen, 10%);
+  }
+
+  section#meridians {
+    border-bottom: 2px solid lighten(purple, 60%);
   }
 
   #essence-indications-list,
@@ -248,6 +271,11 @@ section#essence-keywords {
   }
 
   section#essence-keywords {
+    width: 100%;
+
+    .br-10 {
+      border-radius: 0;
+    }
     ul {
       columns: 1;
     }

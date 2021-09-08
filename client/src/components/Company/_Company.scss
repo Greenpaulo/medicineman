@@ -201,14 +201,23 @@ section#groups {
   }
 
   section#company-info {
-    width: 100%;
     margin-top: 1.5rem;
-    text-align: center;
     font-size: 0.9rem;
 
     p {
       width: 85%;
       margin: 1rem auto;
+    }
+
+    i {
+      display: block;
+      width: 85%;
+      margin: auto;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
     // Remove border radius and specific margins, just from coloured background section inside #company-info
