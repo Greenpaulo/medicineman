@@ -64,7 +64,7 @@ section#groups {
   width: 200px;
   text-align: center;
   font-size: 1.1rem;
-  margin: auto;
+  margin: 0 auto 2rem auto;
 
   img {
     height: 215px;
@@ -73,6 +73,11 @@ section#groups {
 
   img[src='/images/group-images/new_child_series.png'] {
     height: 245px;
+  }
+
+  h4.group-title {
+    font-weight: 400;
+    line-height: 2rem;
   }
 }
 
@@ -169,21 +174,29 @@ section#groups {
 
 // Media queries
 @media (max-width: 414px) {
+  section#groups {
+    padding: 0;
+  }
+
   #group-links {
     grid-template-columns: repeat(1, auto);
-    grid-row-gap: 5rem;
+    grid-row-gap: 2rem;
   }
 
   .group-link {
     height: 200px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
 
     a {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      display: block;
     }
 
     img {
-      height: 175px;
+      height: 150px;
     }
   }
 

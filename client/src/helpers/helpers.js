@@ -62,7 +62,7 @@ export const renderImagePath = (images, format) => {
     } else {
       path = images[0]
     }
-    const pathWithUnderline = path.replaceAll(" ", "_")
+    const pathWithUnderline = path.replace(/\s+/g, '_');
     if (format === "200w") {
       return `/images/${format}/${pathWithUnderline}`
     }
@@ -171,7 +171,6 @@ export const renderChakraIcon = (chakra) => {
   }
 
   export const scrollToTop = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    console.log('scroll fired')
+    document.documentElement.scrollTo(0, -75); // For Chrome, Firefox, IE and Opera
+    document.body.scrollTo(0,-75); // For Safari
   }

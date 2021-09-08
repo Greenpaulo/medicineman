@@ -80,7 +80,7 @@ const Company = (props) => {
                 <div key={uuid()} className="group-link">
                   <Link to={`/medicine/${groupInfo[0].companySlug}/${group.slug}`}>    
                     <img src={`/images/group-images/${group.slug}.png`} alt="" />
-                    {group.name}
+                    <h4 className="group-title">{group.name}</h4>
                   </Link>
                 </div>
               ))}

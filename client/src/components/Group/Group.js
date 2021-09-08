@@ -61,7 +61,7 @@ const Group = (props) => {
           <section id="group">
             <div>
               <div id="mobile-group-photo">
-                {/* {renderEssencePhoto()} */}
+                {renderEssencePhoto()}
               </div>
               <h2 id="group-heading">{group}</h2>
               <section id="group-info">
@@ -71,7 +71,7 @@ const Group = (props) => {
               </section>
             </div>
             <div id="desktop-group-photo">
-              {/* {renderEssencePhoto()} */}
+              {renderEssencePhoto()}
             </div>
           </section>
           <EssenceLinks essences={essences} group={group}/>

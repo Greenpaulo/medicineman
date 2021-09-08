@@ -42,7 +42,7 @@ const MainNav = () => {
               <li id="side-logo-link" className="logo-link"><Link to="/">Medicine Man</Link></li>
               <VineUnderline />
             </div>
-            <li id="top-logo-link" className="logo-link" onClick={handleClick}><Link to="/">Medicine Man</Link></li>
+            <li id="top-logo-link" className="logo-link"><Link to="/">Medicine Man</Link></li>
             <li className="nav-link">
               <Link to="/intro">
                 <img src="/images/hello.svg" alt="" />

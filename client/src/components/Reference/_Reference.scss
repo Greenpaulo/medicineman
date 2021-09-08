@@ -1,7 +1,8 @@
 #reference-heading {
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 ul#references {
@@ -25,7 +26,8 @@ ul#references {
 .essence-links {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  // align-items: center;
+  flex-wrap: wrap;
 }
 
 p.essence {
@@ -48,5 +50,35 @@ section#related {
 
   ul {
     list-style: none;
+  }
+}
+
+@media (max-width: 800px) {
+  h1#reference-heading {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-top: 3rem;
+  }
+
+  h4.indication {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 414px) {
+  h1#reference-heading {
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+  }
+
+  h4.indication {
+    width: 85%;
+    margin: 0 auto 1rem auto;
+    font-size: 0.9rem;
+  }
+
+  p.essence a {
+    font-size: 0.8rem;
   }
 }

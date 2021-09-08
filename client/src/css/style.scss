@@ -44,7 +44,6 @@
 // Core styling
 body,
 html {
-  height: 100%;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   // font-family: 'Nunito', sans-serif;
@@ -181,9 +180,9 @@ sup {
     }
   }
 
-  p {
-    text-align: center;
-  }
+  // p {
+  //   text-align: center;
+  // }
 
   button.back-to-top-btn {
     display: block;

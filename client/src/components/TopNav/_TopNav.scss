@@ -142,7 +142,7 @@ nav#top-nav-main {
   section.top-nav {
     .top-nav-heading {
       line-height: 3.3rem;
-      padding-top: 3rem;
+      padding-top: 2rem;
     }
   }
 }
@@ -152,6 +152,8 @@ nav#top-nav-main {
   section.top-nav {
     .top-nav-heading {
       font-size: 2.1rem;
+      max-width: 90%;
+      margin: auto;
     }
   }
 }
