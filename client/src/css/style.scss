@@ -46,7 +46,6 @@ body,
 html {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  // font-family: 'Nunito', sans-serif;
   font-weight: 400;
   line-height: 2.3em;
   margin: auto;
@@ -60,7 +59,6 @@ html {
 
 // Section heading
 .section-heading {
-  // font-family: 'Dawning of a New Day', cursive;
   font-size: 3rem;
   font-weight: 400;
   padding-top: 5rem;
@@ -151,8 +149,6 @@ sup {
 // Media queries
 @media (max-width: 1024px) {
   .container {
-    // width: 100vw;
-    // margin: 6rem 0 0 0;
     width: 85vw;
     margin: 6rem auto 0 auto;
   }
@@ -170,7 +166,7 @@ sup {
   }
 
   .section-heading {
-    padding-top: 4rem;
+    padding-top: 2rem;
     font-size: 2.5rem;
   }
 
@@ -179,10 +175,6 @@ sup {
       width: 85%;
     }
   }
-
-  // p {
-  //   text-align: center;
-  // }
 
   button.back-to-top-btn {
     display: block;
