@@ -2,8 +2,14 @@
   text-transform: capitalize;
   font-weight: 400;
   font-size: 2.5rem;
-  padding-top: 5rem;
   margin-bottom: 3rem;
+}
+
+.page-subheading {
+  padding-top: 5rem;
+  color: var(--secondary);
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .company-section {
@@ -16,7 +22,7 @@
   }
 }
 
-.essence-list {
+ul.essence-list {
   list-style: none;
   columns: 4;
 }

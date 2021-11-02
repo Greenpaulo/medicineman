@@ -55,7 +55,7 @@ const CrossReference = () => {
         <div id="meridian-list" className="px-1 py-2">
           <ul>
             {meridians.map(meridian => (
-                <Link to="#" className="meridian">
+                <Link to={`/meridian/${slugify(meridian, { lower: true, replacement: '_' })}`} className="meridian">
                   {renderMeridianIcon(meridian)}
                   <li key={uuid()}>
                     {meridian}

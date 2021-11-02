@@ -174,3 +174,10 @@ export const renderChakraIcon = (chakra) => {
     document.documentElement.scrollTo(0, -75); // For Chrome, Firefox, IE and Opera
     document.body.scrollTo(0,-75); // For Safari
   }
+
+  export const unslugify = (slug) => {
+    const result = slug.replace(/_/g, " ");
+    return result.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}

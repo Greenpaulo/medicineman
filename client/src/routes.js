@@ -7,6 +7,7 @@ import Company from './components/Company/Company'
 import Group from './components/Group/Group'
 import CrossReference from './components/CrossReference/CrossReference'
 import Chakra from './components/Chakra/Chakra'
+import Meridian from './components/Meridian/Meridian'
 import Reference from './components/Reference/Reference'
 import Education from './components/Education/Education'
 import Beginner from './components/Beginner/Beginner'
@@ -27,6 +28,7 @@ const routes = [
   { path: "/crossreference", name: "Cross Reference", Component: CrossReference },
   { path: "/crossreference/:reference", name: "Reference", Component: Reference },
   { path: "/chakra/:chakra", name: "Chakra", Component: Chakra },
+  { path: "/meridian/:meridian", name: "Meridian", Component: Meridian },
   { path: "/education", name: "Education", Component: Education },
   { path: "/education/beginner", name: "Beginner", Component: Beginner },
   { path: "/education/intermediate", name: "Intermediate", Component: Intermediate },

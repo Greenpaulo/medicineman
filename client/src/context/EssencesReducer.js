@@ -25,6 +25,11 @@ const essencesReducer = (state, action) => {
         ...state,
         essences: action.payload
       }
+    case 'GET_ESSENCE_DATA_BY_MERIDIAN':
+      return {
+        ...state,
+        essences: action.payload
+      }
     case 'SET_LOADING_ESSENCES':
       return {
         ...state,

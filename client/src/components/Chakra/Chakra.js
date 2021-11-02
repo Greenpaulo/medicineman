@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
-import { checkLoading, scrollToTop } from "../../helpers/helpers"
+import { checkLoading, scrollToTop, unslugify } from "../../helpers/helpers"
 import slugify from 'slugify'
 import uuid from 'react-uuid'
 import CircleLoader from "react-spinners/CircleLoader"
@@ -34,7 +34,6 @@ const Chakra = (props) => {
         companies.push(essence.company)
       }
     })
-    console.log(companies)
     return companies;
   }
 
@@ -42,14 +41,17 @@ const Chakra = (props) => {
     return essences.map(essence => {
       if (essence.company === company) {
         return (
-          <li>{essence.name}</li>
+          <li>
+            <Link to={`/essence/${essence.nameSlug}`}> 
+              {essence.name}
+            </Link>
+          </li>
         )
       }
     })
   }
   
   const renderEssences = () => {
-    console.log(essences)
     const companies = getCompanies();
     return (
       <div>
@@ -63,15 +65,6 @@ const Chakra = (props) => {
         })}
       </div>
     )
-    // return essences.map(essence => {
-    //   return (
-    //     <p className="essence">
-    //       <Link to={`/essence/${slugify(essence, { lower: true, replacement: '_' })}`}> 
-    //         {essence}
-    //       </Link>
-    //     </p>
-    //   )
-    // })
   }
     
   // Check data has loaded before render
@@ -89,7 +82,8 @@ const Chakra = (props) => {
 
       {!isLoading &&
         <div className="container animate__animated animate__fadeIn">
-          <h1 id="chakra-heading">{chakra}</h1>
+          <h4 className="page-subheading">CHAKRA</h4>
+          <h1 id="chakra-heading">{unslugify(chakra)}</h1>
           <section id="reference-info" className="mt-2">
               <div className="essence-links ml-2">
                 {renderEssences()}

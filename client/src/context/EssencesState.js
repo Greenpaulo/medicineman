@@ -97,6 +97,22 @@ export const EssencesProvider = ({ children }) => {
       })
     }
   }
+
+  async function getEssenceDataByMeridian(meridian) {
+    try {
+      const res = await axios.get(`/api/v1/meridians/essence-data/${meridian}`);
+
+      dispatch({
+        type: 'GET_ESSENCE_DATA_BY_MERIDIAN',
+        payload: res.data.data
+      })
+    } catch (err) {
+      dispatch({
+        type: 'ESSENCE_ERROR',
+        payload: err.response.data.error
+      })
+    }
+  }
   
   function setLoadingEssences(boolean) {
     dispatch({
@@ -117,6 +133,7 @@ export const EssencesProvider = ({ children }) => {
       getEssencesByGroup,
       getEssenceNamesByChakra,
       getEssenceDataByChakra,
+      getEssenceDataByMeridian,
       setLoadingEssences
   }}>
     {children}
