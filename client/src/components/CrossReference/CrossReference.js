@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import { ReferencesContext } from "../../context/ReferencesState"
 import { checkLoading, renderChakraIcon, renderMeridianIcon } from "../../helpers/helpers"
 import TopNav from "../TopNav/TopNav"
-import CircleLoader from "react-spinners/CircleLoader";
+import CircleLoader from "react-spinners/CircleLoader"
 import uuid from 'react-uuid'
+import slugify from "slugify"
 
 
 const CrossReference = () => {
@@ -32,7 +33,7 @@ const CrossReference = () => {
         <div id="chakra-list" className="px-1 py-2">
           <ul>
             {chakras.map(chakra => (
-              <Link to="#" className="chakra">
+              <Link to={`/chakra/${slugify(chakra, { lower: true, replacement: '_' })}`} className="chakra">
                 {renderChakraIcon(chakra)}
                 <li key={uuid()}>
                   {chakra}

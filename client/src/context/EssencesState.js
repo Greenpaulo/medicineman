@@ -65,6 +65,38 @@ export const EssencesProvider = ({ children }) => {
       })
     }
   }
+
+  async function getEssenceNamesByChakra(chakra) {
+    try {
+      const res = await axios.get(`/api/v1/chakras/essence-names/${chakra}`);
+
+      dispatch({
+        type: 'GET_ESSENCES_NAMES_BY_CHAKRA',
+        payload: res.data.data
+      })
+    } catch (err) {
+      dispatch({
+        type: 'ESSENCE_ERROR',
+        payload: err.response.data.error
+      })
+    }
+  }
+
+  async function getEssenceDataByChakra(chakra) {
+    try {
+      const res = await axios.get(`/api/v1/chakras/essence-data/${chakra}`);
+
+      dispatch({
+        type: 'GET_ESSENCE_DATA_BY_CHAKRA',
+        payload: res.data.data
+      })
+    } catch (err) {
+      dispatch({
+        type: 'ESSENCE_ERROR',
+        payload: err.response.data.error
+      })
+    }
+  }
   
   function setLoadingEssences(boolean) {
     dispatch({
@@ -83,6 +115,8 @@ export const EssencesProvider = ({ children }) => {
       getEssenceByName,
       getEssencesByCompany,
       getEssencesByGroup,
+      getEssenceNamesByChakra,
+      getEssenceDataByChakra,
       setLoadingEssences
   }}>
     {children}

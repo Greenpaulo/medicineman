@@ -15,6 +15,16 @@ const essencesReducer = (state, action) => {
         ...state,
         essences: action.payload
       }
+    case 'GET_ESSENCES_NAMES_BY_CHAKRA':
+      return {
+        ...state,
+        essences: action.payload
+      }
+    case 'GET_ESSENCE_DATA_BY_CHAKRA':
+      return {
+        ...state,
+        essences: action.payload
+      }
     case 'SET_LOADING_ESSENCES':
       return {
         ...state,

@@ -16,7 +16,7 @@ const App = () => {
                 // Get all routes that contain the current one.
                 .filter(({ path }) => props.match.path.includes(path))
                 // Swap out any dynamic routes with their param values.
-                // E.g. "/pizza/:pizzaId" will become "/pizza/1"
+                // E.g. "/user/:userId" will become "/user/1"
                 .map(({ path, ...rest }) => ({
                   path: Object.keys(props.match.params).length
                     ? Object.keys(props.match.params).reduce(
