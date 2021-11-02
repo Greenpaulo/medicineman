@@ -1,17 +1,16 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
-import { checkLoading, scrollToTop, unslugify } from "../../helpers/helpers"
+import { checkLoading, scrollToTop, unslugify, renderChakraIcon } from "../../helpers/helpers"
 import slugify from 'slugify'
 import uuid from 'react-uuid'
 import CircleLoader from "react-spinners/CircleLoader"
-import { get } from "mongoose"
 
 
 const Chakra = (props) => {
   const { essences, getEssenceDataByChakra , setLoadingEssences, loadingEssences } = useContext(EssencesContext);
 
-  const { chakra } = props.match.params;
+  const chakra = unslugify(props.match.params.chakra).toLowerCase();
 
   useEffect(() => {
     async function getEssenceData(){
@@ -41,7 +40,7 @@ const Chakra = (props) => {
     return essences.map(essence => {
       if (essence.company === company) {
         return (
-          <li>
+          <li key={uuid()}>
             <Link to={`/essence/${essence.nameSlug}`}> 
               {essence.name}
             </Link>
@@ -57,7 +56,7 @@ const Chakra = (props) => {
       <div>
         {companies.map(company => {
           return (
-            <div className="company-section mb-2 pb-2">
+            <div className="company-section mb-2 pb-2" key={uuid()}>
               <h3>{company}</h3>
               <ul className="essence-list mt-1">{renderEssencesForCompany(company)}</ul>
             </div>
@@ -82,12 +81,15 @@ const Chakra = (props) => {
 
       {!isLoading &&
         <div className="container animate__animated animate__fadeIn">
-          <h4 className="page-subheading">CHAKRA</h4>
-          <h1 id="chakra-heading">{unslugify(chakra)}</h1>
+          <h4 className="page-subheading">chakra</h4>
+          <div id="heading-with-icon">
+            <h1 id="chakra-heading">{chakra}</h1>
+            {renderChakraIcon(chakra)}
+          </div>
           <section id="reference-info" className="mt-2">
-              <div className="essence-links ml-2">
-                {renderEssences()}
-              </div>
+            <div className="essence-links ml-2">
+              {renderEssences()}
+            </div>
           </section>
         </div>
       }

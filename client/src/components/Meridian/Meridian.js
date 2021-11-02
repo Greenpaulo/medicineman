@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { EssencesContext } from "../../context/EssencesState"
-import { checkLoading, scrollToTop, unslugify } from "../../helpers/helpers"
+import { checkLoading, scrollToTop, unslugify, renderMeridianIcon } from "../../helpers/helpers"
 import uuid from 'react-uuid'
 import CircleLoader from "react-spinners/CircleLoader"
 

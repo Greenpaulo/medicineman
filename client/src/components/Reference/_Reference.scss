@@ -1,8 +1,16 @@
 #reference-heading {
   font-weight: 400;
   font-size: 2.5rem;
-  padding-top: 5rem;
+  // padding-top: 5rem;
   margin-bottom: 3rem;
+}
+
+#reference-subheading {
+  text-transform: uppercase;
+  padding-top: 5rem;
+  color: var(--secondary);
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 ul#references {
@@ -46,7 +54,7 @@ h4.indication::first-letter {
 
 section#related {
   padding-bottom: 2rem;
-  text-align: center;
+  // text-align: center;
 
   ul {
     list-style: none;

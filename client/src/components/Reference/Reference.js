@@ -60,6 +60,7 @@ const Reference = (props) => {
 
       {!isLoading &&
         <div className="container animate__animated animate__fadeIn">
+          <h4 className="page-subheading">keyword</h4>
           <h1 id="reference-heading">{references[0].title}</h1>
           <section id="reference-info" className="mt-2">
             <ul id="references">
@@ -76,7 +77,7 @@ const Reference = (props) => {
           {references[0].related.length > 0 &&
             <section id="related">
               <h3 className="py-1">Related Keywords</h3>
-              <ul id="related-references">
+              <ul id="related-references" className="ml-2">
                 {references[0].related.map(ref => (
                   <li onClick={scrollToTop} className="related-ref"><Link to={`/crossreference/${slugify(ref, { lower: true, replacement: '_' })}`}>{ref}</Link></li>
                 ))}
